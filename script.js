@@ -21,7 +21,6 @@ function showQuiz(fileUrl, deckName) {
   quizScreen.classList.remove('hidden');
   quizScreen.classList.add('flex');
   
-  // Đã bỏ lệnh toUpperCase() để giữ nguyên chữ hoa/thường của tên file
   document.getElementById('current-deck-name').innerText = `◯ ${deckName}`;
   loadDeck(fileUrl);
 }
@@ -145,12 +144,12 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
   }
 }
 
+// Hàm tắt các thông báo vì nếu hết bài tự chuyển màn hình, tự hiểu
 function goToNextQuestion() {
   if (currentIndex < flashcards.length - 1) {
     currentIndex++;
     renderQuestion();
   } else {
-    alert("Bạn đã hoàn thành bài!");
     showLobby();
   }
 }
@@ -206,6 +205,7 @@ document.getElementById('ff-hira').addEventListener('change', (e) => updateFont(
 document.getElementById('ff-kanji').addEventListener('change', (e) => updateFont('kanji', 'ff', e.target.value));
 document.getElementById('ff-mean').addEventListener('change', (e) => updateFont('mean', 'ff', e.target.value));
 
+
 // ================= GIAO DIỆN NHẬP DỮ LIỆU (IMPORT LOGIC) =================
 const importModal = document.getElementById('import-modal');
 let parsedImportData = [];
@@ -225,7 +225,6 @@ const closeImport = () => {
 document.getElementById('btn-close-import').addEventListener('click', closeImport);
 document.getElementById('btn-cancel-import').addEventListener('click', closeImport);
 
-// Lắng nghe thao tác gõ và đổi delimiter để tự parse
 const importInputs = document.querySelectorAll('#import-textarea, input[name="term_def"], input[name="card_sep"], #custom-term-def, #custom-card-sep');
 importInputs.forEach(el => el.addEventListener('input', renderImportPreview));
 
@@ -261,13 +260,11 @@ function renderImportPreview() {
     const parts = raw.split(termDefSep);
     if (parts.length >= 2) {
       const termRaw = parts[0].trim();
-      const meaning = parts.slice(1).join(termDefSep).trim(); // Ghép lại nếu nghĩa chứa kí tự trùng delimiter
+      const meaning = parts.slice(1).join(termDefSep).trim(); 
       
       let hira = termRaw;
       let kanji = "";
       
-      // Bóc tách Kanji nằm trong ngoặc đơn. Vd: おいしい (美味しい)
-      // Chấp nhận ngoặc tròn () thường hoặc ngoặc tròn full-width của Nhật （）
       const regex = /^(.*?)(?:\s*[\(（](.*?)[\)）])?$/;
       const match = termRaw.match(regex);
       
@@ -294,27 +291,43 @@ function renderImportPreview() {
   previewCount.innerText = `${parsedImportData.length} thẻ`;
 }
 
-// Lưu ra file JSON
-document.getElementById('btn-save-import').addEventListener('click', () => {
-  if (parsedImportData.length === 0) {
-    alert("Chưa có dữ liệu hợp lệ để lưu!");
-    return;
-  }
+// Bắt sự kiện LƯU FILE JSON (Mở hộp thoại Save As hoặc Download tuỳ trình duyệt)
+document.getElementById('btn-save-import').addEventListener('click', async () => {
+  if (parsedImportData.length === 0) return; // Silent return nếu rỗng
   
   let fileName = document.getElementById('import-filename').value.trim();
   if (!fileName) fileName = "bai_moi";
   if (!fileName.endsWith('.json')) fileName += '.json';
 
   const jsonString = JSON.stringify(parsedImportData, null, 2);
-  const blob = new Blob([jsonString], { type: 'application/json' });
-  
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = fileName;
-  link.click();
-  
-  alert("Lưu thành công file " + fileName + ". Hãy đẩy file này vào thư mục data/ trên GitHub nhé!");
-  closeImport();
+
+  try {
+    // API chọn thư mục lưu (Khả dụng trên PC Chrome/Edge/Cốc Cốc)
+    if (window.showSaveFilePicker) {
+      const fileHandle = await window.showSaveFilePicker({
+        suggestedName: fileName,
+        types: [{
+          description: 'JSON Files',
+          accept: { 'application/json': ['.json'] },
+        }],
+      });
+      const writable = await fileHandle.createWritable();
+      await writable.write(jsonString);
+      await writable.close();
+      closeImport();
+    } else {
+      // Fallback cho iPhone/Điện thoại hoặc trình duyệt không hỗ trợ showSaveFilePicker
+      const blob = new Blob([jsonString], { type: 'application/json' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = fileName;
+      link.click();
+      closeImport();
+    }
+  } catch (err) {
+    // Silent catch (ví dụ người dùng mở hộp thoại lên nhưng bấm Hủy)
+    console.error("Đã hủy lưu:", err);
+  }
 });
 
 // ================= KHỞI ĐỘNG =================

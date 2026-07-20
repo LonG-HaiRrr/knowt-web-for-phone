@@ -1,0 +1,248 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "「でんしゃに」のります",
+    "kanji": "「電車に」のります",
+    "meaning": "Đi, lên (tàu) (I)"
+  },
+  {
+    "id": 2,
+    "hira_kata": "「でんしゃを」おります",
+    "kanji": "「電車を」おります ",
+    "meaning": "Xuống (tàu) (db2)"
+  },
+  {
+    "id": 3,
+    "hira_kata": "のりかえます",
+    "kanji": "乗り換えます",
+    "meaning": "Chuyến, đổi ( tàu) (II)"
+  },
+  {
+    "id": 4,
+    "hira_kata": "「シャワーを」あびます",
+    "kanji": "「シャワーを」浴びます",
+    "meaning": "Tắm (vòi hoa sen) (db2)"
+  },
+  {
+    "id": 5,
+    "hira_kata": "「カバンに」いれます",
+    "kanji": "「カバンに」入れます",
+    "meaning": "Cho vào (túi xách) (II)"
+  },
+  {
+    "id": 6,
+    "hira_kata": "「しりょうを」だします",
+    "kanji": "「資料を」出します",
+    "meaning": "Lấy ra, đưa ra,gửi (tài liệu) (I)"
+  },
+  {
+    "id": 7,
+    "hira_kata": "「おかねを」おろします",
+    "kanji": "「お金を」下ろします",
+    "meaning": "Rút ( tiền) (I)"
+  },
+  {
+    "id": 8,
+    "hira_kata": "「だいがくに」はいります",
+    "kanji": "「大学に」入いります",
+    "meaning": "Vào (đại học), nhập học (db1)"
+  },
+  {
+    "id": 9,
+    "hira_kata": "「ボタンを」おします",
+    "kanji": "「ボタンを」押します",
+    "meaning": "Bấm, ấn (nút) (I)"
+  },
+  {
+    "id": 10,
+    "hira_kata": "「かいぎを」はじめます",
+    "kanji": " 「会議を」始めます",
+    "meaning": "Bắt đầu (cuộc họp) (II)"
+  },
+  {
+    "id": 11,
+    "hira_kata": "けんがくします",
+    "kanji": "見学します",
+    "meaning": "Tham quan kiến tập (III)"
+  },
+  {
+    "id": 12,
+    "hira_kata": "でんわします",
+    "kanji": "電話します",
+    "meaning": "Gọi điện thoại (III)"
+  },
+  {
+    "id": 13,
+    "hira_kata": "わかい",
+    "kanji": "若い",
+    "meaning": "Trẻ"
+  },
+  {
+    "id": 14,
+    "hira_kata": "ながい",
+    "kanji": "長い",
+    "meaning": "Dài"
+  },
+  {
+    "id": 15,
+    "hira_kata": "みじかい",
+    "kanji": "短い",
+    "meaning": "Ngắn"
+  },
+  {
+    "id": 16,
+    "hira_kata": "あかるい",
+    "kanji": "明るい",
+    "meaning": "Sáng"
+  },
+  {
+    "id": 17,
+    "hira_kata": "くらい",
+    "kanji": "暗い",
+    "meaning": "Tối"
+  },
+  {
+    "id": 18,
+    "hira_kata": "からだ",
+    "kanji": "体",
+    "meaning": "Cơ thể"
+  },
+  {
+    "id": 19,
+    "hira_kata": "あたま",
+    "kanji": "頭",
+    "meaning": "Đầu"
+  },
+  {
+    "id": 20,
+    "hira_kata": "かみ",
+    "kanji": "髪",
+    "meaning": "Tóc"
+  },
+  {
+    "id": 21,
+    "hira_kata": "かお",
+    "kanji": "顔",
+    "meaning": "Mặt"
+  },
+  {
+    "id": 22,
+    "hira_kata": "め",
+    "kanji": "目",
+    "meaning": "Mắt"
+  },
+  {
+    "id": 23,
+    "hira_kata": "みみ",
+    "kanji": "耳",
+    "meaning": "Tai"
+  },
+  {
+    "id": 24,
+    "hira_kata": "はな",
+    "kanji": "鼻",
+    "meaning": "Mũi"
+  },
+  {
+    "id": 25,
+    "hira_kata": "くち",
+    "kanji": "口",
+    "meaning": "Miệng"
+  },
+  {
+    "id": 26,
+    "hira_kata": "は",
+    "kanji": "歯",
+    "meaning": "Răng"
+  },
+  {
+    "id": 27,
+    "hira_kata": "おなか",
+    "kanji": "",
+    "meaning": "Bụng"
+  },
+  {
+    "id": 28,
+    "hira_kata": "あし",
+    "kanji": "足",
+    "meaning": "Chân"
+  },
+  {
+    "id": 29,
+    "hira_kata": "せ",
+    "kanji": "背",
+    "meaning": "Chiều cao ( cơ thể)"
+  },
+  {
+    "id": 30,
+    "hira_kata": "サービス",
+    "kanji": "",
+    "meaning": "Dịch vụ"
+  },
+  {
+    "id": 31,
+    "hira_kata": "ジョギング",
+    "kanji": "をします",
+    "meaning": "Chạy bộ (III)"
+  },
+  {
+    "id": 32,
+    "hira_kata": "シャワー",
+    "kanji": "",
+    "meaning": "Vòi hoa sen"
+  },
+  {
+    "id": 33,
+    "hira_kata": "みどり",
+    "kanji": "緑",
+    "meaning": "Màu xanh lá cây, cây xanh"
+  },
+  {
+    "id": 34,
+    "hira_kata": "［お］てら",
+    "kanji": "寺",
+    "meaning": "Chùa"
+  },
+  {
+    "id": 35,
+    "hira_kata": "じんじゃ",
+    "kanji": "神社",
+    "meaning": "Đền thờ Thần đạo"
+  },
+  {
+    "id": 36,
+    "hira_kata": "ボタン",
+    "kanji": "",
+    "meaning": "Nút"
+  },
+  {
+    "id": 37,
+    "hira_kata": "キャッシュカード",
+    "kanji": "",
+    "meaning": "Thẻ rút tiền, thẻ ATM"
+  },
+  {
+    "id": 38,
+    "hira_kata": "まず",
+    "kanji": "",
+    "meaning": "Trước tiên, đầu tiên"
+  },
+  {
+    "id": 39,
+    "hira_kata": "つぎ",
+    "kanji": "",
+    "meaning": "Tiếp theo, Sau đó"
+  },
+  {
+    "id": 40,
+    "hira_kata": "すごいですね。",
+    "kanji": "",
+    "meaning": "Tuyệt vời, Giỏi quá đi, Ghê thật đấy"
+  },
+  {
+    "id": 41,
+    "hira_kata": "[いいえ、] まだまだです。",
+    "kanji": "",
+    "meaning": "(Không), tôi còn phải cố gắng nhiều nữa. - (khiêm tốn)"
+  }
+]
