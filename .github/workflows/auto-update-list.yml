@@ -4,15 +4,13 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'data/**.json'
-      - '!data/list.json' # Bỏ qua list.json để tránh vòng lặp vô tận
+  workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công trên web GitHub
 
 jobs:
   update-list:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Cấp quyền cho bot tự động ghi đè file list.json lên repo
+      contents: write 
     
     steps:
       - name: Checkout Code
