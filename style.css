@@ -1,0 +1,38 @@
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.option-btn {
+  transition: all 0.2s ease;
+}
+
+.option-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.option-btn.correct {
+  border-color: #4ade80 !important;
+  background-color: rgba(74, 222, 128, 0.05) !important;
+}
+.option-btn.correct .icon {
+  background-color: #4ade80 !important;
+  color: #111 !important;
+}
+
+.option-btn.wrong {
+  border-color: #f87171 !important;
+  background-color: rgba(248, 113, 113, 0.05) !important;
+  opacity: 0.6;
+}
+.option-btn.wrong .icon {
+  background-color: #f87171 !important;
+  color: white !important;
+}
+
+#settings-content.open {
+  transform: translateY(0);
+}

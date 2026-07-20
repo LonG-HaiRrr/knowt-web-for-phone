@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "まずい",
+    "kanji": "不味い",
+    "meaning": "không ngon, chán\n(Bất vị - đồ ăn)"
+  },
+  {
+    "id": 2,
+    "hira_kata": "おいしい",
+    "kanji": "美味しい",
+    "meaning": "Ngon"
+  },
+  {
+    "id": 3,
+    "hira_kata": "おおきい",
+    "kanji": "大きい",
+    "meaning": "To, lớn"
+  },
+  {
+    "id": 4,
+    "hira_kata": "ちいさい",
+    "kanji": "小さい",
+    "meaning": "Nhỏ, bé"
+  }
+]

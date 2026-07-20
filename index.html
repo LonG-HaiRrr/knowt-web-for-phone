@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+  <title>Trắc nghiệm Knowt - Hướng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#111111] text-white font-sans pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] h-screen overflow-hidden flex flex-col">
+
+  <!-- TOP BAR -->
+  <div class="flex items-center justify-between px-4 py-3 shrink-0">
+    <button class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">✕</button>
+    
+    <!-- Progress Bar -->
+    <div class="flex-1 mx-4 h-2 bg-[#333333] rounded-full overflow-hidden">
+      <div id="progress-bar" class="h-full bg-gray-400 w-0 transition-all duration-300 rounded-full"></div>
+    </div>
+    
+    <div class="flex gap-2 items-center">
+      <div class="px-3 py-1 bg-[#1c2c36] text-[#3ca3f0] font-bold rounded-full flex items-center gap-1 text-sm">
+        <span id="card-counter">0</span> 🗡️
+      </div>
+      <button id="btn-settings" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
+    </div>
+  </div>
+
+  <!-- MAIN CARD CONTENT -->
+  <div class="flex-1 px-4 pb-6 pt-2 flex flex-col overflow-hidden">
+    <div class="bg-[#1c1c1e] flex-1 rounded-[24px] p-5 flex flex-col shadow-lg border border-[#2c2c2e] overflow-y-auto relative">
+      
+      <!-- Card Header (Thay bằng Menu Chọn Bài) -->
+      <div class="flex justify-between items-center mb-6 shrink-0">
+        <select id="deck-selector" class="bg-[#3b2b35] text-[#d685af] px-3 py-1.5 rounded-lg text-sm font-semibold outline-none border border-[#d685af]/30 appearance-none cursor-pointer">
+          <option value="data/bai1.json">◯ Bài 1</option>
+          <option value="data/bai2.json">◯ Bài 2</option>
+          <!-- Cứ thêm Option ở đây khi bạn tạo thêm file JSON -->
+        </select>
+
+        <div class="flex gap-4 text-gray-400 text-xl">
+          <button class="hover:text-white transition">💡</button>
+          <button class="hover:text-white transition" onclick="playQuestionAudio()">🔊</button>
+          <button class="hover:text-white transition">⭐</button>
+        </div>
+      </div>
+
+      <!-- Question Text -->
+      <div class="mb-6 shrink-0">
+        <h1 id="q-hira" class="text-4xl font-bold mb-3">Đang tải bài...</h1>
+        <h2 id="q-kanji" class="text-xl text-gray-300">...</h2>
+      </div>
+
+      <!-- Multiple Choice Options -->
+      <div id="options-container" class="flex flex-col gap-3 mt-auto shrink-0 pb-2">
+        <!-- JS sẽ render 4 nút A B C D vào đây -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BẢNG SETTINGS -->
+  <div id="settings-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex-col justify-end">
+    <div class="bg-[#1c1c1e] rounded-t-[24px] p-6 border-t border-[#2c2c2e] transform transition-transform translate-y-full" id="settings-content">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold">Cài đặt Auto-TTS</h2>
+        <button id="btn-close-settings" class="w-8 h-8 bg-[#333] rounded-full font-bold">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <div class="flex justify-between items-center bg-[#101a2a] p-3 rounded-xl border border-gray-700">
+          <span class="font-bold text-white">Đọc câu hỏi</span>
+          <input type="checkbox" id="set-auto-q" checked class="w-5 h-5 accent-blue-500 cursor-pointer">
+        </div>
+        
+        <div class="flex flex-col bg-[#131836] p-3 rounded-xl border border-gray-700 gap-2">
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-white">Delay đọc (giây)</span>
+            <span id="delay-val" class="text-orange-500 font-bold">1.5s</span>
+          </div>
+          <input type="range" id="set-delay" min="0" max="5" step="0.5" value="1.5" class="w-full accent-orange-500">
+        </div>
+
+        <div class="flex justify-between items-center bg-[#2a1010] p-3 rounded-xl border border-gray-700">
+          <span class="font-bold text-white">Đọc đáp án đúng</span>
+          <input type="checkbox" id="set-auto-ans" class="w-5 h-5 accent-green-500 cursor-pointer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
