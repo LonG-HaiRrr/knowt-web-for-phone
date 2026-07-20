@@ -10,6 +10,9 @@
   --fs-mean: 19px;
   --ff-mean: sans-serif;
 }
+h6{
+  padding-bottom: 0px !important;
+}
 
 body { -webkit-tap-highlight-color: transparent; }
 ::-webkit-scrollbar { display: none; }

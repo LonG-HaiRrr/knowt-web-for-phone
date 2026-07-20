@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
-  <title>Trắc nghiệm Knowt - Hướng</title>
+  <title>Trắc nghiệm Knowt </title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#111111] text-white font-sans pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] h-screen overflow-hidden flex flex-col relative">
 
   <!-- ================= LOBBY SCREEN ================= -->
   <div id="lobby-screen" class="flex-1 px-4 py-8 flex flex-col h-full overflow-y-auto w-full max-w-md mx-auto">
+      <div class="zone_trangchu">
+        <a href="https://long-hairrr.github.io/CV-on-web" class="icon_trangchu">
+          <img src="logo_trangchu.png" alt="Logo" class="w-390 h-12 object-contain rounded-full transition-transform hover:scale-110">
+
+        </a>
+        
+      </div>
     <div class="flex items-center justify-between mb-8">
-      <h1 class="text-3xl font-bold">Thư viện bài học</h1>
+      <h6 class="text-3xl font-bold"  style="color:#14d45e; padding:20px">Thư viện</h6>
       <div class="flex gap-3">
         <button id="btn-open-import" class="w-10 h-10 bg-[#0070ef] rounded-full flex items-center justify-center text-xl hover:bg-blue-600 transition shadow-lg" title="Nhập dữ liệu">📥</button>
         <button id="btn-settings-lobby" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
