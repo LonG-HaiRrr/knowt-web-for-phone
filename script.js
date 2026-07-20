@@ -1,5 +1,3 @@
-
-/// version ok
 // ================= STATE HỆ THỐNG =================
 let flashcards = [];
 let currentIndex = 0;
@@ -11,11 +9,8 @@ async function loadDeck(fileUrl) {
   try {
     const response = await fetch(fileUrl);
     if (!response.ok) throw new Error("File không tồn tại");
-    
     const data = await response.json();
-    
     if (data && data.length >= 4) {
-      // Xáo trộn từ vựng ngẫu nhiên mỗi lần load bài
       flashcards = data.sort(() => 0.5 - Math.random());
       currentIndex = 0;
       renderQuestion();
@@ -25,24 +20,17 @@ async function loadDeck(fileUrl) {
   } catch (error) {
     console.error("Lỗi:", error);
     document.getElementById('q-hira').innerText = "Lỗi tải file!";
-    document.getElementById('q-kanji').innerText = "Chưa có file " + fileUrl;
   }
 }
 
-// Bắt sự kiện khi bạn chọn bài khác trong Dropdown
-document.getElementById('deck-selector').addEventListener('change', (e) => {
-  loadDeck(e.target.value);
-});
+document.getElementById('deck-selector').addEventListener('change', (e) => loadDeck(e.target.value));
 
 // ================= THUẬT TOÁN TẠO ĐÁP ÁN NHIỄU =================
 function generateMultipleChoice(correctCard) {
   let options = [correctCard];
-  // Tìm các từ khác trong mảng làm đáp án gây nhiễu
   let distractors = flashcards.filter(c => c.id !== correctCard.id);
-  // Trộn và bốc đúng 3 từ sai
   distractors = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
   options.push(...distractors);
-  // Trộn lại 4 đáp án để nút đúng không bị kẹt ở vị trí A
   return options.sort(() => 0.5 - Math.random());
 }
 
@@ -50,6 +38,9 @@ function generateMultipleChoice(correctCard) {
 function renderQuestion() {
   if (flashcards.length === 0) return;
   isAnswered = false;
+  
+  // Ẩn nút Next khi vừa render câu mới
+  document.getElementById('next-btn-container').classList.add('hidden');
 
   const currentCard = flashcards[currentIndex];
   document.getElementById('q-hira').innerText = currentCard.hira_kata;
@@ -63,30 +54,27 @@ function renderQuestion() {
   const currentOptions = generateMultipleChoice(currentCard);
 
   currentOptions.forEach((opt, index) => {
-    const letter = String.fromCharCode(65 + index); // Tạo A, B, C, D
+    const letter = String.fromCharCode(65 + index); 
     const btn = document.createElement('button');
     btn.className = "option-btn w-full text-left bg-[#1c1c1e] border-2 border-[#3a3a3c] hover:border-gray-500 rounded-2xl p-4 flex items-center gap-4 cursor-pointer";
+    // Thêm class 'meaning-text' để ăn thuộc tính biến CSS
     btn.innerHTML = `
       <div class="icon w-8 h-8 rounded-full bg-[#2c3238] flex items-center justify-center font-bold text-gray-300 shrink-0 transition-colors">${letter}</div>
-      <span class="text-[15px] leading-relaxed whitespace-pre-wrap">${opt.meaning.replace(/\\n/g, '\n')}</span>
+      <span class="meaning-text leading-relaxed whitespace-pre-wrap">${opt.meaning.replace(/\\n/g, '\n')}</span>
     `;
-    
     btn.dataset.id = opt.id; 
     btn.onclick = () => handleAnswer(btn, opt.id, currentCard.id);
     container.appendChild(btn);
   });
 
-  // Tự động đọc
   if (document.getElementById('set-auto-q').checked) {
     if (timeoutId) clearTimeout(timeoutId);
     const delayMs = parseFloat(document.getElementById('set-delay').value) * 1000;
-    timeoutId = setTimeout(() => {
-      playAudio(currentCard.hira_kata, 'ja-JP');
-    }, delayMs);
+    timeoutId = setTimeout(() => playAudio(currentCard.hira_kata, 'ja-JP'), delayMs);
   }
 }
 
-// ================= XỬ LÝ ĐÚNG/SAI =================
+// ================= XỬ LÝ ĐÚNG/SAI & CHUYỂN CÂU =================
 function handleAnswer(clickedBtn, selectedId, correctId) {
   if (isAnswered) return;
   isAnswered = true;
@@ -108,19 +96,30 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
     playAudio(currentCard.meaning.replace(/\\n/g, ' '), 'vi-VN');
   }
 
-  // Đợi 1.5s tự qua câu mới
-  setTimeout(() => {
-    if (currentIndex < flashcards.length - 1) {
-      currentIndex++;
-      renderQuestion();
-    } else {
-      alert("Bạn đã hoàn thành bài!");
-      currentIndex = 0;
-      // Tự động load lại để trộn bài lần nữa
-      loadDeck(document.getElementById('deck-selector').value);
-    }
-  }, 1500);
+  // KIỂM TRA TRẠNG THÁI AUTO-NEXT
+  const isAutoNext = document.getElementById('set-auto-next').checked;
+  if (isAutoNext) {
+    setTimeout(goToNextQuestion, 1500); // Đợi 1.5s tự động nhảy
+  } else {
+    // Hiện nút Tiếp theo để ấn thủ công
+    document.getElementById('next-btn-container').classList.remove('hidden');
+  }
 }
+
+// Hàm tách rời để dùng chung cho cả Auto và Bấm nút
+function goToNextQuestion() {
+  if (currentIndex < flashcards.length - 1) {
+    currentIndex++;
+    renderQuestion();
+  } else {
+    alert("Bạn đã hoàn thành bài!");
+    currentIndex = 0;
+    loadDeck(document.getElementById('deck-selector').value);
+  }
+}
+
+// Sự kiện bấm nút Next thủ công
+document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
 // ================= ÂM THANH NATIVE =================
 function playAudio(text, lang) {
@@ -128,30 +127,26 @@ function playAudio(text, lang) {
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = lang;
-  utterance.volume = 1.0;
   window.speechSynthesis.speak(utterance);
 }
-
 function playQuestionAudio() {
   const currentCard = flashcards[currentIndex];
   if (currentCard) playAudio(currentCard.hira_kata, 'ja-JP');
 }
 
-// ================= UI SETTINGS MODAL =================
+// ================= UI SETTINGS & CẬP NHẬT BIẾN CSS =================
 const modal = document.getElementById('settings-modal');
 const content = document.getElementById('settings-content');
 
 document.getElementById('btn-settings').addEventListener('click', () => {
-  modal.classList.remove('hidden');
-  modal.classList.add('flex');
+  modal.classList.remove('hidden'); modal.classList.add('flex');
   setTimeout(() => content.classList.add('open'), 10);
 });
 
 document.getElementById('btn-close-settings').addEventListener('click', () => {
   content.classList.remove('open');
   setTimeout(() => {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
+    modal.classList.add('hidden'); modal.classList.remove('flex');
   }, 300);
 });
 
@@ -159,5 +154,23 @@ document.getElementById('set-delay').addEventListener('input', (e) => {
   document.getElementById('delay-val').innerText = e.target.value + 's';
 });
 
-// Chạy mặc định bài 1 khi vừa mở web
+// Logic Lắng nghe thay đổi Cỡ chữ / Font chữ và Update vào CSS Variables
+const root = document.documentElement;
+
+const updateFont = (type, prop, value, displayId, suffix = '') => {
+  root.style.setProperty(`--${prop}-${type}`, value + suffix);
+  if(displayId) document.getElementById(displayId).innerText = value + suffix;
+};
+
+// Lắng nghe Size
+document.getElementById('fs-hira').addEventListener('input', (e) => updateFont('hira', 'fs', e.target.value, 'fs-hira-val', 'px'));
+document.getElementById('fs-kanji').addEventListener('input', (e) => updateFont('kanji', 'fs', e.target.value, 'fs-kanji-val', 'px'));
+document.getElementById('fs-mean').addEventListener('input', (e) => updateFont('mean', 'fs', e.target.value, 'fs-mean-val', 'px'));
+
+// Lắng nghe Family
+document.getElementById('ff-hira').addEventListener('change', (e) => updateFont('hira', 'ff', e.target.value));
+document.getElementById('ff-kanji').addEventListener('change', (e) => updateFont('kanji', 'ff', e.target.value));
+document.getElementById('ff-mean').addEventListener('change', (e) => updateFont('mean', 'ff', e.target.value));
+
+// Chạy bài đầu tiên
 loadDeck('data/bai1.json');
