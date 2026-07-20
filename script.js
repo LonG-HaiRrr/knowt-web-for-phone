@@ -3,7 +3,6 @@ let flashcards = [];
 let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
-let lobbyInterval = null;
 
 const lobbyScreen = document.getElementById('lobby-screen');
 const quizScreen = document.getElementById('quiz-screen');
@@ -13,32 +12,25 @@ function showLobby() {
   quizScreen.classList.remove('flex');
   lobbyScreen.classList.remove('hidden');
   lobbyScreen.classList.add('flex');
-  
-  fetchDeckList(); // Load ngay lập tức
-  // Kích hoạt lại bộ quét mỗi 10s khi đang ở trang chủ
-  lobbyInterval = setInterval(fetchDeckList, 10000); 
+  fetchDeckList(); // Load lại list mới nhất khi ra ngoài lobby
 }
 
 function showQuiz(fileUrl, deckName) {
-  clearInterval(lobbyInterval); // Tắt quét nền khi đang học
-  
   lobbyScreen.classList.add('hidden');
   lobbyScreen.classList.remove('flex');
   quizScreen.classList.remove('hidden');
   quizScreen.classList.add('flex');
 
-  // Đổi text chỉ để thông báo bài
   document.getElementById('current-deck-name').innerText = `◯ ${deckName.toUpperCase()}`;
   loadDeck(fileUrl);
 }
 
-// Bấm nút X thì thoát ra Lobby
 document.getElementById('btn-exit').addEventListener('click', showLobby);
 
 // ================= LẤY DANH SÁCH BÀI HỌC (LOBBY) =================
 async function fetchDeckList() {
   try {
-    // Thêm timestamp để trình duyệt không lấy cache cũ
+    // Chèn ?t= để trình duyệt luôn lấy data mới nhất từ server GitHub (bỏ Cache)
     const response = await fetch('data/list.json?t=' + new Date().getTime());
     if (!response.ok) throw new Error();
     const decks = await response.json();
@@ -57,14 +49,14 @@ async function fetchDeckList() {
       container.appendChild(btn);
     });
   } catch (error) {
-    document.getElementById('deck-list').innerHTML = `<p class="text-orange-400 text-center">Đang chờ quét file hoặc chưa chạy lệnh 'node auto_scan.js'</p>`;
+    document.getElementById('deck-list').innerHTML = `<p class="text-gray-400 text-center">Đang nạp dữ liệu từ GitHub...</p>`;
   }
 }
 
 // ================= LẤY DỮ LIỆU TỪ FILE JSON VÀ RENDER =================
 async function loadDeck(fileUrl) {
   try {
-    const response = await fetch(fileUrl);
+    const response = await fetch(fileUrl + '?t=' + new Date().getTime());
     if (!response.ok) throw new Error("File không tồn tại");
     const data = await response.json();
     
@@ -77,7 +69,7 @@ async function loadDeck(fileUrl) {
     }
   } catch (error) {
     console.error("Lỗi:", error);
-    document.getElementById('q-hira').innerText = "Lỗi tải file bài học!";
+    document.getElementById('q-hira').innerText = "Lỗi tải bài học!";
   }
 }
 
@@ -159,7 +151,7 @@ function goToNextQuestion() {
     renderQuestion();
   } else {
     alert("Bạn đã hoàn thành bài!");
-    showLobby(); // Học xong tự văng ra Lobby chọn bài khác
+    showLobby();
   }
 }
 
@@ -181,7 +173,6 @@ function playQuestionAudio() {
 const modal = document.getElementById('settings-modal');
 const content = document.getElementById('settings-content');
 
-// Mở settings từ cả Lobby và Quiz
 document.getElementById('btn-settings-lobby').addEventListener('click', openSettings);
 document.getElementById('btn-settings-quiz').addEventListener('click', openSettings);
 

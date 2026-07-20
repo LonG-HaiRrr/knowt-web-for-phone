@@ -1,0 +1,39 @@
+name: Auto Update Deck List
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**.json'
+      - '!data/list.json' # Bỏ qua list.json để tránh vòng lặp vô tận
+
+jobs:
+  update-list:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Cấp quyền cho bot tự động ghi đè file list.json lên repo
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Generate list.json using Python
+        run: |
+          python -c "
+          import os, json
+          data_dir = 'data'
+          if not os.path.exists(data_dir):
+              os.makedirs(data_dir)
+          files = [f for f in os.listdir(data_dir) if f.endswith('.json') and f != 'list.json']
+          decks = [{'file': f'data/{f}', 'name': f.replace('.json', '')} for f in files]
+          with open(os.path.join(data_dir, 'list.json'), 'w', encoding='utf-8') as f:
+              json.dump(decks, f, ensure_ascii=False, indent=2)
+          "
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/list.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update list.json" && git push)
