@@ -1,3 +1,5 @@
+
+/// version ok
 // ================= STATE HỆ THỐNG =================
 let flashcards = [];
 let currentIndex = 0;
