@@ -9,18 +9,21 @@
 </head>
 <body class="bg-[#111111] text-white font-sans pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] h-screen overflow-hidden flex flex-col relative">
 
-  <!-- LOBBY SCREEN -->
+  <!-- ================= LOBBY SCREEN ================= -->
   <div id="lobby-screen" class="flex-1 px-4 py-8 flex flex-col h-full overflow-y-auto w-full max-w-md mx-auto">
     <div class="flex items-center justify-between mb-8">
       <h1 class="text-3xl font-bold">Thư viện bài học</h1>
-      <button id="btn-settings-lobby" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
+      <div class="flex gap-3">
+        <button id="btn-open-import" class="w-10 h-10 bg-[#0070ef] rounded-full flex items-center justify-center text-xl hover:bg-blue-600 transition shadow-lg" title="Nhập dữ liệu">📥</button>
+        <button id="btn-settings-lobby" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
+      </div>
     </div>
     <div id="deck-list" class="flex flex-col gap-4">
        <!-- JS tự động tải danh sách vào đây -->
     </div>
   </div>
 
-  <!-- QUIZ SCREEN -->
+  <!-- ================= QUIZ SCREEN ================= -->
   <div id="quiz-screen" class="hidden flex-1 flex-col h-full overflow-hidden w-full max-w-md mx-auto">
     
     <div class="flex items-center justify-between px-4 py-3 shrink-0">
@@ -59,7 +62,7 @@
     </div>
   </div>
 
-  <!-- BẢNG SETTINGS -->
+  <!-- ================= BẢNG SETTINGS ================= -->
   <div id="settings-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex-col justify-end">
     <div class="bg-[#1c1c1e] rounded-t-[24px] p-6 border-t border-[#2c2c2e] transform transition-transform translate-y-full max-h-[85vh] overflow-y-auto" id="settings-content">
       
@@ -132,6 +135,68 @@
 
       </div>
     </div>
+  </div>
+
+  <!-- ================= GIAO DIỆN NHẬP DỮ LIỆU (IMPORT MODAL) ================= -->
+  <div id="import-modal" class="fixed inset-0 bg-[#161722] z-[100] hidden flex-col w-full h-full overflow-hidden">
+    
+    <!-- Header -->
+    <div class="flex justify-between items-center p-5 bg-[#1b1d29] border-b border-[#2a2c41] shrink-0">
+      <h2 class="text-lg font-bold text-white">Nhập dữ liệu. <span class="text-sm font-normal text-gray-400">Chép và dán dữ liệu ở đây (từ Word, Excel, Riki Export, v.v.)</span></h2>
+      <button id="btn-close-import" class="w-8 h-8 rounded-full bg-[#2a2c41] flex items-center justify-center hover:bg-[#3f4260] transition">✕</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 w-full max-w-5xl mx-auto">
+      
+      <!-- Textarea -->
+      <textarea id="import-textarea" class="w-full h-48 bg-[#1a1b27] border border-[#2a2c41] rounded-lg p-4 text-white outline-none focus:border-[#5865f2] transition font-sans resize-none placeholder-gray-600 shadow-inner" placeholder="Từ 1 Định nghĩa 1&#10;Từ 2 Định nghĩa 2&#10;Từ 3 Định nghĩa 3"></textarea>
+
+      <!-- Delimiter Settings -->
+      <div class="grid grid-cols-2 gap-8 text-sm">
+        <div class="flex flex-col gap-3">
+          <label class="font-bold text-white mb-1">Giữa thuật ngữ và định nghĩa</label>
+          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="tab" checked> Tab</label>
+          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="comma"> Phẩy</label>
+          <label class="radio-custom flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="term_def" value="custom"> 
+            <input type="text" id="custom-term-def" class="bg-[#2a2c41] border border-transparent rounded px-2 py-1 outline-none focus:border-[#5865f2] w-24 text-white placeholder-gray-500" placeholder="Tùy chỉnh">
+          </label>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <label class="font-bold text-white mb-1">Giữa các thẻ</label>
+          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="card_sep" value="newline" checked> Dòng mới</label>
+          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="card_sep" value="semicolon"> Chấm phẩy</label>
+          <label class="radio-custom flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="card_sep" value="custom"> 
+            <input type="text" id="custom-card-sep" class="bg-[#2a2c41] border border-transparent rounded px-2 py-1 outline-none focus:border-[#5865f2] w-24 text-white placeholder-gray-500" placeholder="Tùy chỉnh">
+          </label>
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="mt-2 flex flex-col gap-2 flex-1 min-h-[250px]">
+        <h3 class="font-bold text-lg text-white">Xem trước <span id="preview-count" class="text-sm font-normal text-gray-400">0 thẻ</span></h3>
+        <div id="import-preview-box" class="w-full flex-1 bg-black rounded-lg border border-[#2a2c41] p-4 overflow-y-auto flex flex-col gap-2">
+          <p class="text-gray-500 text-sm">Không có nội dung để xem trước</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Actions -->
+    <div class="p-5 bg-[#1b1d29] border-t border-[#2a2c41] flex justify-between items-center shrink-0">
+      <div class="flex items-center gap-2">
+        <span class="text-sm text-gray-400">Tên file:</span>
+        <input type="text" id="import-filename" class="bg-[#2a2c41] border border-transparent rounded px-3 py-2 outline-none focus:border-[#5865f2] text-white text-sm w-48" placeholder="vd: bai3" value="bai_moi">
+        <span class="text-sm text-gray-400">.json</span>
+      </div>
+      <div class="flex gap-3">
+        <button id="btn-cancel-import" class="px-6 py-2 bg-[#2a2c41] text-white rounded font-semibold hover:bg-[#3f4260] transition">Hủy nhập</button>
+        <button id="btn-save-import" class="px-6 py-2 bg-[#5865f2] text-white rounded font-semibold hover:bg-[#4752c4] transition">Lưu thành file JSON</button>
+      </div>
+    </div>
+
   </div>
 
   <script src="script.js"></script>

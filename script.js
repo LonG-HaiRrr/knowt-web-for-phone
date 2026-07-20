@@ -12,7 +12,7 @@ function showLobby() {
   quizScreen.classList.remove('flex');
   lobbyScreen.classList.remove('hidden');
   lobbyScreen.classList.add('flex');
-  fetchDeckList(); // Load lại list mới nhất khi ra ngoài lobby
+  fetchDeckList(); 
 }
 
 function showQuiz(fileUrl, deckName) {
@@ -20,8 +20,9 @@ function showQuiz(fileUrl, deckName) {
   lobbyScreen.classList.remove('flex');
   quizScreen.classList.remove('hidden');
   quizScreen.classList.add('flex');
-
-  document.getElementById('current-deck-name').innerText = `◯ ${deckName.toUpperCase()}`;
+  
+  // Đã bỏ lệnh toUpperCase() để giữ nguyên chữ hoa/thường của tên file
+  document.getElementById('current-deck-name').innerText = `◯ ${deckName}`;
   loadDeck(fileUrl);
 }
 
@@ -30,7 +31,6 @@ document.getElementById('btn-exit').addEventListener('click', showLobby);
 // ================= LẤY DANH SÁCH BÀI HỌC (LOBBY) =================
 async function fetchDeckList() {
   try {
-    // Chèn ?t= để trình duyệt luôn lấy data mới nhất từ server GitHub (bỏ Cache)
     const response = await fetch('data/list.json?t=' + new Date().getTime());
     if (!response.ok) throw new Error();
     const decks = await response.json();
@@ -42,7 +42,7 @@ async function fetchDeckList() {
       const btn = document.createElement('button');
       btn.className = "w-full bg-[#1c1c1e] hover:bg-[#2c2c2e] border-2 border-[#2c2c2e] rounded-2xl p-5 text-left flex justify-between items-center transition-colors shadow-lg";
       btn.innerHTML = `
-        <span class="text-xl font-bold text-gray-200">${deck.name.toUpperCase()}</span>
+        <span class="text-xl font-bold text-gray-200">${deck.name}</span>
         <span class="text-blue-500 font-bold">Bắt đầu ➔</span>
       `;
       btn.onclick = () => showQuiz(deck.file, deck.name);
@@ -170,21 +170,21 @@ function playQuestionAudio() {
 }
 
 // ================= UI SETTINGS & CẬP NHẬT BIẾN CSS =================
-const modal = document.getElementById('settings-modal');
-const content = document.getElementById('settings-content');
+const modalSettings = document.getElementById('settings-modal');
+const contentSettings = document.getElementById('settings-content');
 
 document.getElementById('btn-settings-lobby').addEventListener('click', openSettings);
 document.getElementById('btn-settings-quiz').addEventListener('click', openSettings);
 
 function openSettings() {
-  modal.classList.remove('hidden'); modal.classList.add('flex');
-  setTimeout(() => content.classList.add('open'), 10);
+  modalSettings.classList.remove('hidden'); modalSettings.classList.add('flex');
+  setTimeout(() => contentSettings.classList.add('open'), 10);
 }
 
 document.getElementById('btn-close-settings').addEventListener('click', () => {
-  content.classList.remove('open');
+  contentSettings.classList.remove('open');
   setTimeout(() => {
-    modal.classList.add('hidden'); modal.classList.remove('flex');
+    modalSettings.classList.add('hidden'); modalSettings.classList.remove('flex');
   }, 300);
 });
 
@@ -205,6 +205,117 @@ document.getElementById('fs-mean').addEventListener('input', (e) => updateFont('
 document.getElementById('ff-hira').addEventListener('change', (e) => updateFont('hira', 'ff', e.target.value));
 document.getElementById('ff-kanji').addEventListener('change', (e) => updateFont('kanji', 'ff', e.target.value));
 document.getElementById('ff-mean').addEventListener('change', (e) => updateFont('mean', 'ff', e.target.value));
+
+// ================= GIAO DIỆN NHẬP DỮ LIỆU (IMPORT LOGIC) =================
+const importModal = document.getElementById('import-modal');
+let parsedImportData = [];
+
+document.getElementById('btn-open-import').addEventListener('click', () => {
+  importModal.classList.remove('hidden');
+  importModal.classList.add('flex');
+});
+
+const closeImport = () => {
+  importModal.classList.add('hidden');
+  importModal.classList.remove('flex');
+  document.getElementById('import-textarea').value = '';
+  renderImportPreview();
+};
+
+document.getElementById('btn-close-import').addEventListener('click', closeImport);
+document.getElementById('btn-cancel-import').addEventListener('click', closeImport);
+
+// Lắng nghe thao tác gõ và đổi delimiter để tự parse
+const importInputs = document.querySelectorAll('#import-textarea, input[name="term_def"], input[name="card_sep"], #custom-term-def, #custom-card-sep');
+importInputs.forEach(el => el.addEventListener('input', renderImportPreview));
+
+function getDelimiter(name, customId) {
+  const selected = document.querySelector(`input[name="${name}"]:checked`).value;
+  if (selected === 'tab') return '\t';
+  if (selected === 'comma') return ',';
+  if (selected === 'newline') return '\n';
+  if (selected === 'semicolon') return ';';
+  return document.getElementById(customId).value || (name === 'term_def' ? '\t' : '\n');
+}
+
+function renderImportPreview() {
+  const text = document.getElementById('import-textarea').value;
+  const termDefSep = getDelimiter('term_def', 'custom-term-def');
+  const cardSep = getDelimiter('card_sep', 'custom-card-sep');
+  
+  const previewBox = document.getElementById('import-preview-box');
+  const previewCount = document.getElementById('preview-count');
+  
+  if (!text.trim()) {
+    previewBox.innerHTML = '<p class="text-gray-500 text-sm">Không có nội dung để xem trước</p>';
+    previewCount.innerText = '0 thẻ';
+    parsedImportData = [];
+    return;
+  }
+
+  const rawCards = text.split(cardSep).filter(c => c.trim() !== '');
+  parsedImportData = [];
+  let html = '';
+
+  rawCards.forEach((raw, index) => {
+    const parts = raw.split(termDefSep);
+    if (parts.length >= 2) {
+      const termRaw = parts[0].trim();
+      const meaning = parts.slice(1).join(termDefSep).trim(); // Ghép lại nếu nghĩa chứa kí tự trùng delimiter
+      
+      let hira = termRaw;
+      let kanji = "";
+      
+      // Bóc tách Kanji nằm trong ngoặc đơn. Vd: おいしい (美味しい)
+      // Chấp nhận ngoặc tròn () thường hoặc ngoặc tròn full-width của Nhật （）
+      const regex = /^(.*?)(?:\s*[\(（](.*?)[\)）])?$/;
+      const match = termRaw.match(regex);
+      
+      if (match) {
+        hira = match[1].trim();
+        kanji = match[2] ? match[2].trim() : "";
+      }
+
+      parsedImportData.push({ id: index + 1, hira_kata: hira, kanji: kanji, meaning: meaning });
+      
+      html += `
+        <div class="flex border-b border-[#2a2c41] pb-2 mb-2">
+          <div class="w-1/2 pr-2 border-r border-[#2a2c41]">
+            <div class="font-bold text-blue-400">${hira}</div>
+            <div class="text-gray-500 text-sm">${kanji}</div>
+          </div>
+          <div class="w-1/2 pl-2 text-orange-400 text-sm whitespace-pre-wrap">${meaning}</div>
+        </div>
+      `;
+    }
+  });
+
+  previewBox.innerHTML = html || '<p class="text-red-500 text-sm">Không thể phân tích dữ liệu. Kiểm tra lại dấu phân cách.</p>';
+  previewCount.innerText = `${parsedImportData.length} thẻ`;
+}
+
+// Lưu ra file JSON
+document.getElementById('btn-save-import').addEventListener('click', () => {
+  if (parsedImportData.length === 0) {
+    alert("Chưa có dữ liệu hợp lệ để lưu!");
+    return;
+  }
+  
+  let fileName = document.getElementById('import-filename').value.trim();
+  if (!fileName) fileName = "bai_moi";
+  if (!fileName.endsWith('.json')) fileName += '.json';
+
+  const jsonString = JSON.stringify(parsedImportData, null, 2);
+  const blob = new Blob([jsonString], { type: 'application/json' });
+  
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = fileName;
+  link.click();
+  
+  alert("Lưu thành công file " + fileName + ". Hãy đẩy file này vào thư mục data/ trên GitHub nhé!");
+  closeImport();
+});
 
 // ================= KHỞI ĐỘNG =================
 showLobby();
