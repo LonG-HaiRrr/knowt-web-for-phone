@@ -1,8 +1,10 @@
 // ================= STATE & ĐIỀU HƯỚNG MÀN HÌNH =================
 let flashcards = [];
+let fullDeck = []; // Biến lưu toàn bộ thẻ
 let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
+let currentGoogleAudio = null; // Quản lý Google Audio tránh đè tiếng
 
 const lobbyScreen = document.getElementById('lobby-screen');
 const quizScreen = document.getElementById('quiz-screen');
@@ -12,6 +14,13 @@ function showLobby() {
   quizScreen.classList.remove('flex');
   lobbyScreen.classList.remove('hidden');
   lobbyScreen.classList.add('flex');
+  
+  fullDeck = []; 
+  if (currentGoogleAudio) {
+    currentGoogleAudio.pause();
+    currentGoogleAudio.currentTime = 0;
+  }
+  
   fetchDeckList(); 
 }
 
@@ -60,9 +69,9 @@ async function loadDeck(fileUrl) {
     const data = await response.json();
     
     if (data && data.length >= 4) {
-      flashcards = data.sort(() => 0.5 - Math.random());
-      currentIndex = 0;
-      renderQuestion();
+      // Đánh dấu số lần học (seen = 0)
+      fullDeck = data.map(card => ({...card, seen: 0}));
+      startSession();
     } else {
       document.getElementById('q-hira').innerText = "Cần ít nhất 4 từ/file";
     }
@@ -72,9 +81,29 @@ async function loadDeck(fileUrl) {
   }
 }
 
+function startSession() {
+  if (fullDeck.length === 0) return;
+
+  const limitInput = parseInt(document.getElementById('set-question-limit').value);
+  const limit = (isNaN(limitInput) || limitInput < 4) ? 20 : limitInput;
+
+  // Lọc thẻ chưa học hoặc ít học lên đầu, bằng nhau thì trộn
+  fullDeck.sort((a, b) => {
+    if (a.seen === b.seen) return 0.5 - Math.random();
+    return a.seen - b.seen;
+  });
+
+  flashcards = fullDeck.slice(0, limit);
+  flashcards.forEach(card => card.seen += 1);
+
+  currentIndex = 0;
+  renderQuestion();
+}
+
 function generateMultipleChoice(correctCard) {
   let options = [correctCard];
-  let distractors = flashcards.filter(c => c.id !== correctCard.id);
+  // Lấy các đáp án gây nhiễu từ toàn bộ bài fullDeck
+  let distractors = fullDeck.filter(c => c.id !== correctCard.id);
   distractors = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
   options.push(...distractors);
   return options.sort(() => 0.5 - Math.random());
@@ -111,7 +140,7 @@ function renderQuestion() {
   if (document.getElementById('set-auto-q').checked) {
     if (timeoutId) clearTimeout(timeoutId);
     const delayMs = parseFloat(document.getElementById('set-delay').value) * 1000;
-    timeoutId = setTimeout(() => playAudio(currentCard.hira_kata, 'ja-JP'), delayMs);
+    timeoutId = setTimeout(() => playQuestionAudio(), delayMs);
   }
 }
 
@@ -133,7 +162,7 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
-    playAudio(currentCard.meaning.replace(/\\n/g, ' '), 'vi-VN');
+    playAudioGoogle(currentCard.meaning.replace(/\\n/g, ' '), 'vi'); // Đáp án đọc tiếng Việt
   }
 
   const isAutoNext = document.getElementById('set-auto-next').checked;
@@ -150,23 +179,62 @@ function goToNextQuestion() {
     currentIndex++;
     renderQuestion();
   } else {
-    showLobby();
+    // Trộn 20 thẻ tiếp theo thay vì văng ra Thư viện
+    startSession();
   }
 }
 
 document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
-function playAudio(text, lang) {
+// ================= API GOOGLE DỊCH MỚI (VƯỢT LỖI 403 TRÊN WEB) =================
+function playAudioGoogle(text, langCode) {
   if (!text) return;
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = lang;
-  window.speechSynthesis.speak(utterance);
+  if (currentGoogleAudio) {
+    currentGoogleAudio.pause();
+    currentGoogleAudio.currentTime = 0;
+  }
+  
+  // Dùng api googleapis với client=gtx để không bị chặn bởi bảo mật Web CORS
+  const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=${langCode}&q=${encodeURIComponent(text)}`;
+  
+  currentGoogleAudio = new Audio();
+  currentGoogleAudio.referrerPolicy = "no-referrer"; // Lệnh cực kỳ quan trọng để không bị chặn
+  currentGoogleAudio.src = url;
+  
+  currentGoogleAudio.onerror = () => {
+    // Fallback khi mất mạng
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = (langCode === 'vi') ? 'vi-VN' : 'ja-JP';
+    window.speechSynthesis.speak(utterance);
+  };
+  
+  currentGoogleAudio.play().catch(e => console.log(e));
 }
+
+function playAudio(text, lang) {
+  // Để tương thích ngược, map code lang cũ sang mã của Google
+  const code = lang.includes('vi') ? 'vi' : 'ja';
+  playAudioGoogle(text, code);
+}
+
 function playQuestionAudio() {
   const currentCard = flashcards[currentIndex];
-  if (currentCard) playAudio(currentCard.hira_kata, 'ja-JP');
+  if (currentCard) {
+    const voiceSelect = document.getElementById('set-voice');
+    const voice = voiceSelect ? voiceSelect.value : 'ja';
+    playAudioGoogle(currentCard.hira_kata, voice);
+  }
 }
+
+// BẮT PHÍM TẮT ĐỌC (NUMPAD)
+document.addEventListener('keydown', (e) => {
+  if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+  if (e.code === 'Numpad0' || e.code === 'NumpadDecimal') {
+      playQuestionAudio();
+  }
+}, true);
+
 
 // ================= UI SETTINGS & CẬP NHẬT BIẾN CSS =================
 const modalSettings = document.getElementById('settings-modal');

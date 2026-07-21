@@ -57,10 +57,17 @@
           </div>
         </div>
 
+
+
+
         <div class="mb-6 shrink-0">
-          <h1 id="q-hira" class="font-bold mb-3 transition-all">...</h1>
-          <h2 id="q-kanji" class="text-gray-300 transition-all">...</h2>
+          <h1 id="q-hira" class="font-bold mb-3 transition-all" style="display: flex; justify-content: center !important; align-items: center !important;">...</h1>
+          <h2 id="q-kanji" class="text-gray-300 transition-all" style="display: flex; justify-content: center !important; align-items: center !important;">...</h2>
         </div>
+
+          <div class="nut_to" style="height: 250px; weight: 250px">
+            <button class="hover:text-white transition" onclick="playQuestionAudio()" style="scale:5 ; margin:auto; transform: translateX(45px) translateY(25px);" >🔊</button>
+          </div>
 
         <div id="options-container" class="flex flex-col gap-3 mt-auto shrink-0"></div>
 
@@ -81,6 +88,23 @@
       </div>
 
       <div class="flex flex-col gap-4">
+
+        <!-- ===== THÊM BLOCK MỚI: CHỌN GIỚI HẠN & GIỌNG NÓI ===== -->
+        <div class="flex justify-between items-center bg-[#1c2c36] p-3 rounded-xl border border-[#3ca3f0]">
+          <span class="font-bold text-[#3ca3f0]">Số thẻ học mỗi vòng</span>
+          <input type="number" id="set-question-limit" value="20" min="4" class="w-16 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-center">
+        </div>
+        <div class="flex justify-between items-center bg-[#28102a] p-3 rounded-xl border border-[#9c27b0]">
+          <span class="font-bold text-[#d685af]">Giọng đọc (Google)</span>
+          <select id="set-voice" class="w-28 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none">
+            <option value="ja">Nhật Bản</option>
+            <option value="vi">Việt Nam</option>
+            <option value="en">Tiếng Anh</option>
+            <option value="zh-CN">Tiếng Trung</option>
+          </select>
+        </div>
+        <!-- ===== KẾT THÚC THÊM ===== -->
+
         <div class="flex justify-between items-center bg-[#2c1c36] p-3 rounded-xl border border-[#442c4f]">
           <span class="font-bold text-[#d685af]">Tự động qua câu</span>
           <input type="checkbox" id="set-auto-next" class="w-5 h-5 accent-pink-500 cursor-pointer">
