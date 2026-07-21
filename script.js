@@ -1,10 +1,14 @@
 // ================= STATE & ĐIỀU HƯỚNG MÀN HÌNH =================
 let flashcards = [];
-let fullDeck = []; // Biến lưu toàn bộ thẻ
+let fullDeck = []; 
 let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
-let currentGoogleAudio = new Audio(); // [ĐÃ SỬA] Khởi tạo sẵn Audio tĩnh để vượt rào Mobile
+
+// [CẬP NHẬT] Tạo thẻ Audio tĩnh và cờ đánh dấu đã Unlock
+const currentGoogleAudio = new Audio();
+currentGoogleAudio.setAttribute('playsinline', ''); 
+let isAudioUnlocked = false;
 
 const lobbyScreen = document.getElementById('lobby-screen');
 const quizScreen = document.getElementById('quiz-screen');
@@ -16,19 +20,23 @@ function showLobby() {
   lobbyScreen.classList.add('flex');
   
   fullDeck = []; 
-  if (currentGoogleAudio) {
-    currentGoogleAudio.pause();
-    currentGoogleAudio.currentTime = 0;
-  }
+  currentGoogleAudio.pause();
+  currentGoogleAudio.currentTime = 0;
   
   fetchDeckList(); 
 }
 
 function showQuiz(fileUrl, deckName) {
-  // [ĐÃ SỬA] Mở khóa Audio ngay khi người dùng chạm vào nút Bắt đầu
-  currentGoogleAudio.play().then(() => {
-    currentGoogleAudio.pause();
-  }).catch(e => console.log("Đang chờ tương tác để mở khóa audio"));
+  // [TRICK LÁCH LUẬT] Phát file âm thanh im lặng (Base64) để ép trình duyệt mở khóa Audio API
+  if (!isAudioUnlocked) {
+    currentGoogleAudio.src = 'data:audio/mp3;base64,//OExAAAAANIAAAAAExBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq';
+    currentGoogleAudio.play().then(() => {
+      isAudioUnlocked = true;
+    }).catch(e => console.log("Đang chờ tương tác để unlock"));
+    
+    // Đánh thức luôn cả Web Speech API
+    window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));
+  }
 
   lobbyScreen.classList.add('hidden');
   lobbyScreen.classList.remove('flex');
@@ -74,14 +82,12 @@ async function loadDeck(fileUrl) {
     const data = await response.json();
     
     if (data && data.length >= 4) {
-      // Đánh dấu số lần học (seen = 0)
       fullDeck = data.map(card => ({...card, seen: 0}));
       startSession();
     } else {
       document.getElementById('q-hira').innerText = "Cần ít nhất 4 từ/file";
     }
   } catch (error) {
-    console.error("Lỗi:", error);
     document.getElementById('q-hira').innerText = "Lỗi tải bài học!";
   }
 }
@@ -92,7 +98,6 @@ function startSession() {
   const limitInput = parseInt(document.getElementById('set-question-limit').value);
   const limit = (isNaN(limitInput) || limitInput < 4) ? 20 : limitInput;
 
-  // Lọc thẻ chưa học hoặc ít học lên đầu, bằng nhau thì trộn
   fullDeck.sort((a, b) => {
     if (a.seen === b.seen) return 0.5 - Math.random();
     return a.seen - b.seen;
@@ -107,7 +112,6 @@ function startSession() {
 
 function generateMultipleChoice(correctCard) {
   let options = [correctCard];
-  // Lấy các đáp án gây nhiễu từ toàn bộ bài fullDeck
   let distractors = fullDeck.filter(c => c.id !== correctCard.id);
   distractors = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
   options.push(...distractors);
@@ -167,7 +171,7 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
-    playAudioGoogle(currentCard.meaning.replace(/\\n/g, ' '), 'vi'); // Đáp án đọc tiếng Việt
+    playCustomAudio(currentCard.meaning.replace(/\\n/g, ' '), 'gg-vi'); // Mặc định đáp án đọc TV bằng GG
   }
 
   const isAutoNext = document.getElementById('set-auto-next').checked;
@@ -178,57 +182,70 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
   }
 }
 
-// Hàm tắt các thông báo vì nếu hết bài tự chuyển màn hình, tự hiểu
 function goToNextQuestion() {
   if (currentIndex < flashcards.length - 1) {
     currentIndex++;
     renderQuestion();
   } else {
-    // Trộn 20 thẻ tiếp theo thay vì văng ra Thư viện
     startSession();
   }
 }
 
 document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
-// ================= API GOOGLE DỊCH MỚI (VƯỢT LỖI 403 TRÊN WEB) =================
-function playAudioGoogle(text, langCode) {
+// ================= HỆ THỐNG ÂM THANH MỚI (LÁCH AUTO-PLAY & ĐA TÙY CHỌN) =================
+function playCustomAudio(text, voiceSetting) {
   if (!text) return;
-  
-  // [ĐÃ SỬA] Dừng âm thanh cũ (không tạo mới new Audio)
-  currentGoogleAudio.pause();
-  currentGoogleAudio.currentTime = 0;
-  
-  // Dùng api googleapis với client=gtx để không bị chặn bởi bảo mật Web CORS
-  const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=${langCode}&q=${encodeURIComponent(text)}`;
-  
-  // Nạp link vào thẻ Audio dùng chung
-  currentGoogleAudio.referrerPolicy = "no-referrer"; 
-  currentGoogleAudio.src = url;
-  
-  currentGoogleAudio.onerror = () => {
-    // Fallback khi mất mạng
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = (langCode === 'vi') ? 'vi-VN' : 'ja-JP';
-    window.speechSynthesis.speak(utterance);
-  };
-  
-  currentGoogleAudio.play().catch(e => console.log(e));
+
+  // Cắt chuỗi setting (vd: 'gg-ja' -> engine: 'gg', langCode: 'ja')
+  const parts = voiceSetting.split('-');
+  const engine = parts[0]; 
+  const langCode = parts.slice(1).join('-'); 
+
+  if (engine === 'gg') {
+    // --- CHẾ ĐỘ 1: GOOGLE DỊCH ---
+    currentGoogleAudio.pause();
+    currentGoogleAudio.currentTime = 0;
+    
+    const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=${langCode}&q=${encodeURIComponent(text)}`;
+    currentGoogleAudio.referrerPolicy = "no-referrer"; 
+    currentGoogleAudio.src = url;
+    
+    // Nếu Google chặn mạng hoặc Cốc Cốc ép lỗi, dự phòng ngay lập tức sang giọng máy
+    currentGoogleAudio.onerror = () => {
+      console.log("Cốc Cốc chặn Google TTS, chuyển sang Web Speech API...");
+      playSystemVoice(text, langCode);
+    };
+    
+    currentGoogleAudio.play().catch(e => {
+      console.log("Auto-play bị chặn, gọi giọng hệ thống cứu viện:", e);
+      playSystemVoice(text, langCode);
+    });
+    
+  } else {
+    // --- CHẾ ĐỘ 2: GIỌNG HỆ THỐNG MẶC ĐỊNH ---
+    playSystemVoice(text, langCode);
+  }
 }
 
-function playAudio(text, lang) {
-  // Để tương thích ngược, map code lang cũ sang mã của Google
-  const code = lang.includes('vi') ? 'vi' : 'ja';
-  playAudioGoogle(text, code);
+function playSystemVoice(text, langCode) {
+  window.speechSynthesis.cancel(); // Ngắt câu cũ nếu đang đọc dở
+  const utterance = new SpeechSynthesisUtterance(text);
+  
+  if (langCode.includes('vi')) utterance.lang = 'vi-VN';
+  else if (langCode.includes('ja')) utterance.lang = 'ja-JP';
+  else if (langCode.includes('en')) utterance.lang = 'en-US';
+  else if (langCode.includes('zh')) utterance.lang = 'zh-CN';
+  
+  window.speechSynthesis.speak(utterance);
 }
 
 function playQuestionAudio() {
   const currentCard = flashcards[currentIndex];
   if (currentCard) {
     const voiceSelect = document.getElementById('set-voice');
-    const voice = voiceSelect ? voiceSelect.value : 'ja';
-    playAudioGoogle(currentCard.hira_kata, voice);
+    const voiceSetting = voiceSelect ? voiceSelect.value : 'gg-ja';
+    playCustomAudio(currentCard.hira_kata, voiceSetting);
   }
 }
 
@@ -364,9 +381,8 @@ function renderImportPreview() {
   previewCount.innerText = `${parsedImportData.length} thẻ`;
 }
 
-// Bắt sự kiện LƯU FILE JSON (Mở hộp thoại Save As hoặc Download tuỳ trình duyệt)
 document.getElementById('btn-save-import').addEventListener('click', async () => {
-  if (parsedImportData.length === 0) return; // Silent return nếu rỗng
+  if (parsedImportData.length === 0) return; 
   
   let fileName = document.getElementById('import-filename').value.trim();
   if (!fileName) fileName = "bai_moi";
@@ -375,7 +391,6 @@ document.getElementById('btn-save-import').addEventListener('click', async () =>
   const jsonString = JSON.stringify(parsedImportData, null, 2);
 
   try {
-    // API chọn thư mục lưu (Khả dụng trên PC Chrome/Edge/Cốc Cốc)
     if (window.showSaveFilePicker) {
       const fileHandle = await window.showSaveFilePicker({
         suggestedName: fileName,
@@ -389,7 +404,6 @@ document.getElementById('btn-save-import').addEventListener('click', async () =>
       await writable.close();
       closeImport();
     } else {
-      // Fallback cho iPhone/Điện thoại hoặc trình duyệt không hỗ trợ showSaveFilePicker
       const blob = new Blob([jsonString], { type: 'application/json' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
@@ -398,7 +412,6 @@ document.getElementById('btn-save-import').addEventListener('click', async () =>
       closeImport();
     }
   } catch (err) {
-    // Silent catch (ví dụ người dùng mở hộp thoại lên nhưng bấm Hủy)
     console.error("Đã hủy lưu:", err);
   }
 });
