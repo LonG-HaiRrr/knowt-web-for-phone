@@ -4,7 +4,7 @@ let fullDeck = []; // Biến lưu toàn bộ thẻ
 let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
-let currentGoogleAudio = null; // Quản lý Google Audio tránh đè tiếng
+let currentGoogleAudio = new Audio(); // [ĐÃ SỬA] Khởi tạo sẵn Audio tĩnh để vượt rào Mobile
 
 const lobbyScreen = document.getElementById('lobby-screen');
 const quizScreen = document.getElementById('quiz-screen');
@@ -25,6 +25,11 @@ function showLobby() {
 }
 
 function showQuiz(fileUrl, deckName) {
+  // [ĐÃ SỬA] Mở khóa Audio ngay khi người dùng chạm vào nút Bắt đầu
+  currentGoogleAudio.play().then(() => {
+    currentGoogleAudio.pause();
+  }).catch(e => console.log("Đang chờ tương tác để mở khóa audio"));
+
   lobbyScreen.classList.add('hidden');
   lobbyScreen.classList.remove('flex');
   quizScreen.classList.remove('hidden');
@@ -189,16 +194,16 @@ document.getElementById('btn-manual-next').addEventListener('click', goToNextQue
 // ================= API GOOGLE DỊCH MỚI (VƯỢT LỖI 403 TRÊN WEB) =================
 function playAudioGoogle(text, langCode) {
   if (!text) return;
-  if (currentGoogleAudio) {
-    currentGoogleAudio.pause();
-    currentGoogleAudio.currentTime = 0;
-  }
+  
+  // [ĐÃ SỬA] Dừng âm thanh cũ (không tạo mới new Audio)
+  currentGoogleAudio.pause();
+  currentGoogleAudio.currentTime = 0;
   
   // Dùng api googleapis với client=gtx để không bị chặn bởi bảo mật Web CORS
   const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=${langCode}&q=${encodeURIComponent(text)}`;
   
-  currentGoogleAudio = new Audio();
-  currentGoogleAudio.referrerPolicy = "no-referrer"; // Lệnh cực kỳ quan trọng để không bị chặn
+  // Nạp link vào thẻ Audio dùng chung
+  currentGoogleAudio.referrerPolicy = "no-referrer"; 
   currentGoogleAudio.src = url;
   
   currentGoogleAudio.onerror = () => {
