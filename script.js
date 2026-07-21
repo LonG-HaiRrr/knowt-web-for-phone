@@ -166,6 +166,7 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
+    // Đáp án tiếng Việt ép đọc chuẩn
     playCustomAudio(currentCard.meaning.replace(/\\n/g, ' '), true); 
   }
 
@@ -188,7 +189,7 @@ function goToNextQuestion() {
 document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
 
-// ================= HỆ THỐNG ÂM THANH MỚI: BÁ ĐẠO LÁCH LUẬT APPLE =================
+// ================= HỆ THỐNG ÂM THANH MỚI: ÉP BUỘC CHỌN TRỰC TIẾP GIỌNG XỊN =================
 
 let availableVoices = [];
 let isDefaultVoiceSet = false;
@@ -198,68 +199,110 @@ function loadDynamicVoices() {
   const voiceSelect = document.getElementById('set-voice');
   if (!voiceSelect) return;
   
+  // Đã xóa chế độ Auto. Dropdown giờ chỉ hiển thị giọng thật.
   voiceSelect.innerHTML = '';
   
-  // 1. HACK CHO APPLE (Ép gọi giọng mặc định đã Tick trong Settings máy)
-  const optGroupApple = document.createElement('optgroup');
-  optGroupApple.label = "🍏 CỦA RIÊNG IPHONE (Lách luật Apple)";
-  optGroupApple.innerHTML = `
-    <option value="ios-default-ja">🔥 Dùng Giọng Đã Tick (Otoya/Siri)</option>
-  `;
-  voiceSelect.appendChild(optGroupApple);
-
-  // 2. CHÈN GIỌNG CLOUD 
+  // 1. CHÈN GIỌNG CLOUD 
   const optGroupCloud = document.createElement('optgroup');
-  optGroupCloud.label = "☁️ Giọng Đám Mây (Cần mạng - Xịn)";
+  optGroupCloud.label = "☁️ Giọng Đám Mây (Cần mạng - Chuẩn nhất)";
   optGroupCloud.innerHTML = `
     <option value="api-ja">⭐ Google Mạng - Tiếng Nhật</option>
-    <option value="api-vi">⭐ Google Mạng - Tiếng Việt</option>
     <option value="api-en">⭐ Google Mạng - Tiếng Anh</option>
     <option value="api-zh-CN">⭐ Google Mạng - Tiếng Trung</option>
+    <option value="api-vi">⭐ Google Mạng - Tiếng Việt</option>
   `;
   voiceSelect.appendChild(optGroupCloud);
 
-  // 3. GIỌNG HỆ THỐNG MÀ TRÌNH DUYỆT NHÌN THẤY (Mấy cái cùi cùi như Kyoko)
-  if (availableVoices.length > 0) {
-      const groups = {
-        ja: { label: "🇯🇵 Tiếng Nhật (Hệ thống thấy được)", voices: [] },
-        en: { label: "🇺🇸 Tiếng Anh (Hệ thống thấy được)", voices: [] },
-        zh: { label: "🇨🇳 Tiếng Trung (Hệ thống thấy được)", voices: [] },
-        vi: { label: "🇻🇳 Tiếng Việt (Hệ thống thấy được)", voices: [] }
-      };
+  if (availableVoices.length === 0) return;
 
-      availableVoices.forEach((voice, index) => {
-        const lang = voice.lang.toLowerCase();
-        let category = null;
-        
-        if (lang.includes('ja')) category = 'ja';
-        else if (lang.includes('en')) category = 'en';
-        else if (lang.includes('zh')) category = 'zh';
-        else if (lang.includes('vi')) category = 'vi';
+  // 2. PHÂN LOẠI GIỌNG HỆ THỐNG ĐANG CÓ TRÊN MÁY
+  const groups = {
+    ja: { label: "🇯🇵 Tiếng Nhật (Hệ thống)", voices: [] },
+    en: { label: "🇺🇸 Tiếng Anh (Hệ thống)", voices: [] },
+    zh: { label: "🇨🇳 Tiếng Trung (Hệ thống)", voices: [] },
+    vi: { label: "🇻🇳 Tiếng Việt (Hệ thống)", voices: [] },
+    other: { label: "🌍 Ngôn ngữ khác", voices: [] }
+  };
 
-        if (category) {
-            groups[category].voices.push({ index: index, name: voice.name });
+  let bestJaVoiceIndex = 'api-ja'; // Fallback nếu máy không có giọng nào
+  let highestScore = -1;
+
+  availableVoices.forEach((voice, index) => {
+    const lang = voice.lang.toLowerCase();
+    let category = 'other';
+    
+    if (lang.includes('ja')) category = 'ja';
+    else if (lang.includes('en')) category = 'en';
+    else if (lang.includes('zh')) category = 'zh';
+    else if (lang.includes('vi')) category = 'vi';
+
+    // Đánh dấu icon
+    let marker = "";
+    const nameLow = voice.name.toLowerCase();
+    
+    if (nameLow.includes('siri')) marker = "🍎 "; 
+    else if (nameLow.includes('otoya') || nameLow.includes('premium') || nameLow.includes('enhanced') || nameLow.includes('nâng cao')) {
+        marker = "🔥 "; 
+    } else if (nameLow.includes('google')) {
+        marker = "⭐ "; 
+    }
+
+    groups[category].voices.push({ 
+        index: index, 
+        name: `${marker}${voice.name} (${voice.lang})`, 
+        originalName: voice.name 
+    });
+
+    // TÌM KIẾM ĐỈNH CAO: Chấm điểm để chọn mặc định
+    if (category === 'ja') {
+        let score = 0;
+        if (nameLow.includes('siri') && nameLow.includes('2')) score = 100;
+        else if (nameLow.includes('siri')) score = 90;
+        else if (nameLow.includes('otoya') && (nameLow.includes('nâng cao') || nameLow.includes('premium') || nameLow.includes('enhanced'))) score = 80;
+        else if (nameLow.includes('otoya')) score = 70; // Ngay cả khi Apple nuốt chữ "Nâng cao", nó vẫn ưu tiên Otoya
+        else if (nameLow.includes('google')) score = 50;
+        else if (nameLow.includes('kyoko')) score = 10;
+
+        if (score > highestScore) {
+            highestScore = score;
+            bestJaVoiceIndex = index;
         }
-      });
+    }
+  });
 
-      ['ja', 'en', 'zh', 'vi'].forEach(key => {
-        if (groups[key].voices.length > 0) {
-          const optGroup = document.createElement('optgroup');
-          optGroup.label = groups[key].label;
-          groups[key].voices.forEach(v => {
-            const option = document.createElement('option');
-            option.value = v.index;
-            option.textContent = v.name;
-            optGroup.appendChild(option);
-          });
-          voiceSelect.appendChild(optGroup);
-        }
+  // 3. SẮP XẾP LẠI (Siri -> Otoya -> Kyoko)
+  for (let key in groups) {
+      groups[key].voices.sort((a, b) => {
+          const getScore = (name) => {
+              let score = 0;
+              const n = name.toLowerCase();
+              if (n.includes('siri')) score += (n.includes('2') ? 100 : 90); 
+              else if (n.includes('otoya')) score += ((n.includes('nâng cao') || n.includes('enhanced')) ? 80 : 70);
+              else if (n.includes('kyoko')) score += 10;
+              return score;
+          };
+          return getScore(b.originalName) - getScore(a.originalName);
       });
   }
 
-  // TỰ ĐỘNG CHỐT CÁI HACK APPLE LÀM MẶC ĐỊNH
+  // 4. THÊM VÀO DROPDOWN
+  ['ja', 'en', 'zh', 'vi'].forEach(key => {
+    if (groups[key].voices.length > 0) {
+      const optGroup = document.createElement('optgroup');
+      optGroup.label = groups[key].label;
+      groups[key].voices.forEach(v => {
+        const option = document.createElement('option');
+        option.value = v.index;
+        option.textContent = v.name;
+        optGroup.appendChild(option);
+      });
+      voiceSelect.appendChild(optGroup);
+    }
+  });
+
+  // TỰ ĐỘNG CHỐT GIỌNG ĐỈNH NHẤT KHI VỪA MỞ WEB
   if (!isDefaultVoiceSet) {
-      voiceSelect.value = 'ios-default-ja';
+      voiceSelect.value = bestJaVoiceIndex;
       isDefaultVoiceSet = true;
   }
 }
@@ -280,18 +323,11 @@ function playCustomAudio(text, isAnswer = false) {
       // ĐỌC ĐÁP ÁN: Ngắt Voice tiếng Nhật, ép đọc Tiếng Việt xịn
       triggerVietnameseVoice(text);
   } else {
-      // ĐỌC CÂU HỎI: Lấy tùy chọn trong Dropdown
+      // ĐỌC CÂU HỎI: Dùng chính xác cái đã bị chốt trong Cài đặt
       const voiceSelect = document.getElementById('set-voice');
-      const selectedSetting = voiceSelect ? voiceSelect.value : 'ios-default-ja';
+      const selectedSetting = voiceSelect ? voiceSelect.value : 'api-ja';
 
-      if (selectedSetting === 'ios-default-ja') {
-          // BÍ THUẬT: Chỉ set lang='ja-JP', bỏ trống voice. 
-          // Bắt thằng Apple phải tự mò vào Settings lôi cái Otoya Nâng cao mà mày đã tick ra!
-          const utterance = new SpeechSynthesisUtterance(text);
-          utterance.lang = 'ja-JP';
-          window.speechSynthesis.speak(utterance);
-          
-      } else if (typeof selectedSetting === 'string' && selectedSetting.startsWith('api-')) {
+      if (typeof selectedSetting === 'string' && selectedSetting.startsWith('api-')) {
           const apiLang = selectedSetting.split('-')[1];
           playCloudAudio(text, apiLang);
       } else {
@@ -307,10 +343,11 @@ function playCloudAudio(text, langCode) {
     cloudAudio.referrerPolicy = "no-referrer"; 
     cloudAudio.src = url;
     
-    // Fallback Offline nếu rớt mạng
+    // Fallback Offline
     cloudAudio.onerror = () => {
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = langCode === 'ja' ? 'ja-JP' : (langCode === 'vi' ? 'vi-VN' : 'en-US');
+        const fallbackVoices = availableVoices.filter(v => v.lang.includes(langCode));
+        if (fallbackVoices.length > 0) utterance.voice = fallbackVoices[0];
         window.speechSynthesis.speak(utterance);
     };
     cloudAudio.play().catch(e => cloudAudio.onerror());
@@ -324,7 +361,9 @@ function triggerVietnameseVoice(text) {
     
     cloudAudio.onerror = () => {
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'vi-VN';
+        const viVoices = availableVoices.filter(v => v.lang.includes('vi'));
+        if (viVoices.length > 0) utterance.voice = viVoices[0];
+        else utterance.lang = 'vi-VN';
         window.speechSynthesis.speak(utterance);
     };
     cloudAudio.play().catch(e => cloudAudio.onerror());
