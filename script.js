@@ -168,7 +168,7 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
-    // Đáp án luôn ép ưu tiên tiếng Việt
+    // Đáp án tiếng Việt vẫn dùng hàm Auto để nhận diện
     playCustomAudio(currentCard.meaning.replace(/\\n/g, ' '), 'vi'); 
   }
 
@@ -191,7 +191,8 @@ function goToNextQuestion() {
 
 document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
-// ================= HỆ THỐNG ÂM THANH MỚI: HYBRID (CLOUD + SYSTEM) =================
+
+// ================= HỆ THỐNG ÂM THANH MỚI: TỔ CHỨC LẠI & ƯU TIÊN SIRI -> OTOYA =================
 
 let availableVoices = [];
 function loadDynamicVoices() {
@@ -199,47 +200,111 @@ function loadDynamicVoices() {
   const voiceSelect = document.getElementById('set-voice');
   if (!voiceSelect) return;
   
-  voiceSelect.innerHTML = '<option value="auto">🤖 Tự động (Ưu tiên Giọng Mạng)</option>';
+  voiceSelect.innerHTML = '<option value="auto">🤖 Tự động (Siri 2 ➔ Otoya Pro ➔ Cloud)</option>';
   
   // 1. CHÈN THỦ CÔNG GIỌNG GOOGLE ĐÁM MÂY (Luôn có trên mọi thiết bị)
   const optGroupCloud = document.createElement('optgroup');
   optGroupCloud.label = "☁️ Giọng Đám Mây (Cần mạng - Chuẩn nhất)";
   optGroupCloud.innerHTML = `
     <option value="api-ja">⭐ Google Mạng - Tiếng Nhật</option>
-    <option value="api-vi">⭐ Google Mạng - Tiếng Việt</option>
     <option value="api-en">⭐ Google Mạng - Tiếng Anh</option>
+    <option value="api-zh-CN">⭐ Google Mạng - Tiếng Trung</option>
+    <option value="api-vi">⭐ Google Mạng - Tiếng Việt</option>
   `;
   voiceSelect.appendChild(optGroupCloud);
 
-  // 2. CHÈN GIỌNG HỆ THỐNG CỦA MÁY
-  if (availableVoices.length > 0) {
-    const optGroupSys = document.createElement('optgroup');
-    optGroupSys.label = "📱 Giọng Hệ Thống (Có sẵn trong máy)";
-    availableVoices.forEach((voice, index) => {
-      if (voice.lang.includes('ja') || voice.lang.includes('vi') || voice.lang.includes('en')) {
-        const option = document.createElement('option');
-        option.value = index; 
-        const isGoogle = voice.name.includes('Google') ? '⭐ ' : '';
-        option.textContent = `${isGoogle}${voice.name} (${voice.lang})`;
-        optGroupSys.appendChild(option);
-      }
+  if (availableVoices.length === 0) return;
+
+  // 2. PHÂN LOẠI GIỌNG HỆ THỐNG THEO TỪNG NHÓM NGÔN NGỮ
+  const groups = {
+    ja: { label: "🇯🇵 Tiếng Nhật (Hệ thống)", voices: [] },
+    en: { label: "🇺🇸 Tiếng Anh (Hệ thống)", voices: [] },
+    zh: { label: "🇨🇳 Tiếng Trung (Hệ thống)", voices: [] },
+    vi: { label: "🇻🇳 Tiếng Việt (Hệ thống)", voices: [] },
+    other: { label: "🌍 Ngôn ngữ khác", voices: [] }
+  };
+
+  availableVoices.forEach((voice, index) => {
+    const lang = voice.lang.toLowerCase();
+    let category = 'other';
+    
+    if (lang.includes('ja')) category = 'ja';
+    else if (lang.includes('en')) category = 'en';
+    else if (lang.includes('zh')) category = 'zh';
+    else if (lang.includes('vi')) category = 'vi';
+
+    // Đánh dấu các giọng xịn
+    let marker = "";
+    const nameLow = voice.name.toLowerCase();
+    
+    if (nameLow.includes('siri')) marker = "🍎 "; 
+    else if (nameLow.includes('otoya') || nameLow.includes('premium') || nameLow.includes('enhanced') || nameLow.includes('nâng cao')) {
+        marker = "🔥 "; 
+    } else if (nameLow.includes('google')) {
+        marker = "⭐ "; 
+    }
+
+    groups[category].voices.push({ 
+        index: index, 
+        name: `${marker}${voice.name} (${voice.lang})`, 
+        originalName: voice.name 
     });
-    voiceSelect.appendChild(optGroupSys);
+  });
+
+  // 3. SẮP XẾP LẠI (Siri 2 -> Siri -> Otoya Nâng Cao -> Otoya)
+  for (let key in groups) {
+      groups[key].voices.sort((a, b) => {
+          const getScore = (name) => {
+              let score = 0;
+              const n = name.toLowerCase();
+              if (n.includes('siri')) {
+                  score += 100;
+                  if (n.includes('2')) score += 50; // Siri giọng 2 max điểm
+              } 
+              else if (n.includes('otoya')) {
+                  score += 70;
+                  if (n.includes('nâng cao') || n.includes('enhanced') || n.includes('premium')) score += 20; // Otoya Nâng cao
+              }
+              else if (n.includes('google')) {
+                  score += 50;
+              }
+              return score;
+          };
+          return getScore(b.originalName) - getScore(a.originalName);
+      });
   }
+
+  // 4. THÊM VÀO DROPDOWN THEO THỨ TỰ LOGIC
+  ['ja', 'en', 'zh', 'vi'].forEach(key => {
+    if (groups[key].voices.length > 0) {
+      const optGroup = document.createElement('optgroup');
+      optGroup.label = groups[key].label;
+      groups[key].voices.forEach(v => {
+        const option = document.createElement('option');
+        option.value = v.index;
+        option.textContent = v.name;
+        optGroup.appendChild(option);
+      });
+      voiceSelect.appendChild(optGroup);
+    }
+  });
 }
 
 if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = loadDynamicVoices;
 }
-setTimeout(loadDynamicVoices, 500); // Back-up gọi thủ công nếu onvoiceschanged delay
+setTimeout(loadDynamicVoices, 500); 
 
 function detectLanguage(text) {
   if (!text) return 'en';
-  const jpRegex = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/;
-  if (jpRegex.test(text)) return 'ja';
+  const kanaRegex = /[\u3040-\u309F\u30A0-\u30FF]/;
+  if (kanaRegex.test(text)) return 'ja';
   
   const viRegex = /[àáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳýỹỷỵ]/i;
   if (viRegex.test(text)) return 'vi';
+
+  const hanziRegex = /[\u4e00-\u9fa5]/;
+  if (hanziRegex.test(text)) return 'ja'; 
   
   return 'en';
 }
@@ -251,13 +316,45 @@ function playCustomAudio(text, forcedLangCode = null) {
   let selectedSetting = voiceSelect ? voiceSelect.value : 'auto';
   let targetLang = forcedLangCode || detectLanguage(text);
 
-  // Xử lý logic nút Auto
+  // XỬ LÝ LOGIC AUTO: THUẬT TOÁN ƯU TIÊN (Siri 2 -> Otoya Nâng Cao -> Cloud)
   if (selectedSetting === 'auto') {
-    selectedSetting = `api-${targetLang}`; // Auto sẽ mặc định điều hướng về Giọng Đám Mây cho xịn
+      if (targetLang === 'ja') {
+          let bestJaVoiceIndex = null;
+          let highestScore = 0;
+          
+          availableVoices.forEach((v, index) => {
+              if (v.lang.includes('ja')) {
+                  const n = v.name.toLowerCase();
+                  let score = 0;
+                  if (n.includes('siri')) {
+                      score += 100;
+                      if (n.includes('2')) score += 50; 
+                  } else if (n.includes('otoya')) {
+                      score += 70;
+                      if (n.includes('nâng cao') || n.includes('enhanced') || n.includes('premium')) score += 20;
+                  }
+                  
+                  if (score > highestScore) {
+                      highestScore = score;
+                      bestJaVoiceIndex = index;
+                  }
+              }
+          });
+          
+          // Nếu tìm được Siri hoặc Otoya (điểm >= 70), lấy luôn giọng hệ thống không cần mạng
+          if (highestScore >= 70) {
+              selectedSetting = bestJaVoiceIndex;
+          } else {
+              selectedSetting = `api-ja`; // Nếu không có, đẩy về Cloud
+          }
+      } else {
+          selectedSetting = `api-${targetLang}`; // Với Tiếng Việt, Tiếng Anh mặc định dùng Cloud
+      }
   }
 
+  // --- KÍCH HOẠT ÂM THANH ---
   if (typeof selectedSetting === 'string' && selectedSetting.startsWith('api-')) {
-    // --- CHẾ ĐỘ 1: ĐỌC BẰNG API GOOGLE ONLINE ---
+    // CHẾ ĐỘ GOOGLE CLOUD
     const apiLang = selectedSetting.split('-')[1];
     window.speechSynthesis.cancel();
     cloudAudio.pause();
@@ -267,12 +364,11 @@ function playCustomAudio(text, forcedLangCode = null) {
     cloudAudio.referrerPolicy = "no-referrer"; 
     cloudAudio.src = url;
     
-    // Fallback: Lỡ mạng rớt hoặc bị Cốc Cốc bóp, chuyển ngay sang giọng máy
     cloudAudio.onerror = () => triggerSystemVoice(text, apiLang);
     cloudAudio.play().catch(e => triggerSystemVoice(text, apiLang));
     
   } else {
-    // --- CHẾ ĐỘ 2: ĐỌC BẰNG HỆ THỐNG OFFLINE ---
+    // CHẾ ĐỘ GIỌNG HỆ THỐNG OFFLINE (Siri / Otoya)
     cloudAudio.pause();
     window.speechSynthesis.cancel();
     
@@ -282,16 +378,32 @@ function playCustomAudio(text, forcedLangCode = null) {
   }
 }
 
-// Hàm cứu viện khi Giọng Mạng bị lỗi
+// Hàm cứu viện khi Cloud rớt mạng
 function triggerSystemVoice(text, targetLang) {
     const utterance = new SpeechSynthesisUtterance(text);
-    const bestVoice = availableVoices.find(v => v.lang.includes(targetLang) && v.name.includes('Google')) 
-                   || availableVoices.find(v => v.lang.includes(targetLang));
+    
+    let bestVoice = null;
+    const langVoices = availableVoices.filter(v => v.lang.includes(targetLang));
+
+    if (langVoices.length > 0) {
+        if (targetLang === 'ja') {
+            bestVoice = langVoices.find(v => v.name.toLowerCase().includes('siri') && v.name.includes('2')) 
+                     || langVoices.find(v => v.name.toLowerCase().includes('siri'))
+                     || langVoices.find(v => v.name.toLowerCase().includes('otoya') && (v.name.toLowerCase().includes('nâng cao') || v.name.toLowerCase().includes('enhanced')))
+                     || langVoices.find(v => v.name.toLowerCase().includes('otoya'))
+                     || langVoices.find(v => v.name.toLowerCase().includes('google'))
+                     || langVoices[0];
+        } else {
+            bestVoice = langVoices.find(v => v.name.toLowerCase().includes('google')) || langVoices[0];
+        }
+    }
                    
-    if (bestVoice) utterance.voice = bestVoice;
-    else {
+    if (bestVoice) {
+        utterance.voice = bestVoice;
+    } else {
       if (targetLang === 'vi') utterance.lang = 'vi-VN';
       else if (targetLang === 'ja') utterance.lang = 'ja-JP';
+      else if (targetLang === 'zh') utterance.lang = 'zh-CN';
       else utterance.lang = 'en-US';
     }
     window.speechSynthesis.speak(utterance);
