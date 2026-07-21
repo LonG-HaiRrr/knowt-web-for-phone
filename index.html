@@ -95,20 +95,11 @@
           <input type="number" id="set-question-limit" value="20" min="4" class="w-16 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-center">
         </div>
 
-        <div class="flex justify-between items-center bg-[#28102a] p-3 rounded-xl border border-[#9c27b0]">
-          <span class="font-bold text-[#d685af]">Chọn ngôn ngữ (Giọng)</span>
-          <select id="set-voice" class="w-36 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-sm">
-            <optgroup label="Giọng Google Dịch">
-              <option value="gg-ja">Google - Tiếng Nhật</option>
-              <option value="gg-vi">Google - Tiếng Việt</option>
-              <option value="gg-en">Google - Tiếng Anh</option>
-              <option value="gg-zh-CN">Google - Tiếng Trung</option>
-            </optgroup>
-            <optgroup label="Giọng Hệ Thống (Mượt/Offline)">
-              <option value="sys-ja">Máy - Tiếng Nhật</option>
-              <option value="sys-vi">Máy - Tiếng Việt</option>
-              <option value="sys-en">Máy - Tiếng Anh</option>
-            </optgroup>
+<div class="flex justify-between items-center bg-[#28102a] p-3 rounded-xl border border-[#9c27b0]">
+          <span class="font-bold text-[#d685af]">Giọng đọc & Tự động</span>
+          <select id="set-voice" class="w-36 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-sm truncate">
+            <option value="auto">🤖 Tự động nhận diện</option>
+            <!-- JS sẽ tự động bơm các giọng đọc vào đây -->
           </select>
         </div>
         <!-- ===== KẾT THÚC THÊM ===== -->
