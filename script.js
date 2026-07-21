@@ -5,7 +5,7 @@ let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
 
-// Khởi tạo Audio dùng chung cho "Giọng Google Mạng" để vượt rào Mobile
+// Khởi tạo Audio dùng chung cho "Giọng Google Mạng"
 const cloudAudio = new Audio();
 cloudAudio.setAttribute('playsinline', ''); 
 let isAudioUnlocked = false;
@@ -27,7 +27,6 @@ function showLobby() {
 }
 
 function showQuiz(fileUrl, deckName) {
-  // Đánh thức cả 2 công nghệ âm thanh ngay khi chạm nút "Bắt đầu"
   window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));
   
   if (!isAudioUnlocked) {
@@ -46,7 +45,7 @@ function showQuiz(fileUrl, deckName) {
 
 document.getElementById('btn-exit').addEventListener('click', showLobby);
 
-// ================= LẤY DANH SÁCH BÀI HỌC (LOBBY) =================
+// ================= LẤY DANH SÁCH BÀI HỌC =================
 async function fetchDeckList() {
   try {
     const response = await fetch('data/list.json?t=' + new Date().getTime());
@@ -67,11 +66,10 @@ async function fetchDeckList() {
       container.appendChild(btn);
     });
   } catch (error) {
-    document.getElementById('deck-list').innerHTML = `<p class="text-gray-400 text-center">Đang nạp dữ liệu từ GitHub...</p>`;
+    document.getElementById('deck-list').innerHTML = `<p class="text-gray-400 text-center">Đang nạp dữ liệu...</p>`;
   }
 }
 
-// ================= LẤY DỮ LIỆU TỪ FILE JSON VÀ RENDER =================
 async function loadDeck(fileUrl) {
   try {
     const response = await fetch(fileUrl + '?t=' + new Date().getTime());
@@ -168,7 +166,7 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
-    // GỌI HÀM ĐỌC VÀ ÉP BUỘC LÀ ĐÁP ÁN (TIẾNG VIỆT)
+    // Đáp án tiếng Việt ép đọc chuẩn
     playCustomAudio(currentCard.meaning.replace(/\\n/g, ' '), true); 
   }
 
@@ -188,26 +186,25 @@ function goToNextQuestion() {
     startSession();
   }
 }
-
 document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
 
-// ================= HỆ THỐNG ÂM THANH: MẶC ĐỊNH CHỌN THẲNG SIRI/OTOYA =================
+// ================= HỆ THỐNG ÂM THANH MỚI: ÉP BUỘC CHỌN TRỰC TIẾP GIỌNG XỊN =================
 
 let availableVoices = [];
-let isDefaultVoiceSet = false; // Biến để tránh việc reload làm mất lựa chọn của bạn
+let isDefaultVoiceSet = false;
 
 function loadDynamicVoices() {
   availableVoices = window.speechSynthesis.getVoices();
   const voiceSelect = document.getElementById('set-voice');
   if (!voiceSelect) return;
   
-  // Xóa sạch option cũ
+  // Đã xóa chế độ Auto. Dropdown giờ chỉ hiển thị giọng thật.
   voiceSelect.innerHTML = '';
   
-  // 1. CHÈN THỦ CÔNG GIỌNG GOOGLE ĐÁM MÂY
+  // 1. CHÈN GIỌNG CLOUD 
   const optGroupCloud = document.createElement('optgroup');
-  optGroupCloud.label = "☁️ Giọng Đám Mây (Cần mạng)";
+  optGroupCloud.label = "☁️ Giọng Đám Mây (Cần mạng - Chuẩn nhất)";
   optGroupCloud.innerHTML = `
     <option value="api-ja">⭐ Google Mạng - Tiếng Nhật</option>
     <option value="api-en">⭐ Google Mạng - Tiếng Anh</option>
@@ -218,7 +215,7 @@ function loadDynamicVoices() {
 
   if (availableVoices.length === 0) return;
 
-  // 2. PHÂN LOẠI GIỌNG HỆ THỐNG
+  // 2. PHÂN LOẠI GIỌNG HỆ THỐNG ĐANG CÓ TRÊN MÁY
   const groups = {
     ja: { label: "🇯🇵 Tiếng Nhật (Hệ thống)", voices: [] },
     en: { label: "🇺🇸 Tiếng Anh (Hệ thống)", voices: [] },
@@ -226,6 +223,9 @@ function loadDynamicVoices() {
     vi: { label: "🇻🇳 Tiếng Việt (Hệ thống)", voices: [] },
     other: { label: "🌍 Ngôn ngữ khác", voices: [] }
   };
+
+  let bestJaVoiceIndex = 'api-ja'; // Fallback nếu máy không có giọng nào
+  let highestScore = -1;
 
   availableVoices.forEach((voice, index) => {
     const lang = voice.lang.toLowerCase();
@@ -236,6 +236,7 @@ function loadDynamicVoices() {
     else if (lang.includes('zh')) category = 'zh';
     else if (lang.includes('vi')) category = 'vi';
 
+    // Đánh dấu icon
     let marker = "";
     const nameLow = voice.name.toLowerCase();
     
@@ -251,56 +252,57 @@ function loadDynamicVoices() {
         name: `${marker}${voice.name} (${voice.lang})`, 
         originalName: voice.name 
     });
+
+    // TÌM KIẾM ĐỈNH CAO: Chấm điểm để chọn mặc định
+    if (category === 'ja') {
+        let score = 0;
+        if (nameLow.includes('siri') && nameLow.includes('2')) score = 100;
+        else if (nameLow.includes('siri')) score = 90;
+        else if (nameLow.includes('otoya') && (nameLow.includes('nâng cao') || nameLow.includes('premium') || nameLow.includes('enhanced'))) score = 80;
+        else if (nameLow.includes('otoya')) score = 70; // Ngay cả khi Apple nuốt chữ "Nâng cao", nó vẫn ưu tiên Otoya
+        else if (nameLow.includes('google')) score = 50;
+        else if (nameLow.includes('kyoko')) score = 10;
+
+        if (score > highestScore) {
+            highestScore = score;
+            bestJaVoiceIndex = index;
+        }
+    }
   });
 
-  // 3. SẮP XẾP LẠI (Siri 2 -> Siri -> Otoya Nâng Cao -> Otoya)
+  // 3. SẮP XẾP LẠI (Siri -> Otoya -> Kyoko)
   for (let key in groups) {
       groups[key].voices.sort((a, b) => {
           const getScore = (name) => {
               let score = 0;
               const n = name.toLowerCase();
-              if (n.includes('siri')) {
-                  score += 100;
-                  if (n.includes('2')) score += 50; 
-              } 
-              else if (n.includes('otoya')) {
-                  score += 70;
-                  if (n.includes('nâng cao') || n.includes('enhanced') || n.includes('premium')) score += 20; 
-              }
-              else if (n.includes('kyoko')) {
-                  score += 10;
-              }
+              if (n.includes('siri')) score += (n.includes('2') ? 100 : 90); 
+              else if (n.includes('otoya')) score += ((n.includes('nâng cao') || n.includes('enhanced')) ? 80 : 70);
+              else if (n.includes('kyoko')) score += 10;
               return score;
           };
           return getScore(b.originalName) - getScore(a.originalName);
       });
   }
 
-  // 4. THÊM VÀO DROPDOWN & TÌM GIỌNG ĐỂ CHỌN MẶC ĐỊNH
-  let bestDefaultJaIndex = 'api-ja'; // Khởi đầu mặc định là Cloud nếu máy trắng trơn
-  
+  // 4. THÊM VÀO DROPDOWN
   ['ja', 'en', 'zh', 'vi'].forEach(key => {
     if (groups[key].voices.length > 0) {
       const optGroup = document.createElement('optgroup');
       optGroup.label = groups[key].label;
-      groups[key].voices.forEach((v, idx) => {
+      groups[key].voices.forEach(v => {
         const option = document.createElement('option');
         option.value = v.index;
         option.textContent = v.name;
         optGroup.appendChild(option);
-        
-        // Vì ta đã sort ở trên, giọng Nhật ngon nhất chắc chắn nằm ở phần tử đầu tiên của mảng 'ja'
-        if (key === 'ja' && idx === 0) {
-            bestDefaultJaIndex = v.index;
-        }
       });
       voiceSelect.appendChild(optGroup);
     }
   });
 
-  // Gán giá trị MẶC ĐỊNH (Chỉ gán 1 lần duy nhất khi tải trang)
+  // TỰ ĐỘNG CHỐT GIỌNG ĐỈNH NHẤT KHI VỪA MỞ WEB
   if (!isDefaultVoiceSet) {
-      voiceSelect.value = bestDefaultJaIndex;
+      voiceSelect.value = bestJaVoiceIndex;
       isDefaultVoiceSet = true;
   }
 }
@@ -310,7 +312,6 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 }
 setTimeout(loadDynamicVoices, 500); 
 
-
 function playCustomAudio(text, isAnswer = false) {
   if (!text) return;
   
@@ -319,12 +320,10 @@ function playCustomAudio(text, isAnswer = false) {
   cloudAudio.currentTime = 0;
 
   if (isAnswer) {
-      // ================= ĐỌC ĐÁP ÁN =================
-      // Bỏ qua Dropdown cài đặt. Ép buộc lấy giọng tiếng Việt xịn nhất
+      // ĐỌC ĐÁP ÁN: Ngắt Voice tiếng Nhật, ép đọc Tiếng Việt xịn
       triggerVietnameseVoice(text);
   } else {
-      // ================= ĐỌC CÂU HỎI =================
-      // Tuân thủ tuyệt đối giọng tiếng Nhật mà dropdown đang chọn
+      // ĐỌC CÂU HỎI: Dùng chính xác cái đã bị chốt trong Cài đặt
       const voiceSelect = document.getElementById('set-voice');
       const selectedSetting = voiceSelect ? voiceSelect.value : 'api-ja';
 
@@ -344,7 +343,7 @@ function playCloudAudio(text, langCode) {
     cloudAudio.referrerPolicy = "no-referrer"; 
     cloudAudio.src = url;
     
-    // Nếu rớt mạng, lấy tạm 1 giọng Offline chữa cháy
+    // Fallback Offline
     cloudAudio.onerror = () => {
         const utterance = new SpeechSynthesisUtterance(text);
         const fallbackVoices = availableVoices.filter(v => v.lang.includes(langCode));
@@ -355,12 +354,11 @@ function playCloudAudio(text, langCode) {
 }
 
 function triggerVietnameseVoice(text) {
-    // Ưu tiên 1: Đọc bằng Google Cloud (Vì giọng Tiếng Việt của Apple rất khó nghe)
+    // Đọc Tiếng Việt qua Google Cloud cho trong trẻo
     const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&q=${encodeURIComponent(text)}`;
     cloudAudio.referrerPolicy = "no-referrer"; 
     cloudAudio.src = url;
     
-    // Ưu tiên 2: Nếu không có mạng thì móc giọng Tiếng Việt trong máy ra đọc
     cloudAudio.onerror = () => {
         const utterance = new SpeechSynthesisUtterance(text);
         const viVoices = availableVoices.filter(v => v.lang.includes('vi'));
@@ -371,16 +369,11 @@ function triggerVietnameseVoice(text) {
     cloudAudio.play().catch(e => cloudAudio.onerror());
 }
 
-
 function playQuestionAudio() {
   const currentCard = flashcards[currentIndex];
-  if (currentCard) {
-    // Đọc câu hỏi (false = không phải đáp án)
-    playCustomAudio(currentCard.hira_kata, false);
-  }
+  if (currentCard) playCustomAudio(currentCard.hira_kata, false);
 }
 
-// BẮT PHÍM TẮT ĐỌC (NUMPAD)
 document.addEventListener('keydown', (e) => {
   if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
   if (e.code === 'Numpad0' || e.code === 'NumpadDecimal') {
@@ -547,5 +540,4 @@ document.getElementById('btn-save-import').addEventListener('click', async () =>
   }
 });
 
-// ================= KHỞI ĐỘNG =================
 showLobby();
