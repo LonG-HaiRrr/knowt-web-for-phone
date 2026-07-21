@@ -32,3 +32,50 @@ body { -webkit-tap-highlight-color: transparent; }
 /* Giao diện Import Modal */
 #import-modal { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .radio-custom input[type="radio"] { accent-color: #5865f2; width: 16px; height: 16px; }
+
+.import-preview-container {
+  width: 100%;                /* w-full: Chiều rộng 100% */
+  height: 800px !important;
+  flex: 1;                    /* flex-1: Chiếm phần không gian còn lại nếu nằm trong thẻ flex cha */
+  background-color: #000000;  /* bg-black: Nền đen */
+  border-radius: 8px;         /* rounded-lg: Bo góc khoảng 8px (0.5rem) */
+  border: 1px solid #2a2c41;  /* border border-[#2a2c41]: Viền dày 1px với mã màu cụ thể */
+  padding: 16px;              /* p-4: Khoảng cách đệm bên trong 16px (1rem) */
+  overflow-y: auto;           /* overflow-y-auto: Hiển thị thanh cuộn dọc nếu nội dung bị tràn */
+  
+  /* Thiết lập Flexbox bên trong box */
+  display: flex;              /* flex: Kích hoạt flexbox */
+  flex-direction: column;     /* flex-col: Sắp xếp các phần tử con theo chiều dọc */
+  gap: 8px;                   /* gap-2: Khoảng cách giữa các phần tử con là 8px (0.5rem) */
+}
+
+.import-textarea-custom {
+  width: 100%;                  
+  min-height: 192px;            /* Thay height thành min-height */
+  flex-shrink: 0;               /* QUAN TRỌNG: Cấm Flexbox bóp nhỏ khung này */
+  
+  background-color: #1a1b27;    
+  border: 1px solid #2a2c41;    
+  border-radius: 8px;           
+  padding: 16px;                
+  color: #ffffff;               
+  outline: none;                
+  font-family: sans-serif;      
+  resize: none;                 
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05); 
+  transition: border-color 0.2s ease-in-out; 
+}
+
+/* Xử lý focus:border-[#5865f2] - Đổi màu viền khi click vào */
+.import-textarea-custom:focus {
+  border-color: #5865f2;
+}
+
+/* Xử lý placeholder-gray-600 - Đổi màu chữ của phần placeholder */
+.import-textarea-custom::placeholder {
+  color: #4b5563;               /* Mã màu xám 600 chuẩn của Tailwind */
+}
+
+#su_lua_chon{
+  padding-left: 50px;
+}

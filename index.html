@@ -151,7 +151,7 @@
     
     <!-- Header -->
     <div class="flex justify-between items-center p-5 bg-[#1b1d29] border-b border-[#2a2c41] shrink-0">
-      <h2 class="text-lg font-bold text-white">Nhập dữ liệu. <span class="text-sm font-normal text-gray-400">Chép và dán dữ liệu ở đây (từ Word, Excel, Riki Export, v.v.)</span></h2>
+      <h2 class="text-lg font-bold text-white">Nhập dữ liệu. <span class="text-sm font-normal text-gray-400">Chép và dán dữ liệu ở đây (từ Knowt, Quizlet, Riki Export, v.v.)</span></h2>
       <button id="btn-close-import" class="w-8 h-8 rounded-full bg-[#2a2c41] flex items-center justify-center hover:bg-[#3f4260] transition">✕</button>
     </div>
 
@@ -159,10 +159,9 @@
     <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 w-full max-w-5xl mx-auto">
       
       <!-- Textarea -->
-      <textarea id="import-textarea" class="w-full h-48 bg-[#1a1b27] border border-[#2a2c41] rounded-lg p-4 text-white outline-none focus:border-[#5865f2] transition font-sans resize-none placeholder-gray-600 shadow-inner" placeholder="Từ 1 Định nghĩa 1&#10;Từ 2 Định nghĩa 2&#10;Từ 3 Định nghĩa 3"></textarea>
-
+      <textarea id="import-textarea" class="import-textarea-custom" placeholder="Từ 1 Định nghĩa 1&#10;Từ 2 Định nghĩa 2&#10;Từ 3 Định nghĩa 3"></textarea>
       <!-- Delimiter Settings -->
-      <div class="grid grid-cols-2 gap-8 text-sm">
+      <div id="su_lua_chon" class="grid grid-cols-2 gap-8 text-sm">
         <div class="flex flex-col gap-3">
           <label class="font-bold text-white mb-1">Giữa thuật ngữ và định nghĩa</label>
           <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="tab" checked> Tab</label>
@@ -185,10 +184,10 @@
       </div>
 
       <!-- Preview Section -->
-      <div class="mt-2 flex flex-col gap-2 flex-1 min-h-[250px]">
-        <h3 class="font-bold text-lg text-white">Xem trước <span id="preview-count" class="text-sm font-normal text-gray-400">0 thẻ</span></h3>
-        <div id="import-preview-box" class="w-full flex-1 bg-black rounded-lg border border-[#2a2c41] p-4 overflow-y-auto flex flex-col gap-2">
-          <p class="text-gray-500 text-sm">Không có nội dung để xem trước</p>
+      <div class="preview_zone">
+        <h3 class="font-bold text-lg text-white" style="padding-bottom:  10px ;">Xem trước <span id="preview-count" class="text-sm font-normal text-gray-400">0 thẻ</span></h3>
+        <div id="import-preview-box" class="import-preview-container">
+         <p class="text-gray-500 text-sm">Không có nội dung để xem trước</p>
         </div>
       </div>
     </div>
