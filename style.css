@@ -79,3 +79,13 @@ body { -webkit-tap-highlight-color: transparent; }
 #su_lua_chon{
   padding-left: 50px;
 }
+
+.quiz-body-container {
+  flex: 1;                    /* flex-1: Chiếm toàn bộ không gian còn lại của phần tử cha */
+  display: flex;              /* flex: Kích hoạt mô hình Flexbox */
+  flex-direction: column;     /* flex-col: Xếp các phần tử con theo chiều dọc từ trên xuống */
+  overflow: hidden;           /* overflow-hidden: Ẩn đi các nội dung bị tràn ra ngoài khung */
+  
+  /* padding (Trên - Phải - Dưới - Trái) tương đương pt-2 px-4 pb-6 của Tailwind */
+  padding: 8px 16px 8px 16px; 
+}
