@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "かんがえます",
+    "kanji": "考えます",
+    "meaning": "Nghĩ, suy nghĩ"
+  },
+  {
+    "id": 2,
+    "hira_kata": "[えきに]つきます[駅に]　着きます",
+    "kanji": "",
+    "meaning": "Đến  (nhà ga)"
+  },
+  {
+    "id": 3,
+    "hira_kata": "「としを」とります「年を」とります",
+    "kanji": "",
+    "meaning": "Có, thêm (tuổi)"
+  },
+  {
+    "id": 4,
+    "hira_kata": "たります",
+    "kanji": "足ります",
+    "meaning": "Đủ"
+  },
+  {
+    "id": 5,
+    "hira_kata": "いなか",
+    "kanji": "田舎",
+    "meaning": "Quê, nông thôn"
+  },
+  {
+    "id": 6,
+    "hira_kata": "チャンス",
+    "kanji": "",
+    "meaning": "Cơ hội"
+  },
+  {
+    "id": 7,
+    "hira_kata": "おく",
+    "kanji": "億",
+    "meaning": "Một trăm triệu"
+  },
+  {
+    "id": 8,
+    "hira_kata": "いみ",
+    "kanji": "意味",
+    "meaning": "Ý nghĩa"
+  },
+  {
+    "id": 9,
+    "hira_kata": "てんきん",
+    "kanji": "",
+    "meaning": "Chuyển công tác, chuyển địa điểm làm việc"
+  },
+  {
+    "id": 10,
+    "hira_kata": "もし「〜たら」",
+    "kanji": "",
+    "meaning": "Nếu"
+  },
+  {
+    "id": 11,
+    "hira_kata": "[いろいろ]おせわになりました。[色々]お世話になりました。",
+    "kanji": "",
+    "meaning": "Cảm ơn anh/ chị đã giúp đỡ tôi rất nhiều."
+  },
+  {
+    "id": 12,
+    "hira_kata": "がんばります。",
+    "kanji": "",
+    "meaning": "Cố gắng, cố."
+  },
+  {
+    "id": 13,
+    "hira_kata": "どうぞ　おげんきで。",
+    "kanji": "どうぞ　お元気で。",
+    "meaning": "Chúc anh/ chị mạnh khỏe/Anh / chị bảo trọng nhé."
+  }
+]

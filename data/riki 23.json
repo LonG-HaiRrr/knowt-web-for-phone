@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "「せんせいに」ききます「先生に」聞きます",
+    "kanji": "",
+    "meaning": "Hỏi (giáo viên)"
+  },
+  {
+    "id": 2,
+    "hira_kata": "まわします",
+    "kanji": "回します",
+    "meaning": "Vặn"
+  },
+  {
+    "id": 3,
+    "hira_kata": "ひきます",
+    "kanji": "引きます",
+    "meaning": "Kéo"
+  },
+  {
+    "id": 4,
+    "hira_kata": "かえます",
+    "kanji": "変えます",
+    "meaning": "Đổi"
+  },
+  {
+    "id": 5,
+    "hira_kata": "「ドアに」さわります「ドアに」触ります",
+    "kanji": "",
+    "meaning": "Sờ, chạm vào (cái cửa)"
+  },
+  {
+    "id": 6,
+    "hira_kata": "「おつりが」でます「お釣りが」出ます",
+    "kanji": "",
+    "meaning": "(Tiền thừa) ra, chạy ra"
+  },
+  {
+    "id": 7,
+    "hira_kata": "あるきます",
+    "kanji": "歩きます",
+    "meaning": "Đi bộ"
+  },
+  {
+    "id": 8,
+    "hira_kata": "「はしを」わたります「橋を」渡ります",
+    "kanji": "",
+    "meaning": "Qua, đi qua (cầu)"
+  },
+  {
+    "id": 9,
+    "hira_kata": "「みぎへ」まがります「右へ」曲がります",
+    "kanji": "",
+    "meaning": "Rẽ, quẹo (bên phải)"
+  },
+  {
+    "id": 10,
+    "hira_kata": "さびしい",
+    "kanji": "寂しい",
+    "meaning": "Buồn, cô đơn"
+  },
+  {
+    "id": 11,
+    "hira_kata": "「お」湯",
+    "kanji": "ゆ",
+    "meaning": "Nước nóng"
+  },
+  {
+    "id": 12,
+    "hira_kata": "おと",
+    "kanji": "音",
+    "meaning": "Âm thanh"
+  },
+  {
+    "id": 13,
+    "hira_kata": "サイズ",
+    "kanji": "",
+    "meaning": "Cỡ, kích cỡ"
+  },
+  {
+    "id": 14,
+    "hira_kata": "こしょうをします",
+    "kanji": "故障をします",
+    "meaning": "Hỏng, hỏng hóc"
+  },
+  {
+    "id": 15,
+    "hira_kata": "みち",
+    "kanji": "道",
+    "meaning": "Đường"
+  },
+  {
+    "id": 16,
+    "hira_kata": "こうさてん",
+    "kanji": "交差点",
+    "meaning": "Ngã tư"
+  },
+  {
+    "id": 17,
+    "hira_kata": "しんごう",
+    "kanji": "信号",
+    "meaning": "Đèn tín hiệu"
+  },
+  {
+    "id": 18,
+    "hira_kata": "かど",
+    "kanji": "角",
+    "meaning": "Góc"
+  },
+  {
+    "id": 19,
+    "hira_kata": "はし",
+    "kanji": "橋",
+    "meaning": "Cầu"
+  },
+  {
+    "id": 20,
+    "hira_kata": "ちゅうしゃじょう",
+    "kanji": "駐車場",
+    "meaning": "Bãi đỗ xe"
+  },
+  {
+    "id": 21,
+    "hira_kata": "たてもの",
+    "kanji": "建物",
+    "meaning": "Toà nhà"
+  },
+  {
+    "id": 22,
+    "hira_kata": "なんかいも",
+    "kanji": "何回も",
+    "meaning": "Nhiều lần"
+  }
+]

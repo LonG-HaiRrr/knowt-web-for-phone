@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "くれます",
+    "kanji": "",
+    "meaning": "Cho, tặng (cho tôi)"
+  },
+  {
+    "id": 2,
+    "hira_kata": "なおします",
+    "kanji": "直します",
+    "meaning": "Sửa, chữa"
+  },
+  {
+    "id": 3,
+    "hira_kata": "つれていきます",
+    "kanji": "連れて行きます",
+    "meaning": "Dẫn (một ai đó) đi"
+  },
+  {
+    "id": 4,
+    "hira_kata": "つれてきます",
+    "kanji": "連れて来ます",
+    "meaning": "Dẫn (một ai đó) đến"
+  },
+  {
+    "id": 5,
+    "hira_kata": "「ひとを」おくります「人を」送ります",
+    "kanji": "",
+    "meaning": "Tiễn (một ai đó)"
+  },
+  {
+    "id": 6,
+    "hira_kata": "しょうかいします",
+    "kanji": "紹介します",
+    "meaning": "Giới thiệu"
+  },
+  {
+    "id": 7,
+    "hira_kata": "あんないします",
+    "kanji": "案内します",
+    "meaning": "Hướng dẫn, giới thiệu, dẫn đường"
+  },
+  {
+    "id": 8,
+    "hira_kata": "せつめいします",
+    "kanji": "説明します",
+    "meaning": "Giải thích, trình bày"
+  },
+  {
+    "id": 9,
+    "hira_kata": "おじいさん",
+    "kanji": "",
+    "meaning": "Ông nội, ông ngoại, ông (cụ/ lão)"
+  },
+  {
+    "id": 10,
+    "hira_kata": "おばあさん",
+    "kanji": "",
+    "meaning": "Bà nội, bà ngoại, bà (cụ/ lão)"
+  },
+  {
+    "id": 11,
+    "hira_kata": "じゅんびをします",
+    "kanji": "準備をします",
+    "meaning": "Chuẩn bị"
+  },
+  {
+    "id": 12,
+    "hira_kata": "ひっこしをします",
+    "kanji": "引越しをします",
+    "meaning": "Chuyển nhà"
+  },
+  {
+    "id": 13,
+    "hira_kata": "おかし",
+    "kanji": "",
+    "meaning": "Bánh kẹo"
+  },
+  {
+    "id": 14,
+    "hira_kata": "ぜんぶ",
+    "kanji": "全部",
+    "meaning": "Toàn bộ, tất cả"
+  },
+  {
+    "id": 15,
+    "hira_kata": "じぶんで",
+    "kanji": "自分で",
+    "meaning": "Tự (mình)"
+  },
+  {
+    "id": 16,
+    "hira_kata": "ほかに",
+    "kanji": "他に",
+    "meaning": "Ngoài ra, bên cạnh đó"
+  },
+  {
+    "id": 17,
+    "hira_kata": "おじいちゃん",
+    "kanji": "",
+    "meaning": "Ông nội, ông ngoại, ông (cụ/ lão)"
+  },
+  {
+    "id": 18,
+    "hira_kata": "おばあちゃん",
+    "kanji": "",
+    "meaning": "Bà nội, bà ngoại, bà (cụ/ lão)"
+  }
+]
