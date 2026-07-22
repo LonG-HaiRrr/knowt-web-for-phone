@@ -89,3 +89,10 @@ body { -webkit-tap-highlight-color: transparent; }
   /* padding (Trên - Phải - Dưới - Trái) tương đương pt-2 px-4 pb-6 của Tailwind */
   padding: 8px 16px 8px 16px; 
 }
+
+.zone_logo {
+    display: flex;          /* Dàn các thẻ con nằm ngang trên cùng một dòng */
+    align-items: center;    /* Căn giữa các thẻ con theo chiều dọc (đứa bé sẽ nằm giữa đứa lớn) */
+    gap: 55px;              /* (Tùy chọn) Tạo khoảng cách giữa các thẻ con cho đẹp mắt */
+}
+
