@@ -1,0 +1,3512 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "あいます アイマス",
+    "kanji": "会います",
+    "meaning": "(I) Gặp, gặp gỡ ---> あって"
+  },
+  {
+    "id": 2,
+    "hira_kata": "あいます アイマス",
+    "kanji": "合います",
+    "meaning": "(I) Vừa vặn, phù hợp ---> あって"
+  },
+  {
+    "id": 3,
+    "hira_kata": "あがります アガリマス",
+    "kanji": "上がります",
+    "meaning": "(I) Tăng lên, đi lên ---> あがって"
+  },
+  {
+    "id": 4,
+    "hira_kata": "あきます アキマス",
+    "kanji": "開きます",
+    "meaning": "(I) Mở (tự động từ) ---> あいて"
+  },
+  {
+    "id": 5,
+    "hira_kata": "あきます アキマス",
+    "kanji": "空きます",
+    "meaning": "(I) Trống rảnh, rảnh rỗi ---> あいて"
+  },
+  {
+    "id": 6,
+    "hira_kata": "あきます アキマス",
+    "kanji": "明きます",
+    "meaning": "(I) Sáng (trời), kết thúc ---> あいて"
+  },
+  {
+    "id": 7,
+    "hira_kata": "あきらめます アキラメマス",
+    "kanji": "諦めます",
+    "meaning": "(II) Từ bỏ, bỏ cuộc ---> あきらめて"
+  },
+  {
+    "id": 8,
+    "hira_kata": "あきます アキマス",
+    "kanji": "飽きます",
+    "meaning": "(II) Chán ngán ---> あきて"
+  },
+  {
+    "id": 9,
+    "hira_kata": "あけます アケマス",
+    "kanji": "開けます",
+    "meaning": "(II) Mở (tha động từ) ---> あけて"
+  },
+  {
+    "id": 10,
+    "hira_kata": "あけます アケマス",
+    "kanji": "空けます",
+    "meaning": "(II) Làm trống, để trống ---> あけて"
+  },
+  {
+    "id": 11,
+    "hira_kata": "あけます アケマス",
+    "kanji": "明けます",
+    "meaning": "(II) Rạng sáng, qua (năm mới) ---> あけて"
+  },
+  {
+    "id": 12,
+    "hira_kata": "あげます アゲマス",
+    "kanji": "上げます",
+    "meaning": "(II) Tăng lên, nâng lên ---> あげて"
+  },
+  {
+    "id": 13,
+    "hira_kata": "あげます アゲマス",
+    "kanji": "挙げます",
+    "meaning": "(II) Đưa lên, nêu lên ---> あげて"
+  },
+  {
+    "id": 14,
+    "hira_kata": "あげます アゲマス",
+    "kanji": "_",
+    "meaning": "(II) Cho, tặng ---> あげて"
+  },
+  {
+    "id": 15,
+    "hira_kata": "あこがれます アコガレマス",
+    "kanji": "憧れます",
+    "meaning": "(II) Ngưỡng mộ ---> あこがれて"
+  },
+  {
+    "id": 16,
+    "hira_kata": "あじわいます アジワイマス",
+    "kanji": "味わいます",
+    "meaning": "(I) Nếm, thưởng thức ---> あじわって"
+  },
+  {
+    "id": 17,
+    "hira_kata": "あずかります アズカリマス",
+    "kanji": "預かります",
+    "meaning": "(I) Trông nom, giữ hộ ---> あずかって"
+  },
+  {
+    "id": 18,
+    "hira_kata": "あずけます アズケマス",
+    "kanji": "預けます",
+    "meaning": "(II) Gửi, giao phó ---> あずけて"
+  },
+  {
+    "id": 19,
+    "hira_kata": "あせります アセリマス",
+    "kanji": "焦ります",
+    "meaning": "(db1) Vội vàng, luống cuống ---> あせって"
+  },
+  {
+    "id": 20,
+    "hira_kata": "あそびます アソビマス",
+    "kanji": "遊びます",
+    "meaning": "(I) Chơi ---> あそんで"
+  },
+  {
+    "id": 21,
+    "hira_kata": "あたえます アタエマス",
+    "kanji": "与えます",
+    "meaning": "(II) Cho, ban tặng ---> あたえて"
+  },
+  {
+    "id": 22,
+    "hira_kata": "あたためます アタタメマス",
+    "kanji": "温めます",
+    "meaning": "(II) Làm ấm, hâm nóng ---> あたためて"
+  },
+  {
+    "id": 23,
+    "hira_kata": "あたります アタリマス",
+    "kanji": "当たります",
+    "meaning": "(I) Trúng, đụng trúng ---> あたって"
+  },
+  {
+    "id": 24,
+    "hira_kata": "あつかいます アツカイマス",
+    "kanji": "扱います",
+    "meaning": "(I) Xử lý, đối xử ---> あつかって"
+  },
+  {
+    "id": 25,
+    "hira_kata": "あつまります アツマリマス",
+    "kanji": "集まります",
+    "meaning": "(I) Tập trung (tự động từ) ---> あたまって"
+  },
+  {
+    "id": 26,
+    "hira_kata": "あつめます アツメマス",
+    "kanji": "集めます",
+    "meaning": "(II) Thu thập, gom lại ---> あつめて"
+  },
+  {
+    "id": 27,
+    "hira_kata": "あてます アテマス",
+    "kanji": "当てます",
+    "meaning": "(II) Đánh trúng, đoán trúng ---> あてて"
+  },
+  {
+    "id": 28,
+    "hira_kata": "あばれます アバレマス",
+    "kanji": "暴れます",
+    "meaning": "(II) Nổi giận, làm ầm ĩ ---> あばれて"
+  },
+  {
+    "id": 29,
+    "hira_kata": "あびます アビマス",
+    "kanji": "浴びます",
+    "meaning": "(db2) Tắm ---> あびて"
+  },
+  {
+    "id": 30,
+    "hira_kata": "あまやかします アマヤカシマス",
+    "kanji": "甘やかします",
+    "meaning": "(I) Nuông chiều ---> あまやかして"
+  },
+  {
+    "id": 31,
+    "hira_kata": "あふれます アフレマス",
+    "kanji": "溢れます",
+    "meaning": "(II) Tràn ngập ---> あふれて"
+  },
+  {
+    "id": 32,
+    "hira_kata": "あまります アマリマス",
+    "kanji": "余ります",
+    "meaning": "(I) Dư thừa ---> あまって"
+  },
+  {
+    "id": 33,
+    "hira_kata": "あやしみます アヤシミマス",
+    "kanji": "怪しみます",
+    "meaning": "(I) Đáng ngờ, nghi ngờ ---> あやしんで"
+  },
+  {
+    "id": 34,
+    "hira_kata": "あやまります アヤマリマス",
+    "kanji": "謝ります",
+    "meaning": "(I) Xin lỗi ---> あやまって"
+  },
+  {
+    "id": 35,
+    "hira_kata": "あらいます アライマス",
+    "kanji": "洗います",
+    "meaning": "(I) Rửa ---> あらって"
+  },
+  {
+    "id": 36,
+    "hira_kata": "あらそいます アラソイマス",
+    "kanji": "争います",
+    "meaning": "(I) Tranh giành, cãi vã ---> あらそって"
+  },
+  {
+    "id": 37,
+    "hira_kata": "あらためます アラタメマス",
+    "kanji": "改めます",
+    "meaning": "(II) Sửa đổi, cải thiện ---> あらためて"
+  },
+  {
+    "id": 38,
+    "hira_kata": "あらわします アラワシマス",
+    "kanji": "表します",
+    "meaning": "(I) Thể hiện, biểu hiện ---> あらわして"
+  },
+  {
+    "id": 39,
+    "hira_kata": "あらわします アラワシマス",
+    "kanji": "現します",
+    "meaning": "(I) Làm hiện ra ---> あらわして"
+  },
+  {
+    "id": 40,
+    "hira_kata": "あらわれます アラワレマス",
+    "kanji": "現れます",
+    "meaning": "(II) Xuất hiện ---> あらわれて"
+  },
+  {
+    "id": 41,
+    "hira_kata": "あります アリマス",
+    "kanji": "_",
+    "meaning": "(I) Có (đồ vật) ---> あって"
+  },
+  {
+    "id": 42,
+    "hira_kata": "あるきます アルキマス",
+    "kanji": "歩きます",
+    "meaning": "(I) Đi bộ ---> あるいて"
+  },
+  {
+    "id": 43,
+    "hira_kata": "あんしんします アンシンシマス",
+    "kanji": "安心します",
+    "meaning": "(III) An tâm ---> あんしんして"
+  },
+  {
+    "id": 44,
+    "hira_kata": "あんないします アンナイシマス",
+    "kanji": "案内します",
+    "meaning": "(III) Hướng dẫn ---> あんないして"
+  },
+  {
+    "id": 45,
+    "hira_kata": "いいつけます イイツケマス",
+    "kanji": "言いつけます",
+    "meaning": "(II) Sai bảo, mách lẻo ---> いいつけて"
+  },
+  {
+    "id": 46,
+    "hira_kata": "いいます イイマス",
+    "kanji": "言います",
+    "meaning": "(I) Nói ---> いって"
+  },
+  {
+    "id": 47,
+    "hira_kata": "いきます イキマス",
+    "kanji": "行きます",
+    "meaning": "(I) Đi ---> いって"
+  },
+  {
+    "id": 48,
+    "hira_kata": "いきます イキマス",
+    "kanji": "生きます",
+    "meaning": "(db2) Sống, tồn tại ---> いきて"
+  },
+  {
+    "id": 49,
+    "hira_kata": "いかします イカシマス",
+    "kanji": "生かします",
+    "meaning": "(I) Phát huy, tận dụng ---> いかして"
+  },
+  {
+    "id": 50,
+    "hira_kata": "いじめます イジメマス",
+    "kanji": "苛めます",
+    "meaning": "(II) Bắt nạt, trêu chọc ---> いじめて"
+  },
+  {
+    "id": 51,
+    "hira_kata": "いそぎます イソギマス",
+    "kanji": "急ぎます",
+    "meaning": "(I) Vội vàng ---> いそいで"
+  },
+  {
+    "id": 52,
+    "hira_kata": "いだきます イダキマス",
+    "kanji": "抱きます",
+    "meaning": "(I) Ôm ấp (ảo tưởng, hoài bão) ---> いだいて"
+  },
+  {
+    "id": 53,
+    "hira_kata": "いただきます イタダキマス",
+    "kanji": "頂きます",
+    "meaning": "(I) Nhận, ăn, uống (khiêm nhường) ---> いただいて"
+  },
+  {
+    "id": 54,
+    "hira_kata": "いたみます イタミマス",
+    "kanji": "痛みます",
+    "meaning": "(I) Đau ---> いたんで"
+  },
+  {
+    "id": 55,
+    "hira_kata": "いのります イノリマス",
+    "kanji": "祈ります",
+    "meaning": "(I) Cầu nguyện ---> いのって"
+  },
+  {
+    "id": 56,
+    "hira_kata": "いばります イバリマス",
+    "kanji": "威張ります",
+    "meaning": "(I) Kiêu ngạo ---> いばって"
+  },
+  {
+    "id": 57,
+    "hira_kata": "います イマス",
+    "kanji": "_",
+    "meaning": "(db2) Có, ở (người, động vật) ---> いて"
+  },
+  {
+    "id": 58,
+    "hira_kata": "いれます イレマス",
+    "kanji": "入れます",
+    "meaning": "(II) Cho vào, pha (trà) ---> いれて"
+  },
+  {
+    "id": 59,
+    "hira_kata": "いります イリマス",
+    "kanji": "要ります",
+    "meaning": "(db1) Cần thiết ---> いって"
+  },
+  {
+    "id": 60,
+    "hira_kata": "いわいます イワイマス",
+    "kanji": "祝います",
+    "meaning": "(I) Chúc mừng ---> いわって"
+  },
+  {
+    "id": 61,
+    "hira_kata": "うかがいます ウカガイマス",
+    "kanji": "伺います",
+    "meaning": "(I) Tới thăm, hỏi (khiêm nhường) ---> うかがって"
+  },
+  {
+    "id": 62,
+    "hira_kata": "うかびます ウカビマス",
+    "kanji": "浮かびます",
+    "meaning": "(I) Nổi lên, nảy ra (ý tưởng) ---> うかんで"
+  },
+  {
+    "id": 63,
+    "hira_kata": "うかべます ウカベマス",
+    "kanji": "浮かべます",
+    "meaning": "(II) Thả trôi, biểu lộ ---> うかべて"
+  },
+  {
+    "id": 64,
+    "hira_kata": "うかります ウカリマス",
+    "kanji": "受かります",
+    "meaning": "(I) Thi đỗ, đậu ---> うかって"
+  },
+  {
+    "id": 65,
+    "hira_kata": "うきます ウキマス",
+    "kanji": "浮きます",
+    "meaning": "(I) Nổi ---> ういて"
+  },
+  {
+    "id": 66,
+    "hira_kata": "うけとります ウケトリマス",
+    "kanji": "受け取ります",
+    "meaning": "(I) Nhận lấy ---> うけとって"
+  },
+  {
+    "id": 67,
+    "hira_kata": "うけます ウケマス",
+    "kanji": "受けます",
+    "meaning": "(II) Nhận, dự thi ---> うけて"
+  },
+  {
+    "id": 68,
+    "hira_kata": "うけたまわります ウケタマワリマス",
+    "kanji": "承ります",
+    "meaning": "(I) Tiếp nhận (khiêm nhường) ---> うけたまわって"
+  },
+  {
+    "id": 69,
+    "hira_kata": "うごかします ウゴカシマス",
+    "kanji": "動かします",
+    "meaning": "(I) Làm cho di chuyển ---> うごかして"
+  },
+  {
+    "id": 70,
+    "hira_kata": "うごきます ウゴキマス",
+    "kanji": "動きます",
+    "meaning": "(I) Chuyển động, hoạt động ---> うごいて"
+  },
+  {
+    "id": 71,
+    "hira_kata": "うしないます ウシナイマス",
+    "kanji": "失います",
+    "meaning": "(I) Mất, đánh mất ---> うしなって"
+  },
+  {
+    "id": 72,
+    "hira_kata": "うすめます ウスメマス",
+    "kanji": "薄めます",
+    "meaning": "(II) Pha loãng, làm nhạt ---> うすめて"
+  },
+  {
+    "id": 73,
+    "hira_kata": "うたいます ウタイマス",
+    "kanji": "歌います",
+    "meaning": "(I) Hát ---> うたって"
+  },
+  {
+    "id": 74,
+    "hira_kata": "うたがいます ウタガイマス",
+    "kanji": "疑います",
+    "meaning": "(I) Nghi ngờ ---> うたがって"
+  },
+  {
+    "id": 75,
+    "hira_kata": "うちます ウチマス",
+    "kanji": "打ちます",
+    "meaning": "(I) Đánh, gõ, đập ---> うって"
+  },
+  {
+    "id": 76,
+    "hira_kata": "うちあわせます ウチアワセマス",
+    "kanji": "打ち合わせます",
+    "meaning": "(II) Bàn bạc, thảo luận ---> うちあわせて"
+  },
+  {
+    "id": 77,
+    "hira_kata": "うつします ウツシマス",
+    "kanji": "写します",
+    "meaning": "(I) Chép lại, chụp (ảnh) ---> うつして"
+  },
+  {
+    "id": 78,
+    "hira_kata": "うつします ウツシマス",
+    "kanji": "移します",
+    "meaning": "(I) Chuyển sang, lây (bệnh) ---> うつして"
+  },
+  {
+    "id": 79,
+    "hira_kata": "うつります ウツリマス",
+    "kanji": "移ります",
+    "meaning": "(I) Di chuyển, bị lây (bệnh) ---> うつって"
+  },
+  {
+    "id": 80,
+    "hira_kata": "うつります ウツリマス",
+    "kanji": "写ります",
+    "meaning": "(I) Được chụp, chiếu ---> うつって"
+  },
+  {
+    "id": 81,
+    "hira_kata": "うなずきます ウナズキマス",
+    "kanji": "頷きます",
+    "meaning": "(I) Gật đầu ---> うなずいて"
+  },
+  {
+    "id": 82,
+    "hira_kata": "うばいます ウバイマス",
+    "kanji": "奪います",
+    "meaning": "(I) Cướp đoạt ---> うばって"
+  },
+  {
+    "id": 83,
+    "hira_kata": "うまれます ウマレマス",
+    "kanji": "生まれます",
+    "meaning": "(II) Sinh ra ---> うまれて"
+  },
+  {
+    "id": 84,
+    "hira_kata": "うめます ウメマス",
+    "kanji": "埋めます",
+    "meaning": "(II) Chôn, lấp ---> うめて"
+  },
+  {
+    "id": 85,
+    "hira_kata": "うらやみます ウラヤミマス",
+    "kanji": "羨みます",
+    "meaning": "(I) Ghen tị, đố kỵ ---> うらやんで"
+  },
+  {
+    "id": 86,
+    "hira_kata": "うらぎります ウラギリマス",
+    "kanji": "裏切ります",
+    "meaning": "(I) Phản bội ---> うらぎって"
+  },
+  {
+    "id": 87,
+    "hira_kata": "うります ウリマス",
+    "kanji": "売ります",
+    "meaning": "(I) Bán ---> うって"
+  },
+  {
+    "id": 88,
+    "hira_kata": "うれます ウレマス",
+    "kanji": "売れます",
+    "meaning": "(II) Bán chạy ---> うれて"
+  },
+  {
+    "id": 89,
+    "hira_kata": "うんてんします ウンテンシマス",
+    "kanji": "運転します",
+    "meaning": "(III) Lái xe ---> うんてんして"
+  },
+  {
+    "id": 90,
+    "hira_kata": "うんどうします ウンドウシマス",
+    "kanji": "運動します",
+    "meaning": "(III) Vận động ---> うんどうして"
+  },
+  {
+    "id": 91,
+    "hira_kata": "えがきます エガキマス",
+    "kanji": "描きます",
+    "meaning": "(I) Vẽ, miêu tả ---> えがいて"
+  },
+  {
+    "id": 92,
+    "hira_kata": "えらびます エラビマス",
+    "kanji": "選びます",
+    "meaning": "(I) Chọn, lựa chọn ---> えらんで"
+  },
+  {
+    "id": 93,
+    "hira_kata": "えます エマス",
+    "kanji": "得ます",
+    "meaning": "(II) Đạt được, thu được ---> えて"
+  },
+  {
+    "id": 94,
+    "hira_kata": "えんりょします エンリョシマス",
+    "kanji": "遠慮します",
+    "meaning": "(III) Ngần ngại, khách sáo ---> えんりょして"
+  },
+  {
+    "id": 95,
+    "hira_kata": "おいます オイマス",
+    "kanji": "追います",
+    "meaning": "(I) Đuổi theo ---> おって"
+  },
+  {
+    "id": 96,
+    "hira_kata": "おいかけます オイカケマス",
+    "kanji": "追いかけます",
+    "meaning": "(II) Đuổi theo sau ---> おいかけて"
+  },
+  {
+    "id": 97,
+    "hira_kata": "おいこします オイコシマス",
+    "kanji": "追い越します",
+    "meaning": "(I) Vượt qua (xe) ---> おいこして"
+  },
+  {
+    "id": 98,
+    "hira_kata": "おいつきます オイツキマス",
+    "kanji": "追いつきます",
+    "meaning": "(I) Đuổi kịp ---> おいついて"
+  },
+  {
+    "id": 99,
+    "hira_kata": "おうえんします オウエンシマス",
+    "kanji": "応援します",
+    "meaning": "(III) Cổ vũ, ủng hộ ---> おうえんして"
+  },
+  {
+    "id": 100,
+    "hira_kata": "おえます オエマス",
+    "kanji": "終えます",
+    "meaning": "(II) Kết thúc (tha động từ) ---> おえて"
+  },
+  {
+    "id": 101,
+    "hira_kata": "おきます オキマス",
+    "kanji": "起きます",
+    "meaning": "(db2) Thức dậy ---> おきて"
+  },
+  {
+    "id": 102,
+    "hira_kata": "おきます オキマス",
+    "kanji": "置きます",
+    "meaning": "(I) Đặt, để ---> おいて"
+  },
+  {
+    "id": 103,
+    "hira_kata": "おくります オクリマス",
+    "kanji": "送ります",
+    "meaning": "(I) Gửi, tiễn ---> おくって"
+  },
+  {
+    "id": 104,
+    "hira_kata": "おくります オクリマス",
+    "kanji": "贈ります",
+    "meaning": "(I) Tặng (quà) ---> おくって"
+  },
+  {
+    "id": 105,
+    "hira_kata": "おくれます オクレマス",
+    "kanji": "遅れます",
+    "meaning": "(II) Trễ, muộn ---> おくれて"
+  },
+  {
+    "id": 106,
+    "hira_kata": "おこします オコシマス",
+    "kanji": "起こします",
+    "meaning": "(I) Đánh thức, gây ra ---> おこして"
+  },
+  {
+    "id": 107,
+    "hira_kata": "おこたります オコタリマス",
+    "kanji": "怠ります",
+    "meaning": "(I) Bỏ bê, lơ là ---> おこたって"
+  },
+  {
+    "id": 108,
+    "hira_kata": "おこないます オコナイマス",
+    "kanji": "行います",
+    "meaning": "(I) Tổ chức, tiến hành ---> おこなって"
+  },
+  {
+    "id": 109,
+    "hira_kata": "おこります オコリマス",
+    "kanji": "怒ります",
+    "meaning": "(I) Tức giận ---> おこって"
+  },
+  {
+    "id": 110,
+    "hira_kata": "おこります オコリマス",
+    "kanji": "起こります",
+    "meaning": "(I) Xảy ra ---> おこって"
+  },
+  {
+    "id": 111,
+    "hira_kata": "おさえます オサエマス",
+    "kanji": "抑えます",
+    "meaning": "(II) Kìm nén, đè nén ---> おさえて"
+  },
+  {
+    "id": 112,
+    "hira_kata": "おさめます オサメマス",
+    "kanji": "収めます",
+    "meaning": "(II) Thu được, cất giữ ---> おさめて"
+  },
+  {
+    "id": 113,
+    "hira_kata": "おさめます オサメマス",
+    "kanji": "納めます",
+    "meaning": "(II) Nộp (thuế, tiền) ---> おさめて"
+  },
+  {
+    "id": 114,
+    "hira_kata": "おさめます オサメマス",
+    "kanji": "治めます",
+    "meaning": "(II) Cai trị, thống trị ---> おさめて"
+  },
+  {
+    "id": 115,
+    "hira_kata": "おしえます オシエマス",
+    "kanji": "教えます",
+    "meaning": "(II) Dạy, cho biết ---> おしえて"
+  },
+  {
+    "id": 116,
+    "hira_kata": "おします オシマス",
+    "kanji": "押します",
+    "meaning": "(I) Ấn, đẩy ---> おして"
+  },
+  {
+    "id": 117,
+    "hira_kata": "おちこみます オチコミマス",
+    "kanji": "落ち込みます",
+    "meaning": "(I) Suy sụp, buồn bã ---> おちこんで"
+  },
+  {
+    "id": 118,
+    "hira_kata": "おちます オチマス",
+    "kanji": "落ちます",
+    "meaning": "(db2) Rơi, rớt ---> おちて"
+  },
+  {
+    "id": 119,
+    "hira_kata": "おちつきます オチツキマス",
+    "kanji": "落ち着きます",
+    "meaning": "(I) Bình tĩnh ---> おちついて"
+  },
+  {
+    "id": 120,
+    "hira_kata": "おっしゃいます オッシャイマス",
+    "kanji": "仰います",
+    "meaning": "(I) Nói (tôn kính của いいます) ---> おっしゃって"
+  },
+  {
+    "id": 121,
+    "hira_kata": "おとします オトシマス",
+    "kanji": "落とします",
+    "meaning": "(I) Làm rơi ---> おとして"
+  },
+  {
+    "id": 122,
+    "hira_kata": "おとずれます オトズレマス",
+    "kanji": "訪れます",
+    "meaning": "(II) Ghé thăm ---> おとずれて"
+  },
+  {
+    "id": 123,
+    "hira_kata": "おどろきます オドロキマス",
+    "kanji": "驚きます",
+    "meaning": "(I) Ngạc nhiên ---> おどろいて"
+  },
+  {
+    "id": 124,
+    "hira_kata": "おどろかします オドロカシマス",
+    "kanji": "驚かします",
+    "meaning": "(I) Làm cho ngạc nhiên ---> おどろかして"
+  },
+  {
+    "id": 125,
+    "hira_kata": "おどります オドリマス",
+    "kanji": "踊ります",
+    "meaning": "(I) Nhảy múa ---> おどって"
+  },
+  {
+    "id": 126,
+    "hira_kata": "おぼえます オボエマス",
+    "kanji": "覚えます",
+    "meaning": "(II) Nhớ, thuộc ---> おぼえて"
+  },
+  {
+    "id": 127,
+    "hira_kata": "おぼれます オボレマス",
+    "kanji": "溺れます",
+    "meaning": "(II) Chết đuối, chìm đắm ---> おぼれて"
+  },
+  {
+    "id": 128,
+    "hira_kata": "おもいます オモイマス",
+    "kanji": "思います",
+    "meaning": "(I) Nghĩ ---> おもって"
+  },
+  {
+    "id": 129,
+    "hira_kata": "おもいこみます オモイコミマス",
+    "kanji": "思い込みます",
+    "meaning": "(I) Cho rằng, tin rằng ---> おもいこんで"
+  },
+  {
+    "id": 130,
+    "hira_kata": "おもいだします オモイダシマス",
+    "kanji": "思い出します",
+    "meaning": "(I) Nhớ lại ---> おもいだして"
+  },
+  {
+    "id": 131,
+    "hira_kata": "おもいつきます オモイツキマス",
+    "kanji": "思いつきます",
+    "meaning": "(I) Nảy ra ý tưởng ---> おもいついて"
+  },
+  {
+    "id": 132,
+    "hira_kata": "およぎます オヨギマス",
+    "kanji": "泳ぎます",
+    "meaning": "(I) Bơi ---> およいで"
+  },
+  {
+    "id": 133,
+    "hira_kata": "およぼします オヨボシマス",
+    "kanji": "及ぼします",
+    "meaning": "(I) Gây ra (ảnh hưởng) ---> およぼして"
+  },
+  {
+    "id": 134,
+    "hira_kata": "おります オリマス",
+    "kanji": "降ります",
+    "meaning": "(db2) Xuống (xe, tàu) ---> おりて"
+  },
+  {
+    "id": 135,
+    "hira_kata": "おります オリマス",
+    "kanji": "折ります",
+    "meaning": "(I) Bẻ gãy, gập lại ---> おって"
+  },
+  {
+    "id": 136,
+    "hira_kata": "おろします オロシマス",
+    "kanji": "下ろします",
+    "meaning": "(I) Rút (tiền), cho xuống ---> おろして"
+  },
+  {
+    "id": 137,
+    "hira_kata": "おわります オワリマス",
+    "kanji": "終わります",
+    "meaning": "(I) Kết thúc ---> おわって"
+  },
+  {
+    "id": 138,
+    "hira_kata": "かいます カイマス",
+    "kanji": "買います",
+    "meaning": "(I) Mua ---> かって"
+  },
+  {
+    "id": 139,
+    "hira_kata": "かいます カイマス",
+    "kanji": "飼います",
+    "meaning": "(I) Nuôi (động vật) ---> かって"
+  },
+  {
+    "id": 140,
+    "hira_kata": "かえします カエシマス",
+    "kanji": "返します",
+    "meaning": "(I) Trả lại ---> かえして"
+  },
+  {
+    "id": 141,
+    "hira_kata": "かえます カエマス",
+    "kanji": "変えます",
+    "meaning": "(II) Thay đổi ---> かえて"
+  },
+  {
+    "id": 142,
+    "hira_kata": "かえます カエマス",
+    "kanji": "替えます",
+    "meaning": "(II) Đổi, thay thế ---> かえて"
+  },
+  {
+    "id": 143,
+    "hira_kata": "かえります カエリマス",
+    "kanji": "帰ります",
+    "meaning": "(db1) Về ---> かえって"
+  },
+  {
+    "id": 144,
+    "hira_kata": "かかえます カカエマス",
+    "kanji": "抱えます",
+    "meaning": "(II) Ôm, vướng phải rắc rối ---> かかえて"
+  },
+  {
+    "id": 145,
+    "hira_kata": "かかります カカリマス",
+    "kanji": "掛かります",
+    "meaning": "(I) Tốn (thời gian, tiền), đang treo ---> かかって"
+  },
+  {
+    "id": 146,
+    "hira_kata": "かかわります カカワリマス",
+    "kanji": "関わります",
+    "meaning": "(I) Liên quan đến ---> かかわって"
+  },
+  {
+    "id": 147,
+    "hira_kata": "かぎります カギリマス",
+    "kanji": "限ります",
+    "meaning": "(db1) Giới hạn ---> かぎって"
+  },
+  {
+    "id": 148,
+    "hira_kata": "かきます カキマス",
+    "kanji": "書きます",
+    "meaning": "(I) Viết ---> かいて"
+  },
+  {
+    "id": 149,
+    "hira_kata": "かきます カキマス",
+    "kanji": "描きます",
+    "meaning": "(I) Vẽ ---> かいて"
+  },
+  {
+    "id": 150,
+    "hira_kata": "かきます カキマス",
+    "kanji": "掻きます",
+    "meaning": "(I) Gãi, đổ (mồ hôi) ---> かいて"
+  },
+  {
+    "id": 151,
+    "hira_kata": "かくします カクシマス",
+    "kanji": "隠します",
+    "meaning": "(I) Giấu, che khuất ---> かくして"
+  },
+  {
+    "id": 152,
+    "hira_kata": "かかれます カカレマス",
+    "kanji": "隠れます",
+    "meaning": "(II) Ẩn náu, trốn ---> かくれて"
+  },
+  {
+    "id": 153,
+    "hira_kata": "かぎます カギマス",
+    "kanji": "嗅ぎます",
+    "meaning": "(I) Ngửi ---> かいで"
+  },
+  {
+    "id": 154,
+    "hira_kata": "かけます カケマス",
+    "kanji": "掛けます",
+    "meaning": "(II) Treo lên, gọi (điện thoại) ---> かけて"
+  },
+  {
+    "id": 155,
+    "hira_kata": "かけます カケマス",
+    "kanji": "欠けます",
+    "meaning": "(II) Thiếu, khuyết ---> かけて"
+  },
+  {
+    "id": 156,
+    "hira_kata": "かざります カザリマス",
+    "kanji": "飾ります",
+    "meaning": "(I) Trang trí ---> かざって"
+  },
+  {
+    "id": 157,
+    "hira_kata": "かせぎます カセギマス",
+    "kanji": "稼ぎます",
+    "meaning": "(I) Kiếm tiền ---> かせいで"
+  },
+  {
+    "id": 158,
+    "hira_kata": "かします カシマス",
+    "kanji": "貸します",
+    "meaning": "(I) Cho mượn ---> かして"
+  },
+  {
+    "id": 159,
+    "hira_kata": "かぞえます カゾエマス",
+    "kanji": "数えます",
+    "meaning": "(II) Đếm ---> かぞえて"
+  },
+  {
+    "id": 160,
+    "hira_kata": "かちます カチマス",
+    "kanji": "勝ちます",
+    "meaning": "(I) Thắng ---> かって"
+  },
+  {
+    "id": 161,
+    "hira_kata": "かたづきます カタヅキマス",
+    "kanji": "片付きます",
+    "meaning": "(I) Được dọn dẹp, ngăn nắp ---> かたづいて"
+  },
+  {
+    "id": 162,
+    "hira_kata": "かたづけます カタヅケマス",
+    "kanji": "片付けます",
+    "meaning": "(II) Dọn dẹp ---> かたづけて"
+  },
+  {
+    "id": 163,
+    "hira_kata": "かたります カタリマス",
+    "kanji": "語ります",
+    "meaning": "(I) Kể chuyện, tường thuật ---> かたって"
+  },
+  {
+    "id": 164,
+    "hira_kata": "かつぎます カツギマス",
+    "kanji": "担ぎます",
+    "meaning": "(I) Khiêng, vác ---> かついで"
+  },
+  {
+    "id": 165,
+    "hira_kata": "かなしみます カナシミマス",
+    "kanji": "悲しみます",
+    "meaning": "(I) Buồn bã, đau khổ ---> かなしんで"
+  },
+  {
+    "id": 166,
+    "hira_kata": "かぶります カブリマス",
+    "kanji": "被ります",
+    "meaning": "(I) Đội (mũ) ---> かぶって"
+  },
+  {
+    "id": 167,
+    "hira_kata": "かまいます カマイマス",
+    "kanji": "構います",
+    "meaning": "(I) Quan tâm, bận tâm ---> かまって"
+  },
+  {
+    "id": 168,
+    "hira_kata": "かみます カミマス",
+    "kanji": "噛みます",
+    "meaning": "(I) Nhai, cắn ---> かんで"
+  },
+  {
+    "id": 169,
+    "hira_kata": "かよいます カヨイマス",
+    "kanji": "通います",
+    "meaning": "(I) Đi lại, lui tới ---> かよって"
+  },
+  {
+    "id": 170,
+    "hira_kata": "からかいます カラカイマス",
+    "kanji": "_",
+    "meaning": "(I) Trêu chọc ---> からかって"
+  },
+  {
+    "id": 171,
+    "hira_kata": "かります カリマス",
+    "kanji": "借ります",
+    "meaning": "(db2) Mượn ---> かりて"
+  },
+  {
+    "id": 172,
+    "hira_kata": "かわかします カワカシマス",
+    "kanji": "乾かします",
+    "meaning": "(I) Làm khô ---> かわかして"
+  },
+  {
+    "id": 173,
+    "hira_kata": "かわきます カワキマス",
+    "kanji": "乾きます",
+    "meaning": "(I) Khô ---> かわいて"
+  },
+  {
+    "id": 174,
+    "hira_kata": "かわきます カワキマス",
+    "kanji": "渇きます",
+    "meaning": "(I) Khát ---> かわいて"
+  },
+  {
+    "id": 175,
+    "hira_kata": "かわります カワリマス",
+    "kanji": "変わります",
+    "meaning": "(I) Thay đổi ---> かわって"
+  },
+  {
+    "id": 176,
+    "hira_kata": "かわります カワリマス",
+    "kanji": "代わります",
+    "meaning": "(I) Thay thế, đại diện ---> かわって"
+  },
+  {
+    "id": 177,
+    "hira_kata": "かんがえます カンガエマス",
+    "kanji": "考えます",
+    "meaning": "(II) Suy nghĩ ---> かんがえて"
+  },
+  {
+    "id": 178,
+    "hira_kata": "かんがえなおします カンガエナオシマス",
+    "kanji": "考え直します",
+    "meaning": "(I) Suy nghĩ lại ---> かんがえなおして"
+  },
+  {
+    "id": 179,
+    "hira_kata": "かんじます カンジマス",
+    "kanji": "感じます",
+    "meaning": "(db2) Cảm thấy ---> かんじて"
+  },
+  {
+    "id": 180,
+    "hira_kata": "がんばります ガンバリマス",
+    "kanji": "頑張ります",
+    "meaning": "(I) Cố gắng ---> がんばって"
+  },
+  {
+    "id": 181,
+    "hira_kata": "きがえます キガエマス",
+    "kanji": "着替えます",
+    "meaning": "(II) Thay quần áo ---> きがえて"
+  },
+  {
+    "id": 182,
+    "hira_kata": "ききます キキマス",
+    "kanji": "聞きます",
+    "meaning": "(I) Nghe, hỏi ---> きいて"
+  },
+  {
+    "id": 183,
+    "hira_kata": "ききます キキマス",
+    "kanji": "効きます",
+    "meaning": "(I) Có hiệu quả ---> きいて"
+  },
+  {
+    "id": 184,
+    "hira_kata": "きこえます キコエマス",
+    "kanji": "聞こえます",
+    "meaning": "(II) Nghe thấy ---> きこえて"
+  },
+  {
+    "id": 185,
+    "hira_kata": "きざみます キザミマス",
+    "kanji": "刻みます",
+    "meaning": "(I) Thái (rau), khắc ---> きざんで"
+  },
+  {
+    "id": 186,
+    "hira_kata": "きづきます キヅキマス",
+    "kanji": "気づきます",
+    "meaning": "(I) Nhận ra ---> きづいて"
+  },
+  {
+    "id": 187,
+    "hira_kata": "きにいります キニイリマス",
+    "kanji": "気に入ります",
+    "meaning": "(db1) Yêu thích, vừa ý ---> きにいって"
+  },
+  {
+    "id": 188,
+    "hira_kata": "きにします キニシマス",
+    "kanji": "気にします",
+    "meaning": "(III) Bận tâm, lo lắng ---> きにして"
+  },
+  {
+    "id": 189,
+    "hira_kata": "きまります キマリマス",
+    "kanji": "決まります",
+    "meaning": "(I) Được quyết định ---> きまって"
+  },
+  {
+    "id": 190,
+    "hira_kata": "きめます キメマス",
+    "kanji": "決めます",
+    "meaning": "(II) Quyết định ---> きめて"
+  },
+  {
+    "id": 191,
+    "hira_kata": "きます キマス",
+    "kanji": "来ます",
+    "meaning": "(III) Đến ---> きて"
+  },
+  {
+    "id": 192,
+    "hira_kata": "きます キマス",
+    "kanji": "着ます",
+    "meaning": "(db2) Mặc (áo) ---> きて"
+  },
+  {
+    "id": 193,
+    "hira_kata": "きります キリマス",
+    "kanji": "切ります",
+    "meaning": "(db1) Cắt ---> きって"
+  },
+  {
+    "id": 194,
+    "hira_kata": "きらいます キライマス",
+    "kanji": "嫌います",
+    "meaning": "(I) Ghét ---> きらって"
+  },
+  {
+    "id": 195,
+    "hira_kata": "きをつけます キヲツケマス",
+    "kanji": "気をつけます",
+    "meaning": "(II) Cẩn thận ---> きをつけて"
+  },
+  {
+    "id": 196,
+    "hira_kata": "くさります クサリマス",
+    "kanji": "腐ります",
+    "meaning": "(I) Thối, thiu, hỏng ---> くさって"
+  },
+  {
+    "id": 197,
+    "hira_kata": "くずします クズシマス",
+    "kanji": "崩します",
+    "meaning": "(I) Phá vỡ, đổi (tiền lẻ) ---> くずして"
+  },
+  {
+    "id": 198,
+    "hira_kata": "くずれます クズレマス",
+    "kanji": "崩れます",
+    "meaning": "(II) Sụp đổ ---> くずれて"
+  },
+  {
+    "id": 199,
+    "hira_kata": "くたびれます クタビレマス",
+    "kanji": "_",
+    "meaning": "(II) Mệt mỏi, kiệt sức ---> くたびれて"
+  },
+  {
+    "id": 200,
+    "hira_kata": "くだきます クダキマス",
+    "kanji": "砕きます",
+    "meaning": "(I) Đập vỡ ---> くだいて"
+  },
+  {
+    "id": 201,
+    "hira_kata": "くださいます クダサイマス",
+    "kanji": "下さいます",
+    "meaning": "(I) Cho, tặng (tôn kính) ---> くださって"
+  },
+  {
+    "id": 202,
+    "hira_kata": "くみたてます クミタテマス",
+    "kanji": "組み立てます",
+    "meaning": "(II) Lắp ráp ---> くみたてて"
+  },
+  {
+    "id": 203,
+    "hira_kata": "くみます クミマス",
+    "kanji": "組みます",
+    "meaning": "(I) Lắp ghép, khoanh (tay) ---> くんで"
+  },
+  {
+    "id": 204,
+    "hira_kata": "くみます クミマス",
+    "kanji": "汲みます",
+    "meaning": "(I) Múc (nước), thấu hiểu ---> くんで"
+  },
+  {
+    "id": 205,
+    "hira_kata": "くもります クモリマス",
+    "kanji": "曇ります",
+    "meaning": "(I) Trở nên nhiều mây ---> くもって"
+  },
+  {
+    "id": 206,
+    "hira_kata": "くらします クラシマス",
+    "kanji": "暮らします",
+    "meaning": "(I) Sinh sống ---> くらして"
+  },
+  {
+    "id": 207,
+    "hira_kata": "くらべます クラベマス",
+    "kanji": "比べます",
+    "meaning": "(II) So sánh ---> くらべて"
+  },
+  {
+    "id": 208,
+    "hira_kata": "くりかえします クリカエシマス",
+    "kanji": "繰り返します",
+    "meaning": "(I) Lặp lại ---> くりかえして"
+  },
+  {
+    "id": 209,
+    "hira_kata": "くるいます クルイマス",
+    "kanji": "狂います",
+    "meaning": "(I) Điên, hỏng hóc ---> くるって"
+  },
+  {
+    "id": 210,
+    "hira_kata": "くるしみます クルシミマス",
+    "kanji": "苦しみます",
+    "meaning": "(I) Chịu đựng, đau khổ ---> くるしんで"
+  },
+  {
+    "id": 211,
+    "hira_kata": "くれます クレマス",
+    "kanji": "_",
+    "meaning": "(II) Cho (mình) ---> くれて"
+  },
+  {
+    "id": 212,
+    "hira_kata": "くわえます クワエマス",
+    "kanji": "加えます",
+    "meaning": "(II) Thêm vào ---> くわえて"
+  },
+  {
+    "id": 213,
+    "hira_kata": "くわわります クワワリマス",
+    "kanji": "加わります",
+    "meaning": "(I) Tham gia, gia nhập ---> くわわって"
+  },
+  {
+    "id": 214,
+    "hira_kata": "けいかくします ケイカクシマス",
+    "kanji": "計画します",
+    "meaning": "(III) Lên kế hoạch ---> けいかくして"
+  },
+  {
+    "id": 215,
+    "hira_kata": "けいけんします ケイケンシマス",
+    "kanji": "経験します",
+    "meaning": "(III) Trải nghiệm ---> けいけんして"
+  },
+  {
+    "id": 216,
+    "hira_kata": "けします ケシマス",
+    "kanji": "消します",
+    "meaning": "(I) Tắt (điện), xóa ---> けして"
+  },
+  {
+    "id": 217,
+    "hira_kata": "けずります ケズリマス",
+    "kanji": "削ります",
+    "meaning": "(db1) Gọt, bào ---> けずって"
+  },
+  {
+    "id": 218,
+    "hira_kata": "けります ケリマス",
+    "kanji": "蹴ります",
+    "meaning": "(db1) Đá ---> けって"
+  },
+  {
+    "id": 219,
+    "hira_kata": "けんかします ケンカシマス",
+    "kanji": "喧嘩します",
+    "meaning": "(III) Cãi nhau ---> けんかして"
+  },
+  {
+    "id": 220,
+    "hira_kata": "けんがくします ケンガクシマス",
+    "kanji": "見学します",
+    "meaning": "(III) Tham quan học tập ---> けんがくして"
+  },
+  {
+    "id": 221,
+    "hira_kata": "けんきゅうします ケンキュウシマス",
+    "kanji": "研究します",
+    "meaning": "(III) Nghiên cứu ---> けんきゅうして"
+  },
+  {
+    "id": 222,
+    "hira_kata": "こえます コエマス",
+    "kanji": "越えます",
+    "meaning": "(II) Vượt qua (biên giới) ---> こえて"
+  },
+  {
+    "id": 223,
+    "hira_kata": "こえます コエマス",
+    "kanji": "超えます",
+    "meaning": "(II) Vượt quá (mức độ) ---> こえて"
+  },
+  {
+    "id": 224,
+    "hira_kata": "こおります コオリマス",
+    "kanji": "凍ります",
+    "meaning": "(I) Đóng băng ---> こおって"
+  },
+  {
+    "id": 225,
+    "hira_kata": "こがします コガシマス",
+    "kanji": "焦がします",
+    "meaning": "(I) Làm cháy ---> こがして"
+  },
+  {
+    "id": 226,
+    "hira_kata": "こげます コゲマス",
+    "kanji": "焦げます",
+    "meaning": "(II) Bị cháy ---> こげて"
+  },
+  {
+    "id": 227,
+    "hira_kata": "こごえます コゴエマス",
+    "kanji": "凍えます",
+    "meaning": "(II) Lạnh cóng ---> こごえて"
+  },
+  {
+    "id": 228,
+    "hira_kata": "こしらえます コシラエマス",
+    "kanji": "_",
+    "meaning": "(II) Tạo ra, làm ra ---> こしらえて"
+  },
+  {
+    "id": 229,
+    "hira_kata": "こすります コスリマス",
+    "kanji": "擦ります",
+    "meaning": "(I) Chà xát, cọ ---> こすって"
+  },
+  {
+    "id": 230,
+    "hira_kata": "こたえます コタエマス",
+    "kanji": "答えます",
+    "meaning": "(II) Trả lời ---> こたえて"
+  },
+  {
+    "id": 231,
+    "hira_kata": "ことわります コトワリマス",
+    "kanji": "断ります",
+    "meaning": "(I) Từ chối ---> ことわって"
+  },
+  {
+    "id": 232,
+    "hira_kata": "こぼします コボシマス",
+    "kanji": "_",
+    "meaning": "(I) Làm đổ ---> こぼして"
+  },
+  {
+    "id": 233,
+    "hira_kata": "こぼれます コボレマス",
+    "kanji": "_",
+    "meaning": "(II) Bị đổ ---> こぼれて"
+  },
+  {
+    "id": 234,
+    "hira_kata": "こまります コマリマス",
+    "kanji": "困ります",
+    "meaning": "(I) Khó khăn, rắc rối ---> こまって"
+  },
+  {
+    "id": 235,
+    "hira_kata": "こみます コミマス",
+    "kanji": "込みます",
+    "meaning": "(I) Đông đúc ---> こんで"
+  },
+  {
+    "id": 236,
+    "hira_kata": "ごまかします ゴマカシマス",
+    "kanji": "誤魔化します",
+    "meaning": "(I) Lừa dối, đánh trống lảng ---> ごまかして"
+  },
+  {
+    "id": 237,
+    "hira_kata": "ころがります コロガリマス",
+    "kanji": "転がります",
+    "meaning": "(I) Lăn ---> ころがって"
+  },
+  {
+    "id": 238,
+    "hira_kata": "ころします コロシマス",
+    "kanji": "殺します",
+    "meaning": "(I) Giết ---> ころして"
+  },
+  {
+    "id": 239,
+    "hira_kata": "ころびます コロビマス",
+    "kanji": "転びます",
+    "meaning": "(I) Ngã ---> ころんで"
+  },
+  {
+    "id": 240,
+    "hira_kata": "こわします コワシマス",
+    "kanji": "壊します",
+    "meaning": "(I) Làm hỏng ---> こわして"
+  },
+  {
+    "id": 241,
+    "hira_kata": "こわれます コワレマス",
+    "kanji": "壊れます",
+    "meaning": "(II) Bị hỏng ---> こわれて"
+  },
+  {
+    "id": 242,
+    "hira_kata": "さがします サガシマス",
+    "kanji": "探します",
+    "meaning": "(I) Tìm kiếm ---> さがして"
+  },
+  {
+    "id": 243,
+    "hira_kata": "さがります サガリマス",
+    "kanji": "下がります",
+    "meaning": "(I) Giảm xuống, đi xuống ---> さがって"
+  },
+  {
+    "id": 244,
+    "hira_kata": "さげます サゲマス",
+    "kanji": "下げます",
+    "meaning": "(II) Hạ xuống, dọn đi ---> さげて"
+  },
+  {
+    "id": 245,
+    "hira_kata": "ささえます ササエマス",
+    "kanji": "支えます",
+    "meaning": "(II) Nâng đỡ, hỗ trợ ---> ささえて"
+  },
+  {
+    "id": 246,
+    "hira_kata": "ささやきます ササヤキマス",
+    "kanji": "囁きます",
+    "meaning": "(I) Thì thầm ---> ささやいて"
+  },
+  {
+    "id": 247,
+    "hira_kata": "ささります ササリマス",
+    "kanji": "刺さります",
+    "meaning": "(I) Bị đâm, bị mắc ---> ささって"
+  },
+  {
+    "id": 248,
+    "hira_kata": "さします サシマス",
+    "kanji": "指します",
+    "meaning": "(I) Chỉ định, giương (ô) ---> さして"
+  },
+  {
+    "id": 249,
+    "hira_kata": "さします サシマス",
+    "kanji": "刺します",
+    "meaning": "(I) Đâm, chích ---> さして"
+  },
+  {
+    "id": 250,
+    "hira_kata": "さそいます サソイマス",
+    "kanji": "誘います",
+    "meaning": "(I) Rủ rê ---> さそって"
+  },
+  {
+    "id": 251,
+    "hira_kata": "さけびます サケビマス",
+    "kanji": "叫びます",
+    "meaning": "(I) Gào thét, la hét ---> さけんで"
+  },
+  {
+    "id": 252,
+    "hira_kata": "さます サマシマス",
+    "kanji": "冷まします",
+    "meaning": "(I) Làm nguội ---> さまして"
+  },
+  {
+    "id": 253,
+    "hira_kata": "さめます サメマス",
+    "kanji": "冷めます",
+    "meaning": "(II) Nguội đi ---> さめて"
+  },
+  {
+    "id": 254,
+    "hira_kata": "さめます サメマス",
+    "kanji": "覚めます",
+    "meaning": "(II) Tỉnh giấc ---> さめて"
+  },
+  {
+    "id": 255,
+    "hira_kata": "さわぎます サワギマス",
+    "kanji": "騒ぎます",
+    "meaning": "(I) Làm ồn ---> さわいで"
+  },
+  {
+    "id": 256,
+    "hira_kata": "さわります サワリマス",
+    "kanji": "触ります",
+    "meaning": "(I) Sờ, chạm ---> さわって"
+  },
+  {
+    "id": 257,
+    "hira_kata": "さんかします サンカシマス",
+    "kanji": "参加します",
+    "meaning": "(III) Tham gia ---> さんかして"
+  },
+  {
+    "id": 258,
+    "hira_kata": "さんぽします サンポシマス",
+    "kanji": "散歩します",
+    "meaning": "(III) Đi dạo ---> さんぽして"
+  },
+  {
+    "id": 259,
+    "hira_kata": "しあがります シアガリマス",
+    "kanji": "仕上がります",
+    "meaning": "(I) Hoàn thành (tự động từ) ---> しあがって"
+  },
+  {
+    "id": 260,
+    "hira_kata": "しあげます シアゲマス",
+    "kanji": "仕上げます",
+    "meaning": "(II) Hoàn thiện (tha động từ) ---> しあげて"
+  },
+  {
+    "id": 261,
+    "hira_kata": "しかります シカリマス",
+    "kanji": "叱ります",
+    "meaning": "(I) Mắng ---> しかって"
+  },
+  {
+    "id": 262,
+    "hira_kata": "しずみます シズミマス",
+    "kanji": "沈みます",
+    "meaning": "(I) Chìm, lặn ---> しずんで"
+  },
+  {
+    "id": 263,
+    "hira_kata": "したがいます シタガイマス",
+    "kanji": "従います",
+    "meaning": "(I) Tuân theo ---> したがって"
+  },
+  {
+    "id": 264,
+    "hira_kata": "したくします シタクシマス",
+    "kanji": "支度します",
+    "meaning": "(III) Chuẩn bị ---> したくして"
+  },
+  {
+    "id": 265,
+    "hira_kata": "しつもんします シツモンシマス",
+    "kanji": "質問します",
+    "meaning": "(III) Hỏi ---> しつもんして"
+  },
+  {
+    "id": 266,
+    "hira_kata": "しはらいます シハライマス",
+    "kanji": "支払います",
+    "meaning": "(I) Chi trả ---> しはらって"
+  },
+  {
+    "id": 267,
+    "hira_kata": "しばります シバリマス",
+    "kanji": "縛ります",
+    "meaning": "(I) Buộc, trói ---> しばって"
+  },
+  {
+    "id": 268,
+    "hira_kata": "しびれます シビレマス",
+    "kanji": "痺れます",
+    "meaning": "(II) Tê ---> しびれて"
+  },
+  {
+    "id": 269,
+    "hira_kata": "しゃべります シャベリマス",
+    "kanji": "喋ります",
+    "meaning": "(db1) Nói chuyện, tán gẫu ---> しゃべって"
+  },
+  {
+    "id": 270,
+    "hira_kata": "しまります シマリマス",
+    "kanji": "閉まります",
+    "meaning": "(I) Bị đóng ---> しまって"
+  },
+  {
+    "id": 271,
+    "hira_kata": "しまいます シマイマス",
+    "kanji": "仕舞います",
+    "meaning": "(I) Cất đi ---> しまって"
+  },
+  {
+    "id": 272,
+    "hira_kata": "しめます シメマス",
+    "kanji": "閉めます",
+    "meaning": "(II) Đóng ---> しめて"
+  },
+  {
+    "id": 273,
+    "hira_kata": "しめます シメマス",
+    "kanji": "締めます",
+    "meaning": "(II) Buộc, thắt (cà vạt) ---> しめて"
+  },
+  {
+    "id": 274,
+    "hira_kata": "しめます シメマス",
+    "kanji": "占めます",
+    "meaning": "(II) Chiếm (tỷ lệ) ---> しめて"
+  },
+  {
+    "id": 275,
+    "hira_kata": "しめします シメシマス",
+    "kanji": "示します",
+    "meaning": "(I) Cho thấy, chỉ ra ---> しめして"
+  },
+  {
+    "id": 276,
+    "hira_kata": "しります シリマス",
+    "kanji": "知ります",
+    "meaning": "(db1) Biết ---> しって"
+  },
+  {
+    "id": 277,
+    "hira_kata": "しらせます シラセマス",
+    "kanji": "知らせます",
+    "meaning": "(II) Thông báo ---> しらせて"
+  },
+  {
+    "id": 278,
+    "hira_kata": "しらべます シラベマス",
+    "kanji": "調べます",
+    "meaning": "(II) Điều tra, tìm hiểu ---> しらべて"
+  },
+  {
+    "id": 279,
+    "hira_kata": "しんじます シンジマス",
+    "kanji": "信じます",
+    "meaning": "(db2) Tin tưởng ---> しんじて"
+  },
+  {
+    "id": 280,
+    "hira_kata": "しんぱいします シンパイシマス",
+    "kanji": "心配します",
+    "meaning": "(III) Lo lắng ---> しんぱいして"
+  },
+  {
+    "id": 281,
+    "hira_kata": "すいます スイマス",
+    "kanji": "吸います",
+    "meaning": "(I) Hút (thuốc), hít ---> すって"
+  },
+  {
+    "id": 282,
+    "hira_kata": "すきます スキマス",
+    "kanji": "空きます",
+    "meaning": "(I) Trống rỗng, đói bụng ---> すいて"
+  },
+  {
+    "id": 283,
+    "hira_kata": "すぐれます スグレマス",
+    "kanji": "優れます",
+    "meaning": "(II) Xuất sắc, ưu tú ---> すぐれて"
+  },
+  {
+    "id": 284,
+    "hira_kata": "すごします スゴシマス",
+    "kanji": "過ごします",
+    "meaning": "(I) Trải qua (thời gian) ---> すごして"
+  },
+  {
+    "id": 285,
+    "hira_kata": "すすぎます ススギマス",
+    "kanji": "濯ぎます",
+    "meaning": "(I) Tráng, xả (nước) ---> すすいで"
+  },
+  {
+    "id": 286,
+    "hira_kata": "すすみます ススミマス",
+    "kanji": "進みます",
+    "meaning": "(I) Tiến lên ---> すすんで"
+  },
+  {
+    "id": 287,
+    "hira_kata": "すすめます ススメマス",
+    "kanji": "進めます",
+    "meaning": "(II) Thúc đẩy ---> すすめて"
+  },
+  {
+    "id": 288,
+    "hira_kata": "すすめます ススメマス",
+    "kanji": "勧めます",
+    "meaning": "(II) Khuyên, gợi ý ---> すすめて"
+  },
+  {
+    "id": 289,
+    "hira_kata": "すてます ステマス",
+    "kanji": "捨てます",
+    "meaning": "(II) Vứt bỏ ---> すてて"
+  },
+  {
+    "id": 290,
+    "hira_kata": "すべります スベリマス",
+    "kanji": "滑ります",
+    "meaning": "(db1) Trượt ---> すべって"
+  },
+  {
+    "id": 291,
+    "hira_kata": "すませます スマセマス",
+    "kanji": "済ませます",
+    "meaning": "(II) Hoàn thành, làm xong ---> すませて"
+  },
+  {
+    "id": 292,
+    "hira_kata": "すみます スミマス",
+    "kanji": "住みます",
+    "meaning": "(I) Sinh sống ---> すんで"
+  },
+  {
+    "id": 293,
+    "hira_kata": "すみます スミマス",
+    "kanji": "済みます",
+    "meaning": "(I) Kết thúc, xong xuôi ---> すんで"
+  },
+  {
+    "id": 294,
+    "hira_kata": "すわります スワリマス",
+    "kanji": "座ります",
+    "meaning": "(I) Ngồi ---> すわって"
+  },
+  {
+    "id": 295,
+    "hira_kata": "せきをします セキヲシマス",
+    "kanji": "咳をします",
+    "meaning": "(III) Ho ---> せきをして"
+  },
+  {
+    "id": 296,
+    "hira_kata": "せつめいします セツメイシマス",
+    "kanji": "説明します",
+    "meaning": "(III) Giải thích ---> せつめいして"
+  },
+  {
+    "id": 297,
+    "hira_kata": "せわをします セワヲシマス",
+    "kanji": "世話をします",
+    "meaning": "(III) Chăm sóc ---> せわをして"
+  },
+  {
+    "id": 298,
+    "hira_kata": "そろいます ソロイマス",
+    "kanji": "揃います",
+    "meaning": "(I) Tập hợp đầy đủ, đồng đều ---> そろって"
+  },
+  {
+    "id": 299,
+    "hira_kata": "そだちます ソダチマス",
+    "kanji": "育ちます",
+    "meaning": "(I) Lớn lên, phát triển ---> そだって"
+  },
+  {
+    "id": 300,
+    "hira_kata": "そだてます ソダテマス",
+    "kanji": "育てます",
+    "meaning": "(II) Nuôi dưỡng ---> そだてて"
+  },
+  {
+    "id": 301,
+    "hira_kata": "そそぎます ソソギマス",
+    "kanji": "注ぎます",
+    "meaning": "(I) Rót, đổ ---> そそいで"
+  },
+  {
+    "id": 302,
+    "hira_kata": "そなえます ソナエマス",
+    "kanji": "備えます",
+    "meaning": "(II) Trang bị, phòng bị ---> そなえて"
+  },
+  {
+    "id": 303,
+    "hira_kata": "そんけいします ソンケイシマス",
+    "kanji": "尊敬します",
+    "meaning": "(III) Tôn trọng ---> そんけいして"
+  },
+  {
+    "id": 304,
+    "hira_kata": "たおします タオシマス",
+    "kanji": "倒します",
+    "meaning": "(I) Đánh bại, làm đổ ---> たおして"
+  },
+  {
+    "id": 305,
+    "hira_kata": "たおれます タオレマス",
+    "kanji": "倒れます",
+    "meaning": "(II) Đổ, ngã ---> たおれて"
+  },
+  {
+    "id": 306,
+    "hira_kata": "たがやします タガヤシマス",
+    "kanji": "耕します",
+    "meaning": "(I) Cày cấy ---> たがやして"
+  },
+  {
+    "id": 307,
+    "hira_kata": "だきます ダキマス",
+    "kanji": "抱きます",
+    "meaning": "(I) Ôm, ấp ủ ---> だいて"
+  },
+  {
+    "id": 308,
+    "hira_kata": "たしかめます タシカメマス",
+    "kanji": "確かめます",
+    "meaning": "(II) Xác nhận ---> たしかめて"
+  },
+  {
+    "id": 309,
+    "hira_kata": "たすかります タスカリマス",
+    "kanji": "助かります",
+    "meaning": "(I) Được cứu, có ích ---> たすかって"
+  },
+  {
+    "id": 310,
+    "hira_kata": "たすけます タスケマス",
+    "kanji": "助けます",
+    "meaning": "(II) Cứu giúp ---> たすけて"
+  },
+  {
+    "id": 311,
+    "hira_kata": "だします ダシマス",
+    "kanji": "出します",
+    "meaning": "(I) Lấy ra, nộp, gửi ---> だして"
+  },
+  {
+    "id": 312,
+    "hira_kata": "たたかいます タタカイマス",
+    "kanji": "戦います",
+    "meaning": "(I) Chiến đấu ---> たたかって"
+  },
+  {
+    "id": 313,
+    "hira_kata": "たたきます タタキマス",
+    "kanji": "叩きます",
+    "meaning": "(I) Đánh, vỗ ---> たたいて"
+  },
+  {
+    "id": 314,
+    "hira_kata": "たちます タチマス",
+    "kanji": "立ちます",
+    "meaning": "(I) Đứng ---> たって"
+  },
+  {
+    "id": 315,
+    "hira_kata": "たちます タチマス",
+    "kanji": "建ちます",
+    "meaning": "(I) Được xây dựng ---> たって"
+  },
+  {
+    "id": 316,
+    "hira_kata": "たちます タチマス",
+    "kanji": "経ちます",
+    "meaning": "(I) Trôi qua (thời gian) ---> たって"
+  },
+  {
+    "id": 317,
+    "hira_kata": "たっします タッシマス",
+    "kanji": "達します",
+    "meaning": "(III) Đạt tới ---> たっして"
+  },
+  {
+    "id": 318,
+    "hira_kata": "たてます タテマス",
+    "kanji": "建てます",
+    "meaning": "(II) Xây dựng ---> たてて"
+  },
+  {
+    "id": 319,
+    "hira_kata": "たてます タテマス",
+    "kanji": "立てます",
+    "meaning": "(II) Lập, dựng lên (kế hoạch) ---> たてて"
+  },
+  {
+    "id": 320,
+    "hira_kata": "たのしみます タノシミマス",
+    "kanji": "楽しみます",
+    "meaning": "(I) Tận hưởng ---> たのしんで"
+  },
+  {
+    "id": 321,
+    "hira_kata": "たのみます タノミマス",
+    "kanji": "頼みます",
+    "meaning": "(I) Nhờ vả ---> たのんで"
+  },
+  {
+    "id": 322,
+    "hira_kata": "たべます タベマス",
+    "kanji": "食べます",
+    "meaning": "(II) Ăn ---> たべて"
+  },
+  {
+    "id": 323,
+    "hira_kata": "だまります ダマリマス",
+    "kanji": "黙ります",
+    "meaning": "(I) Im lặng ---> だまって"
+  },
+  {
+    "id": 324,
+    "hira_kata": "たまります タマリマス",
+    "kanji": "溜まります",
+    "meaning": "(I) Tích tụ, ứ đọng ---> たまって"
+  },
+  {
+    "id": 325,
+    "hira_kata": "ためします タメシマス",
+    "kanji": "試します",
+    "meaning": "(I) Thử nghiệm ---> ためして"
+  },
+  {
+    "id": 326,
+    "hira_kata": "ためます タメマス",
+    "kanji": "溜めます",
+    "meaning": "(II) Tích trữ, dành dụm ---> ためて"
+  },
+  {
+    "id": 327,
+    "hira_kata": "たります タリマス",
+    "kanji": "足ります",
+    "meaning": "(db2) Đủ ---> たりて"
+  },
+  {
+    "id": 328,
+    "hira_kata": "ちかづきます チカヅキマス",
+    "kanji": "近づきます",
+    "meaning": "(I) Đến gần ---> ちかづいて"
+  },
+  {
+    "id": 329,
+    "hira_kata": "ちかづけます チカヅケマス",
+    "kanji": "近づけます",
+    "meaning": "(II) Mang đến gần ---> ちかづけて"
+  },
+  {
+    "id": 330,
+    "hira_kata": "ちがいます チガイマス",
+    "kanji": "違います",
+    "meaning": "(I) Sai, khác ---> ちがって"
+  },
+  {
+    "id": 331,
+    "hira_kata": "ちぎります チギリマス",
+    "kanji": "千切ります",
+    "meaning": "(db1) Xé vụn ---> ちぎって"
+  },
+  {
+    "id": 332,
+    "hira_kata": "ちぢみます チヂミマス",
+    "kanji": "縮みます",
+    "meaning": "(I) Co lại ---> ちぢんで"
+  },
+  {
+    "id": 333,
+    "hira_kata": "ちらかします チラカシマス",
+    "kanji": "散らかします",
+    "meaning": "(I) Làm vương vãi ---> ちらかして"
+  },
+  {
+    "id": 334,
+    "hira_kata": "ちらかります チラカリマス",
+    "kanji": "散らかります",
+    "meaning": "(I) Vương vãi, bừa bộn ---> ちらかって"
+  },
+  {
+    "id": 335,
+    "hira_kata": "つうじます ツウジマス",
+    "kanji": "通じます",
+    "meaning": "(db2) Hiểu, thông suốt ---> つうじて"
+  },
+  {
+    "id": 336,
+    "hira_kata": "つかいます ツカイマス",
+    "kanji": "使います",
+    "meaning": "(I) Sử dụng ---> つかって"
+  },
+  {
+    "id": 337,
+    "hira_kata": "つかまります ツカマリマス",
+    "kanji": "捕まります",
+    "meaning": "(I) Bị bắt, bám vào ---> つかまって"
+  },
+  {
+    "id": 338,
+    "hira_kata": "つかまえます ツカマエマス",
+    "kanji": "捕まえます",
+    "meaning": "(II) Bắt giữ ---> つかまえて"
+  },
+  {
+    "id": 339,
+    "hira_kata": "つかみます ツカミマス",
+    "kanji": "掴みます",
+    "meaning": "(I) Nắm bắt, tóm lấy ---> つかんで"
+  },
+  {
+    "id": 340,
+    "hira_kata": "つかれます ツカレマス",
+    "kanji": "疲れます",
+    "meaning": "(II) Mệt mỏi ---> つかれて"
+  },
+  {
+    "id": 341,
+    "hira_kata": "つきあいます ツキアイマス",
+    "kanji": "付き合います",
+    "meaning": "(I) Giao du, hẹn hò ---> つきあって"
+  },
+  {
+    "id": 342,
+    "hira_kata": "つきます ツキマス",
+    "kanji": "着きます",
+    "meaning": "(I) Đến (nơi) ---> ついて"
+  },
+  {
+    "id": 343,
+    "hira_kata": "つきます ツキマス",
+    "kanji": "付きます",
+    "meaning": "(I) Dính, kèm theo ---> ついて"
+  },
+  {
+    "id": 344,
+    "hira_kata": "つきます ツキマス",
+    "kanji": "点きます",
+    "meaning": "(I) Sáng (đèn, điện) ---> ついて"
+  },
+  {
+    "id": 345,
+    "hira_kata": "つきます ツキマス",
+    "kanji": "突きます",
+    "meaning": "(I) Đâm, chọc ---> ついて"
+  },
+  {
+    "id": 346,
+    "hira_kata": "つぎます ツギマス",
+    "kanji": "次ぎます",
+    "meaning": "(I) Tiếp theo ---> ついで"
+  },
+  {
+    "id": 347,
+    "hira_kata": "つぎます ツギマス",
+    "kanji": "注ぎます",
+    "meaning": "(I) Rót ---> ついで"
+  },
+  {
+    "id": 348,
+    "hira_kata": "つくります ツクリマス",
+    "kanji": "作ります",
+    "meaning": "(I) Làm, chế tạo ---> つくって"
+  },
+  {
+    "id": 349,
+    "hira_kata": "つけます ツケマス",
+    "kanji": "点けます",
+    "meaning": "(II) Bật (điện) ---> つけて"
+  },
+  {
+    "id": 350,
+    "hira_kata": "つけます ツケマス",
+    "kanji": "付けます",
+    "meaning": "(II) Gắn vào, bôi ---> つけて"
+  },
+  {
+    "id": 351,
+    "hira_kata": "つけます ツケマス",
+    "kanji": "漬けます",
+    "meaning": "(II) Ngâm, muối (dưa) ---> つけて"
+  },
+  {
+    "id": 352,
+    "hira_kata": "つたわります ツタワリマス",
+    "kanji": "伝わります",
+    "meaning": "(I) Được truyền đạt ---> つたわって"
+  },
+  {
+    "id": 353,
+    "hira_kata": "つたえます ツタエマス",
+    "kanji": "伝えます",
+    "meaning": "(II) Truyền đạt ---> つたえて"
+  },
+  {
+    "id": 354,
+    "hira_kata": "つづきます ツヅキマス",
+    "kanji": "続きます",
+    "meaning": "(I) Tiếp tục (tự động từ) ---> つづいて"
+  },
+  {
+    "id": 355,
+    "hira_kata": "つづけます ツヅケマス",
+    "kanji": "続けます",
+    "meaning": "(II) Tiếp tục (tha động từ) ---> つづけて"
+  },
+  {
+    "id": 356,
+    "hira_kata": "つつみます ツツミマス",
+    "kanji": "包みます",
+    "meaning": "(I) Bọc, gói ---> つつんで"
+  },
+  {
+    "id": 357,
+    "hira_kata": "つとめます ツトメマス",
+    "kanji": "勤めます",
+    "meaning": "(II) Làm việc (cho) ---> つとめて"
+  },
+  {
+    "id": 358,
+    "hira_kata": "つなぎます ツナギマス",
+    "kanji": "繋ぎます",
+    "meaning": "(I) Buộc, nối ---> つないで"
+  },
+  {
+    "id": 359,
+    "hira_kata": "つながります ツナガリマス",
+    "kanji": "繋がります",
+    "meaning": "(I) Được kết nối ---> つながって"
+  },
+  {
+    "id": 360,
+    "hira_kata": "つまずきます ツマズキマス",
+    "kanji": "躓きます",
+    "meaning": "(I) Vấp ngã ---> つまずいて"
+  },
+  {
+    "id": 361,
+    "hira_kata": "つぶします ツブシマス",
+    "kanji": "潰します",
+    "meaning": "(I) Nghiền nát, làm lãng phí ---> つぶして"
+  },
+  {
+    "id": 362,
+    "hira_kata": "つぶれます ツブレマス",
+    "kanji": "潰れます",
+    "meaning": "(II) Bị nghiền nát, phá sản ---> つぶれて"
+  },
+  {
+    "id": 363,
+    "hira_kata": "つもります ツモリマス",
+    "kanji": "積もります",
+    "meaning": "(I) Tích tụ, chất đống ---> つもって"
+  },
+  {
+    "id": 364,
+    "hira_kata": "つれます ツレマス",
+    "kanji": "連れます",
+    "meaning": "(II) Dẫn theo ---> つれて"
+  },
+  {
+    "id": 365,
+    "hira_kata": "であいます デアイマス",
+    "kanji": "出会います",
+    "meaning": "(I) Tình cờ gặp ---> であって"
+  },
+  {
+    "id": 366,
+    "hira_kata": "でかけます デカケマス",
+    "kanji": "出かけます",
+    "meaning": "(II) Đi ra ngoài ---> でかけて"
+  },
+  {
+    "id": 367,
+    "hira_kata": "できます デキマス",
+    "kanji": "出来ます",
+    "meaning": "(db2) Có thể, hoàn thành ---> できて"
+  },
+  {
+    "id": 368,
+    "hira_kata": "てつだいます テツダイマス",
+    "kanji": "手伝います",
+    "meaning": "(I) Giúp đỡ ---> てつだって"
+  },
+  {
+    "id": 369,
+    "hira_kata": "でます デマス",
+    "kanji": "出ます",
+    "meaning": "(II) Ra khỏi, xuất hiện ---> でて"
+  },
+  {
+    "id": 370,
+    "hira_kata": "てらします テラシマス",
+    "kanji": "照らします",
+    "meaning": "(I) Chiếu sáng ---> てらして"
+  },
+  {
+    "id": 371,
+    "hira_kata": "といます トイマス",
+    "kanji": "問います",
+    "meaning": "(I) Hỏi ---> とうて"
+  },
+  {
+    "id": 372,
+    "hira_kata": "とおざかります トオザカリマス",
+    "kanji": "遠ざかります",
+    "meaning": "(I) Rời xa ---> とおざかって"
+  },
+  {
+    "id": 373,
+    "hira_kata": "とおります トオリマス",
+    "kanji": "通ります",
+    "meaning": "(I) Đi qua ---> とおって"
+  },
+  {
+    "id": 374,
+    "hira_kata": "とかします トカシマス",
+    "kanji": "溶かします",
+    "meaning": "(I) Làm chảy ---> とかして"
+  },
+  {
+    "id": 375,
+    "hira_kata": "ときます トキマス",
+    "kanji": "解きます",
+    "meaning": "(I) Giải quyết, tháo gỡ ---> といて"
+  },
+  {
+    "id": 376,
+    "hira_kata": "とけます トケマス",
+    "kanji": "溶けます",
+    "meaning": "(II) Tan chảy ---> とけて"
+  },
+  {
+    "id": 377,
+    "hira_kata": "とけます トケマス",
+    "kanji": "解けます",
+    "meaning": "(II) Được giải quyết, cởi ra ---> とけて"
+  },
+  {
+    "id": 378,
+    "hira_kata": "とじます トジマス",
+    "kanji": "閉じます",
+    "meaning": "(db2) Đóng lại (sách, mắt) ---> とじて"
+  },
+  {
+    "id": 379,
+    "hira_kata": "とどきます トドキマス",
+    "kanji": "届きます",
+    "meaning": "(I) Đến nơi, chạm tới ---> とどいて"
+  },
+  {
+    "id": 380,
+    "hira_kata": "とどけます トドケマス",
+    "kanji": "届けます",
+    "meaning": "(II) Giao đến ---> とどけて"
+  },
+  {
+    "id": 381,
+    "hira_kata": "とびます トビマス",
+    "kanji": "飛びます",
+    "meaning": "(I) Bay, nhảy ---> とんで"
+  },
+  {
+    "id": 382,
+    "hira_kata": "とばします トバシマス",
+    "kanji": "飛ばします",
+    "meaning": "(I) Cho bay ---> とばして"
+  },
+  {
+    "id": 383,
+    "hira_kata": "とまります トマリマス",
+    "kanji": "止まります",
+    "meaning": "(I) Dừng lại (tự động từ) ---> とまって"
+  },
+  {
+    "id": 384,
+    "hira_kata": "とまります トマリマス",
+    "kanji": "泊まります",
+    "meaning": "(I) Trọ lại ---> とまって"
+  },
+  {
+    "id": 385,
+    "hira_kata": "とめます トメマス",
+    "kanji": "止めます",
+    "meaning": "(II) Dừng lại (tha động từ) ---> とめて"
+  },
+  {
+    "id": 386,
+    "hira_kata": "とめます トメマス",
+    "kanji": "留めます",
+    "meaning": "(II) Ghim, cài ---> とめて"
+  },
+  {
+    "id": 387,
+    "hira_kata": "とりかえます トリカエマス",
+    "kanji": "取り替えます",
+    "meaning": "(II) Đổi, thay ---> とりかえて"
+  },
+  {
+    "id": 388,
+    "hira_kata": "とります トリマス",
+    "kanji": "取ります",
+    "meaning": "(I) Lấy ---> とって"
+  },
+  {
+    "id": 389,
+    "hira_kata": "とります トリマス",
+    "kanji": "撮ります",
+    "meaning": "(I) Chụp (ảnh) ---> とって"
+  },
+  {
+    "id": 390,
+    "hira_kata": "とります トリマス",
+    "kanji": "盗ります",
+    "meaning": "(I) Trộm cắp ---> とって"
+  },
+  {
+    "id": 391,
+    "hira_kata": "なおします ナオシマス",
+    "kanji": "直します",
+    "meaning": "(I) Sửa chữa ---> なおして"
+  },
+  {
+    "id": 392,
+    "hira_kata": "なおします ナオシマス",
+    "kanji": "治します",
+    "meaning": "(I) Chữa (bệnh) ---> なおして"
+  },
+  {
+    "id": 393,
+    "hira_kata": "なおります ナオリマス",
+    "kanji": "直ります",
+    "meaning": "(I) Được sửa ---> なおって"
+  },
+  {
+    "id": 394,
+    "hira_kata": "なおります ナオリマス",
+    "kanji": "治ります",
+    "meaning": "(I) Khỏi bệnh ---> なおって"
+  },
+  {
+    "id": 395,
+    "hira_kata": "ながします ナガシマス",
+    "kanji": "流します",
+    "meaning": "(I) Cho chảy ---> ながして"
+  },
+  {
+    "id": 396,
+    "hira_kata": "ながれます ナガレマス",
+    "kanji": "流れます",
+    "meaning": "(II) Chảy, trôi ---> ながれて"
+  },
+  {
+    "id": 397,
+    "hira_kata": "ながめます ナガメマス",
+    "kanji": "眺めます",
+    "meaning": "(II) Ngắm nhìn ---> ながめて"
+  },
+  {
+    "id": 398,
+    "hira_kata": "なきます ナキマス",
+    "kanji": "泣きます",
+    "meaning": "(I) Khóc ---> ないて"
+  },
+  {
+    "id": 399,
+    "hira_kata": "なきます ナキマス",
+    "kanji": "鳴きます",
+    "meaning": "(I) Kêu, hót (động vật) ---> ないて"
+  },
+  {
+    "id": 400,
+    "hira_kata": "なぐります ナグリマス",
+    "kanji": "殴ります",
+    "meaning": "(I) Đấm ---> なぐって"
+  },
+  {
+    "id": 401,
+    "hira_kata": "なくします ナクシマス",
+    "kanji": "無くします",
+    "meaning": "(I) Làm mất ---> なくして"
+  },
+  {
+    "id": 402,
+    "hira_kata": "なくなります ナクナリマス",
+    "kanji": "無くなります",
+    "meaning": "(I) Bị mất ---> なくなって"
+  },
+  {
+    "id": 403,
+    "hira_kata": "なくなります ナクナリマス",
+    "kanji": "亡くなります",
+    "meaning": "(I) Mất, qua đời ---> なくなって"
+  },
+  {
+    "id": 404,
+    "hira_kata": "なぐさめます ナグサメマス",
+    "kanji": "慰めます",
+    "meaning": "(II) An ủi ---> なぐさめて"
+  },
+  {
+    "id": 405,
+    "hira_kata": "なげます ナゲマス",
+    "kanji": "投げます",
+    "meaning": "(II) Ném ---> なげて"
+  },
+  {
+    "id": 406,
+    "hira_kata": "なさいます ナサイマス",
+    "kanji": "_",
+    "meaning": "(I) Làm (tôn kính của します) ---> なさって"
+  },
+  {
+    "id": 407,
+    "hira_kata": "なでます ナデマス",
+    "kanji": "撫でます",
+    "meaning": "(II) Xoa, vuốt ve ---> なでて"
+  },
+  {
+    "id": 408,
+    "hira_kata": "ならいます ナライマス",
+    "kanji": "習います",
+    "meaning": "(I) Học ---> ならって"
+  },
+  {
+    "id": 409,
+    "hira_kata": "ならします ナラシマス",
+    "kanji": "鳴らします",
+    "meaning": "(I) Làm cho kêu ---> ならして"
+  },
+  {
+    "id": 410,
+    "hira_kata": "ならびます ナラビマス",
+    "kanji": "並びます",
+    "meaning": "(I) Xếp hàng ---> ならんで"
+  },
+  {
+    "id": 411,
+    "hira_kata": "ならべます ナラベマス",
+    "kanji": "並べます",
+    "meaning": "(II) Xếp thành hàng ---> ならべて"
+  },
+  {
+    "id": 412,
+    "hira_kata": "なります ナリマス",
+    "kanji": "成ります",
+    "meaning": "(I) Trở nên, trở thành ---> なって"
+  },
+  {
+    "id": 413,
+    "hira_kata": "なります ナリマス",
+    "kanji": "鳴ります",
+    "meaning": "(I) Kêu, reo ---> なって"
+  },
+  {
+    "id": 414,
+    "hira_kata": "なれます ナレマス",
+    "kanji": "慣れます",
+    "meaning": "(II) Quen với ---> なれて"
+  },
+  {
+    "id": 415,
+    "hira_kata": "にあいます ニアイマス",
+    "kanji": "似合います",
+    "meaning": "(I) Hợp, tương xứng ---> にあって"
+  },
+  {
+    "id": 416,
+    "hira_kata": "にげます ニゲマス",
+    "kanji": "逃げます",
+    "meaning": "(II) Bỏ trốn ---> にげて"
+  },
+  {
+    "id": 417,
+    "hira_kata": "にます ニマス",
+    "kanji": "似ます",
+    "meaning": "(db2) Giống ---> にて"
+  },
+  {
+    "id": 418,
+    "hira_kata": "にます ニマス",
+    "kanji": "煮ます",
+    "meaning": "(db2) Nấu, ninh ---> にて"
+  },
+  {
+    "id": 419,
+    "hira_kata": "にらみます ニラミマス",
+    "kanji": "睨みます",
+    "meaning": "(I) Lườm ---> にらんで"
+  },
+  {
+    "id": 420,
+    "hira_kata": "ぬきます ヌキマス",
+    "kanji": "抜きます",
+    "meaning": "(I) Nhổ, rút ---> ぬいて"
+  },
+  {
+    "id": 421,
+    "hira_kata": "ぬけます ヌケマス",
+    "kanji": "抜けます",
+    "meaning": "(II) Rơi, rụng, tuột ---> ぬけて"
+  },
+  {
+    "id": 422,
+    "hira_kata": "ぬぎます ヌギマス",
+    "kanji": "脱ぎます",
+    "meaning": "(I) Cởi (quần áo) ---> ぬいで"
+  },
+  {
+    "id": 423,
+    "hira_kata": "ぬすみます ヌスミマス",
+    "kanji": "盗みます",
+    "meaning": "(I) Ăn trộm ---> ぬすんで"
+  },
+  {
+    "id": 424,
+    "hira_kata": "ぬります ヌリマス",
+    "kanji": "塗ります",
+    "meaning": "(I) Sơn, bôi ---> ぬって"
+  },
+  {
+    "id": 425,
+    "hira_kata": "ぬらします ヌラシマス",
+    "kanji": "濡らします",
+    "meaning": "(I) Làm ướt ---> ぬらして"
+  },
+  {
+    "id": 426,
+    "hira_kata": "ぬれます ヌレマス",
+    "kanji": "濡れます",
+    "meaning": "(II) Bị ướt ---> ぬれて"
+  },
+  {
+    "id": 427,
+    "hira_kata": "ねがいます ネガイマス",
+    "kanji": "願います",
+    "meaning": "(I) Mong ước, cầu xin ---> ねがって"
+  },
+  {
+    "id": 428,
+    "hira_kata": "ねっします ネッシマス",
+    "kanji": "熱します",
+    "meaning": "(III) Tỏa nhiệt, phát sốt ---> ねっして"
+  },
+  {
+    "id": 429,
+    "hira_kata": "ねます ネマス",
+    "kanji": "寝ます",
+    "meaning": "(II) Ngủ ---> ねて"
+  },
+  {
+    "id": 430,
+    "hira_kata": "ねむります ネムリマス",
+    "kanji": "眠ります",
+    "meaning": "(I) Ngủ ---> ねむって"
+  },
+  {
+    "id": 431,
+    "hira_kata": "ねらいます ネライマス",
+    "kanji": "狙います",
+    "meaning": "(I) Nhắm mục tiêu ---> ねらって"
+  },
+  {
+    "id": 432,
+    "hira_kata": "のこします ノコシマス",
+    "kanji": "残します",
+    "meaning": "(I) Để lại ---> のこして"
+  },
+  {
+    "id": 433,
+    "hira_kata": "のこります ノコリマス",
+    "kanji": "残ります",
+    "meaning": "(I) Còn lại ---> のこって"
+  },
+  {
+    "id": 434,
+    "hira_kata": "のせます ノセマス",
+    "kanji": "乗せます",
+    "meaning": "(II) Chất lên, cho lên ---> のせて"
+  },
+  {
+    "id": 435,
+    "hira_kata": "のぞきます ノゾキマス",
+    "kanji": "覗きます",
+    "meaning": "(I) Nhìn trộm, ngó ---> のぞいて"
+  },
+  {
+    "id": 436,
+    "hira_kata": "のぞきます ノゾキマス",
+    "kanji": "除きます",
+    "meaning": "(I) Loại trừ ---> のぞいて"
+  },
+  {
+    "id": 437,
+    "hira_kata": "のぞみます ノゾミマス",
+    "kanji": "望みます",
+    "meaning": "(I) Trông cậy, nguyện vọng ---> のぞんで"
+  },
+  {
+    "id": 438,
+    "hira_kata": "のばします ノバシマス",
+    "kanji": "伸ばします",
+    "meaning": "(I) Kéo dài ---> のばして"
+  },
+  {
+    "id": 439,
+    "hira_kata": "のびます ノビマス",
+    "kanji": "伸びます",
+    "meaning": "(db2) Kéo dài, tăng lên ---> のびて"
+  },
+  {
+    "id": 440,
+    "hira_kata": "のぼります ノボリマス",
+    "kanji": "登ります",
+    "meaning": "(I) Leo (núi) ---> のぼって"
+  },
+  {
+    "id": 441,
+    "hira_kata": "のぼります ノボリマス",
+    "kanji": "上ります",
+    "meaning": "(I) Đi lên ---> のぼって"
+  },
+  {
+    "id": 442,
+    "hira_kata": "のみます ノミマス",
+    "kanji": "飲みます",
+    "meaning": "(I) Uống ---> のんで"
+  },
+  {
+    "id": 443,
+    "hira_kata": "のります ノリマス",
+    "kanji": "乗ります",
+    "meaning": "(I) Lên (xe) ---> のって"
+  },
+  {
+    "id": 444,
+    "hira_kata": "はいります ハイリマス",
+    "kanji": "入ります",
+    "meaning": "(db1) Vào ---> はいって"
+  },
+  {
+    "id": 445,
+    "hira_kata": "はえます ハエマス",
+    "kanji": "生えます",
+    "meaning": "(II) Mọc ---> はえて"
+  },
+  {
+    "id": 446,
+    "hira_kata": "はきます ハキマス",
+    "kanji": "履きます",
+    "meaning": "(I) Mặc (quần), mang (giày) ---> はいて"
+  },
+  {
+    "id": 447,
+    "hira_kata": "はきます ハキマス",
+    "kanji": "掃きます",
+    "meaning": "(I) Quét ---> はいて"
+  },
+  {
+    "id": 448,
+    "hira_kata": "はきます ハキマス",
+    "kanji": "吐きます",
+    "meaning": "(I) Nôn, nhổ ---> はいて"
+  },
+  {
+    "id": 449,
+    "hira_kata": "はげます ハゲマス",
+    "kanji": "禿げます",
+    "meaning": "(II) Hói đầu, rụng (tóc) ---> はげて"
+  },
+  {
+    "id": 450,
+    "hira_kata": "ばけます バケマス",
+    "kanji": "化けます",
+    "meaning": "(II) Biến hóa, cải trang ---> ばけて"
+  },
+  {
+    "id": 451,
+    "hira_kata": "はかどります ハカドリマス",
+    "kanji": "捗ります",
+    "meaning": "(I) Tiến triển ---> はかどって"
+  },
+  {
+    "id": 452,
+    "hira_kata": "はかります ハカリマス",
+    "kanji": "測ります",
+    "meaning": "(I) Đo chiều dài, diện tích ---> はかって"
+  },
+  {
+    "id": 453,
+    "hira_kata": "はかります ハカリマス",
+    "kanji": "計ります",
+    "meaning": "(I) Đo thời gian, nhiệt độ ---> はかって"
+  },
+  {
+    "id": 454,
+    "hira_kata": "はかります ハカリマス",
+    "kanji": "量ります",
+    "meaning": "(I) Cân trọng lượng ---> はかって"
+  },
+  {
+    "id": 455,
+    "hira_kata": "はこびます ハコビマス",
+    "kanji": "運びます",
+    "meaning": "(I) Vận chuyển ---> はこんで"
+  },
+  {
+    "id": 456,
+    "hira_kata": "はさみます ハサミマス",
+    "kanji": "挟みます",
+    "meaning": "(I) Kẹp vào ---> はさんで"
+  },
+  {
+    "id": 457,
+    "hira_kata": "はしります ハシリマス",
+    "kanji": "走ります",
+    "meaning": "(db1) Chạy ---> はしって"
+  },
+  {
+    "id": 458,
+    "hira_kata": "はずします ハズシマス",
+    "kanji": "外します",
+    "meaning": "(I) Tháo ra, rời đi ---> はずして"
+  },
+  {
+    "id": 459,
+    "hira_kata": "はずれます ハズレマス",
+    "kanji": "外れます",
+    "meaning": "(II) Bị tuột, trật ---> はずれて"
+  },
+  {
+    "id": 460,
+    "hira_kata": "はじまります ハジマリマス",
+    "kanji": "始まります",
+    "meaning": "(I) Bắt đầu (tự động từ) ---> はじまって"
+  },
+  {
+    "id": 461,
+    "hira_kata": "はじめます ハジメマス",
+    "kanji": "始めます",
+    "meaning": "(II) Bắt đầu (tha động từ) ---> はじめて"
+  },
+  {
+    "id": 462,
+    "hira_kata": "はたらきます ハタラキマス",
+    "kanji": "働きます",
+    "meaning": "(I) Làm việc ---> はたらいて"
+  },
+  {
+    "id": 463,
+    "hira_kata": "はたらきかけます ハタラキカケマス",
+    "kanji": "働きかけます",
+    "meaning": "(II) Tác động, kêu gọi ---> はたらきかけて"
+  },
+  {
+    "id": 464,
+    "hira_kata": "はなします ハナシマス",
+    "kanji": "話します",
+    "meaning": "(I) Nói chuyện ---> はなして"
+  },
+  {
+    "id": 465,
+    "hira_kata": "はなします ハナシマス",
+    "kanji": "離します",
+    "meaning": "(I) Tách ra, buông ra ---> はなして"
+  },
+  {
+    "id": 466,
+    "hira_kata": "はなれます ハナレマス",
+    "kanji": "離れます",
+    "meaning": "(II) Rời xa ---> はなれて"
+  },
+  {
+    "id": 467,
+    "hira_kata": "はねます ハネマス",
+    "kanji": "跳ねます",
+    "meaning": "(II) Nhảy, bắn (dầu mỡ) ---> はねて"
+  },
+  {
+    "id": 468,
+    "hira_kata": "はぶきます ハブキマス",
+    "kanji": "省きます",
+    "meaning": "(I) Lược bớt ---> はぶいて"
+  },
+  {
+    "id": 469,
+    "hira_kata": "はらいます ハライマス",
+    "kanji": "払います",
+    "meaning": "(I) Trả tiền ---> はらって"
+  },
+  {
+    "id": 470,
+    "hira_kata": "はります ハリマス",
+    "kanji": "張ります",
+    "meaning": "(I) Căng, kéo căng ---> はって"
+  },
+  {
+    "id": 471,
+    "hira_kata": "はります ハリマス",
+    "kanji": "貼ります",
+    "meaning": "(I) Dán ---> はって"
+  },
+  {
+    "id": 472,
+    "hira_kata": "はれます ハレマス",
+    "kanji": "晴れます",
+    "meaning": "(II) Nắng, quang đãng ---> はれて"
+  },
+  {
+    "id": 473,
+    "hira_kata": "ひえます ヒエマス",
+    "kanji": "冷えます",
+    "meaning": "(II) Trở nên lạnh ---> ひえて"
+  },
+  {
+    "id": 474,
+    "hira_kata": "ひっかかります ヒッカカリマス",
+    "kanji": "引っ掛かります",
+    "meaning": "(I) Bị vướng ---> ひっかかって"
+  },
+  {
+    "id": 475,
+    "hira_kata": "ひっぱります ヒッパリマス",
+    "kanji": "引っ張ります",
+    "meaning": "(I) Kéo lôi đi ---> ひっぱって"
+  },
+  {
+    "id": 476,
+    "hira_kata": "ひかります ヒカリマス",
+    "kanji": "光ります",
+    "meaning": "(I) Phát sáng ---> ひかって"
+  },
+  {
+    "id": 477,
+    "hira_kata": "ひきだします ヒキダシマス",
+    "kanji": "引き出します",
+    "meaning": "(I) Rút ra (tiền) ---> ひきだして"
+  },
+  {
+    "id": 478,
+    "hira_kata": "ひきうけます ヒキウケマス",
+    "kanji": "引き受けます",
+    "meaning": "(II) Đảm nhận ---> ひきうけて"
+  },
+  {
+    "id": 479,
+    "hira_kata": "ひきます ヒキマス",
+    "kanji": "弾きます",
+    "meaning": "(I) Chơi (nhạc cụ) ---> ひいて"
+  },
+  {
+    "id": 480,
+    "hira_kata": "ひきます ヒキマス",
+    "kanji": "引きます",
+    "meaning": "(I) Kéo, trừ ---> ひいて"
+  },
+  {
+    "id": 481,
+    "hira_kata": "ひっこします ヒッコシマス",
+    "kanji": "引っ越します",
+    "meaning": "(I) Chuyển nhà ---> ひっこして"
+  },
+  {
+    "id": 482,
+    "hira_kata": "ひびきます ヒビキマス",
+    "kanji": "響きます",
+    "meaning": "(I) Vang, ảnh hưởng ---> ひびいて"
+  },
+  {
+    "id": 483,
+    "hira_kata": "ひやかします ヒヤカシマス",
+    "kanji": "冷やかします",
+    "meaning": "(I) Châm chọc, trêu ---> ひやかして"
+  },
+  {
+    "id": 484,
+    "hira_kata": "ひやします ヒヤシマス",
+    "kanji": "冷やします",
+    "meaning": "(I) Làm lạnh ---> ひやして"
+  },
+  {
+    "id": 485,
+    "hira_kata": "ひらきます ヒラキマス",
+    "kanji": "開きます",
+    "meaning": "(I) Mở, tổ chức (sự kiện) ---> ひらいて"
+  },
+  {
+    "id": 486,
+    "hira_kata": "ひろいます ヒロイマス",
+    "kanji": "拾います",
+    "meaning": "(I) Nhặt ---> ひろって"
+  },
+  {
+    "id": 487,
+    "hira_kata": "ひろがります ヒロガリマス",
+    "kanji": "広がります",
+    "meaning": "(I) Lan rộng ---> ひろがって"
+  },
+  {
+    "id": 488,
+    "hira_kata": "ひろげます ヒロゲマス",
+    "kanji": "広げます",
+    "meaning": "(II) Mở rộng ---> ひろげて"
+  },
+  {
+    "id": 489,
+    "hira_kata": "ふえます フエマス",
+    "kanji": "増えます",
+    "meaning": "(II) Tăng lên ---> ふえて"
+  },
+  {
+    "id": 490,
+    "hira_kata": "ふかします フカシマス",
+    "kanji": "蒸します",
+    "meaning": "(I) Hấp ---> ふかして"
+  },
+  {
+    "id": 491,
+    "hira_kata": "ふきます フキマス",
+    "kanji": "吹きます",
+    "meaning": "(I) Thổi ---> ふいて"
+  },
+  {
+    "id": 492,
+    "hira_kata": "ふきます フキマス",
+    "kanji": "拭きます",
+    "meaning": "(I) Lau ---> ふいて"
+  },
+  {
+    "id": 493,
+    "hira_kata": "ふくみます フクミマス",
+    "kanji": "含みます",
+    "meaning": "(I) Bao gồm ---> ふくんで"
+  },
+  {
+    "id": 494,
+    "hira_kata": "ふくめます フクメマス",
+    "kanji": "含めます",
+    "meaning": "(II) Kèm theo ---> ふくめて"
+  },
+  {
+    "id": 495,
+    "hira_kata": "ふくらみます フクラミマス",
+    "kanji": "膨らみます",
+    "meaning": "(I) Phồng lên ---> ふくらんで"
+  },
+  {
+    "id": 496,
+    "hira_kata": "ふせぎます フセギマス",
+    "kanji": "防ぎます",
+    "meaning": "(I) Phòng ngừa ---> ふせいで"
+  },
+  {
+    "id": 497,
+    "hira_kata": "ふざけます フザケマス",
+    "kanji": "_",
+    "meaning": "(II) Đùa cợt ---> ふざけて"
+  },
+  {
+    "id": 498,
+    "hira_kata": "ふとります フトリマス",
+    "kanji": "太ります",
+    "meaning": "(I) Béo lên ---> ふとって"
+  },
+  {
+    "id": 499,
+    "hira_kata": "ふみます フミマス",
+    "kanji": "踏みます",
+    "meaning": "(I) Dẫm lên ---> ふんで"
+  },
+  {
+    "id": 500,
+    "hira_kata": "ふりかえります フリカエリマス",
+    "kanji": "振り返ります",
+    "meaning": "(I) Ngoảnh lại, nhìn lại ---> ふりかえって"
+  },
+  {
+    "id": 501,
+    "hira_kata": "ふります フリマス",
+    "kanji": "降ります",
+    "meaning": "(I) Rơi (mưa, tuyết) ---> ふって"
+  },
+  {
+    "id": 502,
+    "hira_kata": "ふります フリマス",
+    "kanji": "振ります",
+    "meaning": "(I) Vẫy, rắc, bị đá (tình cảm) ---> ふって"
+  },
+  {
+    "id": 503,
+    "hira_kata": "ふれます フレマス",
+    "kanji": "触れます",
+    "meaning": "(II) Chạm vào ---> ふれて"
+  },
+  {
+    "id": 504,
+    "hira_kata": "へります ヘリマス",
+    "kanji": "減ります",
+    "meaning": "(db1) Giảm đi ---> へって"
+  },
+  {
+    "id": 505,
+    "hira_kata": "へらします ヘラシマス",
+    "kanji": "減らします",
+    "meaning": "(I) Làm giảm ---> へらして"
+  },
+  {
+    "id": 506,
+    "hira_kata": "ほえます ホエマス",
+    "kanji": "吠えます",
+    "meaning": "(II) Sủa ---> ほえて"
+  },
+  {
+    "id": 507,
+    "hira_kata": "ほほえみます ホホエミマス",
+    "kanji": "微笑みます",
+    "meaning": "(I) Mỉm cười ---> ほほえんで"
+  },
+  {
+    "id": 508,
+    "hira_kata": "ほめます ホメマス",
+    "kanji": "褒めます",
+    "meaning": "(II) Khen ngợi ---> ほめて"
+  },
+  {
+    "id": 509,
+    "hira_kata": "ほります ホリマス",
+    "kanji": "掘ります",
+    "meaning": "(I) Đào ---> ほって"
+  },
+  {
+    "id": 510,
+    "hira_kata": "ほります ホリマス",
+    "kanji": "彫ります",
+    "meaning": "(I) Khắc ---> ほって"
+  },
+  {
+    "id": 511,
+    "hira_kata": "まかせます マカセマス",
+    "kanji": "任せます",
+    "meaning": "(II) Giao phó ---> まかせて"
+  },
+  {
+    "id": 512,
+    "hira_kata": "まがります マガリマス",
+    "kanji": "曲がります",
+    "meaning": "(I) Rẽ, quẹo ---> まがって"
+  },
+  {
+    "id": 513,
+    "hira_kata": "まきます マキマス",
+    "kanji": "撒きます",
+    "meaning": "(I) Rắc, rải ---> まいて"
+  },
+  {
+    "id": 514,
+    "hira_kata": "まきます マキマス",
+    "kanji": "巻きます",
+    "meaning": "(I) Cuộn, quấn ---> まいて"
+  },
+  {
+    "id": 515,
+    "hira_kata": "まげます マゲマス",
+    "kanji": "曲げます",
+    "meaning": "(II) Bẻ cong ---> まげて"
+  },
+  {
+    "id": 516,
+    "hira_kata": "まざります マザリマス",
+    "kanji": "混ざります",
+    "meaning": "(I) Lẫn lộn ---> まざって"
+  },
+  {
+    "id": 517,
+    "hira_kata": "まぜます マゼマス",
+    "kanji": "混ぜます",
+    "meaning": "(II) Trộn ---> まぜて"
+  },
+  {
+    "id": 518,
+    "hira_kata": "まします マシマス",
+    "kanji": "増します",
+    "meaning": "(I) Tăng lên ---> まして"
+  },
+  {
+    "id": 519,
+    "hira_kata": "まちがえます マチガエマス",
+    "kanji": "間違えます",
+    "meaning": "(II) Nhầm lẫn ---> まちがえて"
+  },
+  {
+    "id": 520,
+    "hira_kata": "まちがいます マチガイマス",
+    "kanji": "違います",
+    "meaning": "(I) Sai, nhầm ---> まちがって"
+  },
+  {
+    "id": 521,
+    "hira_kata": "まちます マチマス",
+    "kanji": "待ちます",
+    "meaning": "(I) Đợi ---> まって"
+  },
+  {
+    "id": 522,
+    "hira_kata": "まつります マツリマス",
+    "kanji": "祭ります",
+    "meaning": "(I) Thờ cúng ---> まつって"
+  },
+  {
+    "id": 523,
+    "hira_kata": "まとめます マトメマス",
+    "kanji": "_",
+    "meaning": "(II) Thu thập, tóm tắt ---> まとめて"
+  },
+  {
+    "id": 524,
+    "hira_kata": "まなびます マナビマス",
+    "kanji": "学びます",
+    "meaning": "(I) Học ---> まなんで"
+  },
+  {
+    "id": 525,
+    "hira_kata": "まねきます マネキマス",
+    "kanji": "招きます",
+    "meaning": "(I) Mời ---> まねいて"
+  },
+  {
+    "id": 526,
+    "hira_kata": "まもります マモリマス",
+    "kanji": "守ります",
+    "meaning": "(I) Bảo vệ ---> まもって"
+  },
+  {
+    "id": 527,
+    "hira_kata": "まよいます マヨイマス",
+    "kanji": "迷います",
+    "meaning": "(I) Lạc đường, phân vân ---> まよって"
+  },
+  {
+    "id": 528,
+    "hira_kata": "まわします マワシマス",
+    "kanji": "回します",
+    "meaning": "(I) Vặn, xoay ---> まわして"
+  },
+  {
+    "id": 529,
+    "hira_kata": "まわります マワリマス",
+    "kanji": "回ります",
+    "meaning": "(I) Xoay quanh ---> まわって"
+  },
+  {
+    "id": 530,
+    "hira_kata": "みがきます ミガキマス",
+    "kanji": "磨きます",
+    "meaning": "(I) Đánh (răng), mài ---> みがいて"
+  },
+  {
+    "id": 531,
+    "hira_kata": "みつかります ミツカリマス",
+    "kanji": "見つかります",
+    "meaning": "(I) Được tìm thấy ---> みつかって"
+  },
+  {
+    "id": 532,
+    "hira_kata": "みつけます ミツケマス",
+    "kanji": "見つけます",
+    "meaning": "(II) Tìm thấy ---> みつけて"
+  },
+  {
+    "id": 533,
+    "hira_kata": "みとめます ミトメマス",
+    "kanji": "認めます",
+    "meaning": "(II) Thừa nhận ---> みとめて"
+  },
+  {
+    "id": 534,
+    "hira_kata": "みなします ミナシマス",
+    "kanji": "見なします",
+    "meaning": "(I) Coi như là ---> みなして"
+  },
+  {
+    "id": 535,
+    "hira_kata": "みます ミマス",
+    "kanji": "見ます",
+    "meaning": "(db2) Nhìn, xem ---> みて"
+  },
+  {
+    "id": 536,
+    "hira_kata": "みます ミマス",
+    "kanji": "診ます",
+    "meaning": "(db2) Khám bệnh ---> みて"
+  },
+  {
+    "id": 537,
+    "hira_kata": "むかいます ムカイマス",
+    "kanji": "向かいます",
+    "meaning": "(I) Hướng tới ---> むかって"
+  },
+  {
+    "id": 538,
+    "hira_kata": "むかえます ムカエマス",
+    "kanji": "迎えます",
+    "meaning": "(II) Đón ---> むかえて"
+  },
+  {
+    "id": 539,
+    "hira_kata": "むきます ムキマス",
+    "kanji": "剥きます",
+    "meaning": "(I) Bóc, lột ---> むいて"
+  },
+  {
+    "id": 540,
+    "hira_kata": "むすびます ムスビマス",
+    "kanji": "結びます",
+    "meaning": "(I) Buộc, nối ---> むすんで"
+  },
+  {
+    "id": 541,
+    "hira_kata": "めしあがります メシアガリマス",
+    "kanji": "召し上がります",
+    "meaning": "(I) Ăn, uống (tôn kính) ---> めしあがって"
+  },
+  {
+    "id": 542,
+    "hira_kata": "めだちます メダチマス",
+    "kanji": "目立ちます",
+    "meaning": "(I) Nổi bật ---> めだって"
+  },
+  {
+    "id": 543,
+    "hira_kata": "もうします モウシマス",
+    "kanji": "申します",
+    "meaning": "(I) Nói (khiêm nhường) ---> もうして"
+  },
+  {
+    "id": 544,
+    "hira_kata": "もうしこみます モウシコミマス",
+    "kanji": "申し込みます",
+    "meaning": "(I) Đăng ký ---> もうしこんで"
+  },
+  {
+    "id": 545,
+    "hira_kata": "もえます モエマス",
+    "kanji": "燃えます",
+    "meaning": "(II) Cháy ---> もえて"
+  },
+  {
+    "id": 546,
+    "hira_kata": "もやします モヤシマス",
+    "kanji": "燃やします",
+    "meaning": "(I) Đốt ---> もやして"
+  },
+  {
+    "id": 547,
+    "hira_kata": "もちます モチマス",
+    "kanji": "持ちます",
+    "meaning": "(I) Mang, cầm ---> もって"
+  },
+  {
+    "id": 548,
+    "hira_kata": "もたらします モタラシマス",
+    "kanji": "_",
+    "meaning": "(I) Đem lại ---> もたらして"
+  },
+  {
+    "id": 549,
+    "hira_kata": "もちあげます モチアゲマス",
+    "kanji": "持ち上げます",
+    "meaning": "(II) Nâng lên ---> もちあげて"
+  },
+  {
+    "id": 550,
+    "hira_kata": "もどします モドシマス",
+    "kanji": "戻します",
+    "meaning": "(I) Trả lại ---> もどして"
+  },
+  {
+    "id": 551,
+    "hira_kata": "もどります モドリマス",
+    "kanji": "戻ります",
+    "meaning": "(I) Quay lại ---> もどって"
+  },
+  {
+    "id": 552,
+    "hira_kata": "もらいます モライマス",
+    "kanji": "貰います",
+    "meaning": "(I) Nhận ---> もらって"
+  },
+  {
+    "id": 553,
+    "hira_kata": "もらします モラシマス",
+    "kanji": "漏らします",
+    "meaning": "(I) Làm rò rỉ, tiết lộ ---> もらして"
+  },
+  {
+    "id": 554,
+    "hira_kata": "もれます モレマス",
+    "kanji": "漏れます",
+    "meaning": "(II) Bị rò rỉ ---> もれて"
+  },
+  {
+    "id": 555,
+    "hira_kata": "やきます ヤキマス",
+    "kanji": "焼きます",
+    "meaning": "(I) Nướng ---> やいて"
+  },
+  {
+    "id": 556,
+    "hira_kata": "やけます ヤケマス",
+    "kanji": "焼けます",
+    "meaning": "(II) Bị nướng, cháy nắng ---> やけて"
+  },
+  {
+    "id": 557,
+    "hira_kata": "やといます ヤトイマス",
+    "kanji": "雇います",
+    "meaning": "(I) Thuê, mướn ---> やとって"
+  },
+  {
+    "id": 558,
+    "hira_kata": "やぶります ヤブリマス",
+    "kanji": "破ります",
+    "meaning": "(I) Làm rách, xé rách ---> やぶって"
+  },
+  {
+    "id": 559,
+    "hira_kata": "やぶれます ヤブレマス",
+    "kanji": "破れます",
+    "meaning": "(II) Bị rách ---> やぶれて"
+  },
+  {
+    "id": 560,
+    "hira_kata": "やめます ヤメマス",
+    "kanji": "辞めます",
+    "meaning": "(II) Bỏ, nghỉ việc ---> やめて"
+  },
+  {
+    "id": 561,
+    "hira_kata": "やめます ヤメマス",
+    "kanji": "止めます",
+    "meaning": "(II) Dừng lại, từ bỏ thói quen ---> やめて"
+  },
+  {
+    "id": 562,
+    "hira_kata": "やります ヤリマス",
+    "kanji": "_",
+    "meaning": "(I) Làm, cho (động vật, thực vật) ---> やって"
+  },
+  {
+    "id": 563,
+    "hira_kata": "やわらげます ヤワラゲマス",
+    "kanji": "和らげます",
+    "meaning": "(II) Làm dịu ---> やわらげて"
+  },
+  {
+    "id": 564,
+    "hira_kata": "ゆでます ユデマス",
+    "kanji": "茹でます",
+    "meaning": "(II) Luộc ---> ゆでて"
+  },
+  {
+    "id": 565,
+    "hira_kata": "ゆるします ユルシマス",
+    "kanji": "許します",
+    "meaning": "(I) Tha thứ, cho phép ---> ゆるして"
+  },
+  {
+    "id": 566,
+    "hira_kata": "ゆれます ユレマス",
+    "kanji": "揺れます",
+    "meaning": "(II) Rung lắc ---> ゆれて"
+  },
+  {
+    "id": 567,
+    "hira_kata": "よごします ヨゴシマス",
+    "kanji": "汚します",
+    "meaning": "(I) Làm bẩn ---> よごして"
+  },
+  {
+    "id": 568,
+    "hira_kata": "よごれます ヨゴレマス",
+    "kanji": "汚れます",
+    "meaning": "(II) Bị bẩn ---> よごれて"
+  },
+  {
+    "id": 569,
+    "hira_kata": "よこします ヨコシマス",
+    "kanji": "寄越します",
+    "meaning": "(I) Gửi đến, chuyển tới ---> よこして"
+  },
+  {
+    "id": 570,
+    "hira_kata": "よびます ヨビマス",
+    "kanji": "呼びます",
+    "meaning": "(I) Gọi ---> よんで"
+  },
+  {
+    "id": 571,
+    "hira_kata": "よびかけます ヨビカケマス",
+    "kanji": "呼びかけます",
+    "meaning": "(II) Kêu gọi ---> よびかけて"
+  },
+  {
+    "id": 572,
+    "hira_kata": "よみます ヨミマス",
+    "kanji": "読みます",
+    "meaning": "(I) Đọc ---> よんで"
+  },
+  {
+    "id": 573,
+    "hira_kata": "よろこびます ヨロコビマス",
+    "kanji": "喜びます",
+    "meaning": "(I) Vui mừng ---> よろこんで"
+  },
+  {
+    "id": 574,
+    "hira_kata": "わかします ワカシマス",
+    "kanji": "沸かします",
+    "meaning": "(I) Đun sôi ---> わかして"
+  },
+  {
+    "id": 575,
+    "hira_kata": "わきます ワキマス",
+    "kanji": "沸きます",
+    "meaning": "(I) Sôi ---> わいて"
+  },
+  {
+    "id": 576,
+    "hira_kata": "わかります ワカリマス",
+    "kanji": "分かります",
+    "meaning": "(I) Hiểu ---> わかって"
+  },
+  {
+    "id": 577,
+    "hira_kata": "わかれます ワカレマス",
+    "kanji": "別れます",
+    "meaning": "(II) Chia tay ---> わかれて"
+  },
+  {
+    "id": 578,
+    "hira_kata": "わかれます ワカレマス",
+    "kanji": "分かれます",
+    "meaning": "(II) Được chia ra ---> わかれて"
+  },
+  {
+    "id": 579,
+    "hira_kata": "わけます ワケマス",
+    "kanji": "分けます",
+    "meaning": "(II) Chia ---> わけて"
+  },
+  {
+    "id": 580,
+    "hira_kata": "わすれます ワスレマス",
+    "kanji": "忘れます",
+    "meaning": "(II) Quên ---> わすれて"
+  },
+  {
+    "id": 581,
+    "hira_kata": "わたります ワタリマス",
+    "kanji": "渡ります",
+    "meaning": "(I) Băng qua ---> わたって"
+  },
+  {
+    "id": 582,
+    "hira_kata": "わたします ワタシマス",
+    "kanji": "渡します",
+    "meaning": "(I) Trao cho ---> わたして"
+  },
+  {
+    "id": 583,
+    "hira_kata": "わらいます ワライマス",
+    "kanji": "笑います",
+    "meaning": "(I) Cười ---> わらって"
+  },
+  {
+    "id": 584,
+    "hira_kata": "われます ワレマス",
+    "kanji": "割れます",
+    "meaning": "(II) Vỡ ---> われて"
+  },
+  {
+    "id": 585,
+    "hira_kata": "わります ワリマス",
+    "kanji": "割ります",
+    "meaning": "(I) Làm vỡ, chia ---> わって"
+  }
+]
