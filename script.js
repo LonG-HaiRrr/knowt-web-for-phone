@@ -1,6 +1,7 @@
 // ================= STATE & ĐIỀU HƯỚNG MÀN HÌNH =================
 let flashcards = [];
 let fullDeck = []; 
+let globalDecks = []; // Biến chứa tất cả các deck để dùng cho tính năng Filter/Sort
 let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
@@ -45,31 +46,62 @@ function showQuiz(fileUrl, deckName) {
 
 document.getElementById('btn-exit').addEventListener('click', showLobby);
 
-// ================= LẤY DANH SÁCH BÀI HỌC =================
+// ================= LẤY DANH SÁCH BÀI HỌC VÀ LỌC (TÌM KIẾM, SẮP XẾP) =================
 async function fetchDeckList() {
   try {
     const response = await fetch('data/list.json?t=' + new Date().getTime());
     if (!response.ok) throw new Error();
-    const decks = await response.json();
-    
-    const container = document.getElementById('deck-list');
-    container.innerHTML = '';
-    
-    decks.forEach(deck => {
-      const btn = document.createElement('button');
-      btn.className = "w-full bg-[#1c1c1e] hover:bg-[#2c2c2e] border-2 border-[#2c2c2e] rounded-2xl p-5 text-left flex justify-between items-center transition-colors shadow-lg";
-      btn.innerHTML = `
-        <span class="text-xl font-bold text-gray-200">${deck.name}</span>
-        <span class="text-blue-500 font-bold">Bắt đầu ➔</span>
-      `;
-      btn.onclick = () => showQuiz(deck.file, deck.name);
-      container.appendChild(btn);
-    });
+    globalDecks = await response.json();
+    handleSearchAndSort(); // Chạy hàm render dựa theo thanh filter
   } catch (error) {
     document.getElementById('deck-list').innerHTML = `<p class="text-gray-400 text-center">Đang nạp dữ liệu...</p>`;
   }
 }
 
+function renderDeckList(decks) {
+  const container = document.getElementById('deck-list');
+  container.innerHTML = '';
+  
+  if(decks.length === 0) {
+    container.innerHTML = `<p class="text-gray-500 text-center italic mt-4">Không tìm thấy bài học nào.</p>`;
+    return;
+  }
+
+  decks.forEach(deck => {
+    const btn = document.createElement('button');
+    btn.className = "w-full bg-[#1c1c1e] hover:bg-[#2c2c2e] border-2 border-[#2c2c2e] rounded-2xl p-5 text-left flex justify-between items-center transition-colors shadow-lg";
+    btn.innerHTML = `
+      <span class="text-xl font-bold text-gray-200">${deck.name}</span>
+      <span class="text-[#14d45e] font-bold">Bắt đầu ➔</span>
+    `;
+    btn.onclick = () => showQuiz(deck.file, deck.name);
+    container.appendChild(btn);
+  });
+}
+
+// Logic Tìm kiếm theo chữ và Sắp xếp A-Z
+function handleSearchAndSort() {
+  const query = document.getElementById('search-deck').value.toLowerCase().trim();
+  const sortType = document.getElementById('sort-deck').value;
+
+  // Lọc theo tìm kiếm (không cần nhập 100% đúng tên)
+  let filteredDecks = globalDecks.filter(deck => deck.name.toLowerCase().includes(query));
+
+  // Sắp xếp
+  if (sortType === 'az') {
+    filteredDecks.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
+  } else if (sortType === 'za') {
+    filteredDecks.sort((a, b) => b.name.localeCompare(a.name, 'vi'));
+  }
+
+  renderDeckList(filteredDecks);
+}
+
+document.getElementById('search-deck').addEventListener('input', handleSearchAndSort);
+document.getElementById('sort-deck').addEventListener('change', handleSearchAndSort);
+
+
+// ================= KHỞI TẠO BÀI HỌC =================
 async function loadDeck(fileUrl) {
   try {
     const response = await fetch(fileUrl + '?t=' + new Date().getTime());
@@ -129,7 +161,7 @@ function renderQuestion() {
   const currentOptions = generateMultipleChoice(currentCard);
 
   currentOptions.forEach((opt, index) => {
-    const letter = String.fromCharCode(65 + index); 
+    const letter = String.fromCharCode(65 + index); // A, B, C, D
     const btn = document.createElement('button');
     btn.className = "option-btn w-full text-left bg-[#1c1c1e] border-2 border-[#3a3a3c] hover:border-gray-500 rounded-2xl p-4 flex items-center gap-4 cursor-pointer";
     btn.innerHTML = `
@@ -166,7 +198,6 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
-    // Đáp án tiếng Việt ép đọc chuẩn
     playCustomAudio(currentCard.meaning.replace(/\\n/g, ' '), true); 
   }
 
@@ -189,8 +220,41 @@ function goToNextQuestion() {
 document.getElementById('btn-manual-next').addEventListener('click', goToNextQuestion);
 
 
-// ================= HỆ THỐNG ÂM THANH MỚI: ÉP BUỘC CHỌN TRỰC TIẾP GIỌNG XỊN =================
+// ================= XỬ LÝ PHÍM TẮT BÀN PHÍM =================
+document.addEventListener('keydown', (e) => {
+  // Bỏ qua nếu đang gõ text (tìm kiếm, nhập file, v.v...)
+  if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+  
+  // Phát Audio (Phím Numpad 0)
+  if (e.code === 'Numpad0' || e.code === 'NumpadDecimal') {
+      playQuestionAudio();
+  }
 
+  // Chọn đáp án 1, 2, 3, 4 => A, B, C, D (Hỗ trợ cả phím trên và phím Numpad)
+  if (['Digit1', 'Numpad1'].includes(e.code)) clickOptionByIndex(0);
+  if (['Digit2', 'Numpad2'].includes(e.code)) clickOptionByIndex(1);
+  if (['Digit3', 'Numpad3'].includes(e.code)) clickOptionByIndex(2);
+  if (['Digit4', 'Numpad4'].includes(e.code)) clickOptionByIndex(3);
+
+  // Phím Enter để qua bài (chỉ hoạt động khi ở chế độ Manual Skip và nút "Next" hiện ra)
+  if (['Enter', 'NumpadEnter'].includes(e.code)) {
+      const nextBtnContainer = document.getElementById('next-btn-container');
+      if (nextBtnContainer && !nextBtnContainer.classList.contains('hidden')) {
+          goToNextQuestion();
+      }
+  }
+}, true);
+
+// Hàm click tự động dựa trên số 1,2,3,4
+function clickOptionByIndex(index) {
+  const btns = document.querySelectorAll('.option-btn');
+  if (btns && btns.length > index && !btns[index].disabled) {
+      btns[index].click();
+  }
+}
+
+
+// ================= HỆ THỐNG ÂM THANH MỚI =================
 let availableVoices = [];
 let isDefaultVoiceSet = false;
 
@@ -199,10 +263,8 @@ function loadDynamicVoices() {
   const voiceSelect = document.getElementById('set-voice');
   if (!voiceSelect) return;
   
-  // Đã xóa chế độ Auto. Dropdown giờ chỉ hiển thị giọng thật.
   voiceSelect.innerHTML = '';
   
-  // 1. CHÈN GIỌNG CLOUD 
   const optGroupCloud = document.createElement('optgroup');
   optGroupCloud.label = "☁️ Giọng Đám Mây (Cần mạng - Chuẩn nhất)";
   optGroupCloud.innerHTML = `
@@ -215,7 +277,6 @@ function loadDynamicVoices() {
 
   if (availableVoices.length === 0) return;
 
-  // 2. PHÂN LOẠI GIỌNG HỆ THỐNG ĐANG CÓ TRÊN MÁY
   const groups = {
     ja: { label: "🇯🇵 Tiếng Nhật (Hệ thống)", voices: [] },
     en: { label: "🇺🇸 Tiếng Anh (Hệ thống)", voices: [] },
@@ -224,7 +285,7 @@ function loadDynamicVoices() {
     other: { label: "🌍 Ngôn ngữ khác", voices: [] }
   };
 
-  let bestJaVoiceIndex = 'api-ja'; // Fallback nếu máy không có giọng nào
+  let bestJaVoiceIndex = 'api-ja'; 
   let highestScore = -1;
 
   availableVoices.forEach((voice, index) => {
@@ -236,7 +297,6 @@ function loadDynamicVoices() {
     else if (lang.includes('zh')) category = 'zh';
     else if (lang.includes('vi')) category = 'vi';
 
-    // Đánh dấu icon
     let marker = "";
     const nameLow = voice.name.toLowerCase();
     
@@ -253,13 +313,12 @@ function loadDynamicVoices() {
         originalName: voice.name 
     });
 
-    // TÌM KIẾM ĐỈNH CAO: Chấm điểm để chọn mặc định
     if (category === 'ja') {
         let score = 0;
         if (nameLow.includes('siri') && nameLow.includes('2')) score = 100;
         else if (nameLow.includes('siri')) score = 90;
         else if (nameLow.includes('otoya') && (nameLow.includes('nâng cao') || nameLow.includes('premium') || nameLow.includes('enhanced'))) score = 80;
-        else if (nameLow.includes('otoya')) score = 70; // Ngay cả khi Apple nuốt chữ "Nâng cao", nó vẫn ưu tiên Otoya
+        else if (nameLow.includes('otoya')) score = 70; 
         else if (nameLow.includes('google')) score = 50;
         else if (nameLow.includes('kyoko')) score = 10;
 
@@ -270,7 +329,6 @@ function loadDynamicVoices() {
     }
   });
 
-  // 3. SẮP XẾP LẠI (Siri -> Otoya -> Kyoko)
   for (let key in groups) {
       groups[key].voices.sort((a, b) => {
           const getScore = (name) => {
@@ -285,7 +343,6 @@ function loadDynamicVoices() {
       });
   }
 
-  // 4. THÊM VÀO DROPDOWN
   ['ja', 'en', 'zh', 'vi'].forEach(key => {
     if (groups[key].voices.length > 0) {
       const optGroup = document.createElement('optgroup');
@@ -300,7 +357,6 @@ function loadDynamicVoices() {
     }
   });
 
-  // TỰ ĐỘNG CHỐT GIỌNG ĐỈNH NHẤT KHI VỪA MỞ WEB
   if (!isDefaultVoiceSet) {
       voiceSelect.value = bestJaVoiceIndex;
       isDefaultVoiceSet = true;
@@ -320,10 +376,8 @@ function playCustomAudio(text, isAnswer = false) {
   cloudAudio.currentTime = 0;
 
   if (isAnswer) {
-      // ĐỌC ĐÁP ÁN: Ngắt Voice tiếng Nhật, ép đọc Tiếng Việt xịn
       triggerVietnameseVoice(text);
   } else {
-      // ĐỌC CÂU HỎI: Dùng chính xác cái đã bị chốt trong Cài đặt
       const voiceSelect = document.getElementById('set-voice');
       const selectedSetting = voiceSelect ? voiceSelect.value : 'api-ja';
 
@@ -343,7 +397,6 @@ function playCloudAudio(text, langCode) {
     cloudAudio.referrerPolicy = "no-referrer"; 
     cloudAudio.src = url;
     
-    // Fallback Offline
     cloudAudio.onerror = () => {
         const utterance = new SpeechSynthesisUtterance(text);
         const fallbackVoices = availableVoices.filter(v => v.lang.includes(langCode));
@@ -354,7 +407,6 @@ function playCloudAudio(text, langCode) {
 }
 
 function triggerVietnameseVoice(text) {
-    // Đọc Tiếng Việt qua Google Cloud cho trong trẻo
     const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=vi&q=${encodeURIComponent(text)}`;
     cloudAudio.referrerPolicy = "no-referrer"; 
     cloudAudio.src = url;
@@ -373,13 +425,6 @@ function playQuestionAudio() {
   const currentCard = flashcards[currentIndex];
   if (currentCard) playCustomAudio(currentCard.hira_kata, false);
 }
-
-document.addEventListener('keydown', (e) => {
-  if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
-  if (e.code === 'Numpad0' || e.code === 'NumpadDecimal') {
-      playQuestionAudio();
-  }
-}, true);
 
 
 // ================= UI SETTINGS & CẬP NHẬT BIẾN CSS =================
@@ -492,7 +537,7 @@ function renderImportPreview() {
       html += `
         <div class="flex border-b border-[#2a2c41] pb-2 mb-2">
           <div class="w-1/2 pr-2 border-r border-[#2a2c41]">
-            <div class="font-bold text-blue-400">${hira}</div>
+            <div class="font-bold text-[#3ca3f0]">${hira}</div>
             <div class="text-gray-500 text-sm">${kanji}</div>
           </div>
           <div class="w-1/2 pl-2 text-orange-400 text-sm whitespace-pre-wrap">${meaning}</div>

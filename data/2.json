@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "できます",
+    "kanji": "",
+    "meaning": "Có thể"
+  },
+  {
+    "id": 2,
+    "hira_kata": "あらいます",
+    "kanji": "洗います",
+    "meaning": "Rửa"
+  },
+  {
+    "id": 3,
+    "hira_kata": "ひきます",
+    "kanji": "",
+    "meaning": "Chơi ( piano, gita,.... )"
+  },
+  {
+    "id": 4,
+    "hira_kata": "うたいます",
+    "kanji": "歌います",
+    "meaning": "Hát"
+  },
+  {
+    "id": 5,
+    "hira_kata": "あつめます",
+    "kanji": "集めます",
+    "meaning": "Sưu tầm, sưa tập"
+  },
+  {
+    "id": 6,
+    "hira_kata": "すてます",
+    "kanji": "捨てます",
+    "meaning": "Vứt, bỏ, bỏ đi"
+  },
+  {
+    "id": 7,
+    "hira_kata": "かえます",
+    "kanji": "換えます",
+    "meaning": "Đổi, trao đổi"
+  },
+  {
+    "id": 8,
+    "hira_kata": "うんてんします",
+    "kanji": "運転します",
+    "meaning": "Lái"
+  },
+  {
+    "id": 9,
+    "hira_kata": "よやくします",
+    "kanji": "予約します",
+    "meaning": "Đặt chỗ, đặt trước"
+  },
+  {
+    "id": 10,
+    "hira_kata": "ピアノ",
+    "kanji": "",
+    "meaning": "Đàn Piano"
+  },
+  {
+    "id": 11,
+    "hira_kata": "げんきん",
+    "kanji": "現金",
+    "meaning": "Tiền mặt"
+  },
+  {
+    "id": 12,
+    "hira_kata": "しゅみ",
+    "kanji": "趣味",
+    "meaning": "Sở thích"
+  },
+  {
+    "id": 13,
+    "hira_kata": "にっき",
+    "kanji": "日記",
+    "meaning": "Nhật ký"
+  },
+  {
+    "id": 14,
+    "hira_kata": "おいのりをします",
+    "kanji": "お祈りをします",
+    "meaning": "Cầu nguyện"
+  },
+  {
+    "id": 15,
+    "hira_kata": "かちょう",
+    "kanji": "課長",
+    "meaning": "Trưởng bộ phận, tổ trưởng"
+  },
+  {
+    "id": 16,
+    "hira_kata": "ぶちょう",
+    "kanji": "部長",
+    "meaning": "Trưởng phòng"
+  },
+  {
+    "id": 17,
+    "hira_kata": "しゃちょう",
+    "kanji": "社長",
+    "meaning": "Giám đốc"
+  },
+  {
+    "id": 18,
+    "hira_kata": "どうぶつ",
+    "kanji": "動物",
+    "meaning": "Động vật"
+  },
+  {
+    "id": 19,
+    "hira_kata": "うま",
+    "kanji": "馬",
+    "meaning": "Ngựa"
+  },
+  {
+    "id": 20,
+    "hira_kata": "インターネット",
+    "kanji": "",
+    "meaning": "Internet"
+  },
+  {
+    "id": 21,
+    "hira_kata": "とくに",
+    "kanji": "特に",
+    "meaning": "Đặc biệt là"
+  },
+  {
+    "id": 22,
+    "hira_kata": "なかなか",
+    "kanji": "",
+    "meaning": "Mãi mà, khó mà"
+  },
+  {
+    "id": 23,
+    "hira_kata": "ぜひ",
+    "kanji": "",
+    "meaning": "Nhất định"
+  }
+]

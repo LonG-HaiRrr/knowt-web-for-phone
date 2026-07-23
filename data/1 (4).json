@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "「ビザが」いります「ビザが」",
+    "kanji": "要ります",
+    "meaning": "Cần ( thị thực / visa)"
+  },
+  {
+    "id": 2,
+    "hira_kata": "しらべます",
+    "kanji": "調べます",
+    "meaning": "Tìm hiểu, điều tra, kiểm tra"
+  },
+  {
+    "id": 3,
+    "hira_kata": "しゅうりします",
+    "kanji": "修理します",
+    "meaning": "Sửa chữa, tu sửa"
+  },
+  {
+    "id": 4,
+    "hira_kata": "ことば",
+    "kanji": "言葉",
+    "meaning": "Ngôn ngữ / từ vựng"
+  },
+  {
+    "id": 5,
+    "hira_kata": "きもの",
+    "kanji": "着物",
+    "meaning": "Kimono"
+  },
+  {
+    "id": 6,
+    "hira_kata": "ビザ",
+    "kanji": "",
+    "meaning": "Thị thực/ visa"
+  },
+  {
+    "id": 7,
+    "hira_kata": "はじめ",
+    "kanji": "初め",
+    "meaning": "Ban đầu, đầu tiên"
+  },
+  {
+    "id": 8,
+    "hira_kata": "おわり",
+    "kanji": "終わり",
+    "meaning": "Kết thúc, hết  phim"
+  },
+  {
+    "id": 9,
+    "hira_kata": "こっち",
+    "kanji": "",
+    "meaning": "Phía này, chỗ này"
+  },
+  {
+    "id": 10,
+    "hira_kata": "そっち",
+    "kanji": "",
+    "meaning": "Phía đó, chỗ đó"
+  },
+  {
+    "id": 11,
+    "hira_kata": "あっち",
+    "kanji": "",
+    "meaning": "Phía kia, chỗ kia"
+  },
+  {
+    "id": 12,
+    "hira_kata": "どっち",
+    "kanji": "",
+    "meaning": "Cái nào (giữa 2 cái), phía nào, đâu - (cách nói thân mật của どちら)"
+  },
+  {
+    "id": 13,
+    "hira_kata": "みんなで",
+    "kanji": "",
+    "meaning": "Mọi người cùng"
+  },
+  {
+    "id": 14,
+    "hira_kata": "〜けど",
+    "kanji": "",
+    "meaning": "~, nhưng (cách nói thân mật của が)"
+  },
+  {
+    "id": 15,
+    "hira_kata": "ぼく",
+    "kanji": "僕",
+    "meaning": "Tôi, tớ (cách xưng thân mật của わたし (私) - được dùng bởi nam giới)"
+  },
+  {
+    "id": 16,
+    "hira_kata": "〜くん",
+    "kanji": "",
+    "meaning": "Dùng sau tên người ngang hàng hoặc ít tuổi hơn - (thường dùng sau tên bé trai)"
+  },
+  {
+    "id": 17,
+    "hira_kata": "よかったら",
+    "kanji": "",
+    "meaning": "Nếu anh/chị thích thì…"
+  },
+  {
+    "id": 18,
+    "hira_kata": "おなかがいっぱい",
+    "kanji": "",
+    "meaning": "No ( bụng)"
+  }
+]

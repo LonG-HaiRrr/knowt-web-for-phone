@@ -3,233 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
-  <title>Trắc nghiệm Knowt </title>
+  <title>Trắc nghiệm Knowt</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#111111] text-white font-sans pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] h-screen overflow-hidden flex flex-col relative">
+<body class="bg-[#000000] text-white font-sans h-screen w-full flex justify-center items-center overflow-hidden">
 
-  <!-- ================= LOBBY SCREEN ================= -->
-  <div id="lobby-screen" class="flex-1 px-4 py-8 flex flex-col h-full overflow-y-auto w-full max-w-md mx-auto">
-      <div class="zone_logo">
-        <a href="https://long-hairrr.github.io/CV-on-web" class="icon_trangchu">
-          <img src="logo_trangchu.png" alt="Logo" class="w-390 h-12 object-contain rounded-full transition-transform hover:scale-110">
+  <!-- MÔ PHỎNG MÀN HÌNH ĐIỆN THOẠI (Ép cứng UI trên Laptop) -->
+  <div id="mobile-frame" class="w-full max-w-[450px] h-full bg-[#111111] flex flex-col relative sm:border-x sm:border-[#333] shadow-2xl pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] overflow-hidden">
 
-        </a>
+    <!-- ================= LOBBY SCREEN ================= -->
+    <div id="lobby-screen" class="flex-1 px-4 py-8 flex flex-col h-full overflow-y-auto w-full mx-auto">
+        <div class="zone_logo">
+          <a href="https://long-hairrr.github.io/CV-on-web" class="icon_trangchu">
+            <img src="logo_trangchu.png" alt="Logo" class="w-390 h-12 object-contain rounded-full transition-transform hover:scale-110">
+          </a>
+          <a href="https://github.com/LonG-HaiRrr/knowt-web-for-phone" target="_blank" class="social-icon"><i class="fa-brands fa-github text-3xl"></i></a>
+        </div>
+      <div class="flex items-center justify-between mb-4">
+        <h6 class="text-3xl font-bold"  style="color:#14d45e; padding:20px">Thư viện</h6>
+        <div class="flex gap-3">
+          <button id="btn-open-import" class="w-10 h-10 bg-[#0070ef] rounded-full flex items-center justify-center text-xl hover:bg-blue-600 transition shadow-lg" title="Nhập dữ liệu">📥</button>
+          <button id="btn-settings-lobby" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
+        </div>
+      </div>
+
+      <!-- TÍNH NĂNG TÌM KIẾM & SẮP XẾP -->
+      <div class="flex gap-2 mb-6 shrink-0">
+        <input type="text" id="search-deck" placeholder="🔍 Tìm tên bài học..." class="flex-1 bg-[#1c1c1e] text-white border border-[#333] rounded-xl px-4 py-2 outline-none focus:border-[#14d45e] transition text-sm">
+        <select id="sort-deck" class="bg-[#1c1c1e] text-white border border-[#333] rounded-xl px-2 outline-none text-sm cursor-pointer hover:bg-[#2c2c2e]">
+          <option value="default">Mới nhất</option>
+          <option value="az">A ➔ Z</option>
+          <option value="za">Z ➔ A</option>
+        </select>
+      </div>
+
+      <div id="deck-list" class="flex flex-col gap-4">
+         <!-- JS tự động tải danh sách vào đây -->
+      </div>
+    </div>
+
+    <!-- ================= QUIZ SCREEN ================= -->
+    <div id="quiz-screen" class="hidden flex-1 flex-col h-full overflow-hidden w-full mx-auto">
+      <div class="flex items-center justify-between px-4 py-3 shrink-0">
+        <button id="btn-exit" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">✕</button>
+        <div class="flex-1 mx-4 h-2 bg-[#333333] rounded-full overflow-hidden">
+          <div id="progress-bar" class="h-full bg-gray-400 w-0 transition-all duration-300 rounded-full"></div>
+        </div>
+        <div class="flex gap-2 items-center">
+          <div class="px-3 py-1 bg-[#1c2c36] text-[#3ca3f0] font-bold rounded-full flex items-center gap-1 text-sm">
+            <span id="card-counter">0</span> 🗡️
+          </div>
+          <button id="btn-settings-quiz" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
+        </div>
+      </div>
+
+      <div class="quiz-body-container">
+        <div class="bg-[#1c1c1e] flex-1 rounded-[24px] p-5 flex flex-col shadow-lg border border-[#2c2c2e] overflow-y-auto relative">
+          <div class="flex justify-between items-center mb-6 shrink-0">
+            <span id="current-deck-name" class="bg-[#3b2b35] text-[#d685af] px-3 py-1.5 rounded-lg text-sm font-semibold truncate max-w-[200px]">◯ Đang tải...</span>
+            <div class="flex gap-4 text-gray-400 text-xl">
+              <button class="hover:text-white transition" onclick="playQuestionAudio()">🔊</button>
+            </div>
+          </div>
+
+          <div class="mb-6 shrink-0">
+            <h1 id="q-hira" class="font-bold mb-3 transition-all" style="display: flex; justify-content: center !important; align-items: center !important; text-align: center;">...</h1>
+            <h2 id="q-kanji" class="text-gray-300 transition-all" style="display: flex; justify-content: center !important; align-items: center !important; text-align: center;">...</h2>
+          </div>
+
+          <div class="nut_to text-center mb-2">
+            <button class="hover:text-white transition scale-150" onclick="playQuestionAudio()">🔊</button>
+          </div>
+
+          <div id="options-container" class="flex flex-col gap-3 mt-auto shrink-0"></div>
+
+          <div id="next-btn-container" class="mt-4 hidden shrink-0">
+            <button id="btn-manual-next" class="w-full bg-[#0070ef] hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-colors text-lg">Tiếp theo (Enter) ➔</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= BẢNG SETTINGS (Đổi sang absolute để khóa UI) ================= -->
+    <div id="settings-modal" class="absolute inset-0 bg-black/80 z-50 hidden flex-col justify-end">
+      <div class="bg-[#1c1c1e] rounded-t-[24px] p-6 border-t border-[#2c2c2e] transform transition-transform translate-y-full max-h-[85vh] overflow-y-auto" id="settings-content">
         
-        <a href="https://github.com/LonG-HaiRrr/knowt-web-for-phone" target="_blank" class="social-icon"><i class="fa-brands fa-github text-3xl"></i></a>
-      </div>
-    <div class="flex items-center justify-between mb-8">
-      <h6 class="text-3xl font-bold"  style="color:#14d45e; padding:20px">Thư viện</h6>
-      <div class="flex gap-3">
-        <button id="btn-open-import" class="w-10 h-10 bg-[#0070ef] rounded-full flex items-center justify-center text-xl hover:bg-blue-600 transition shadow-lg" title="Nhập dữ liệu">📥</button>
-        <button id="btn-settings-lobby" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
-      </div>
-    </div>
-    <div id="deck-list" class="flex flex-col gap-4">
-       <!-- JS tự động tải danh sách vào đây -->
-    </div>
-  </div>
-
-  <!-- ================= QUIZ SCREEN ================= -->
-  <div id="quiz-screen" class="hidden flex-1 flex-col h-full overflow-hidden w-full max-w-md mx-auto">
-    
-    <div class="flex items-center justify-between px-4 py-3 shrink-0">
-      <button id="btn-exit" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">✕</button>
-      <div class="flex-1 mx-4 h-2 bg-[#333333] rounded-full overflow-hidden">
-        <div id="progress-bar" class="h-full bg-gray-400 w-0 transition-all duration-300 rounded-full"></div>
-      </div>
-      <div class="flex gap-2 items-center">
-        <div class="px-3 py-1 bg-[#1c2c36] text-[#3ca3f0] font-bold rounded-full flex items-center gap-1 text-sm">
-          <span id="card-counter">0</span> 🗡️
-        </div>
-        <button id="btn-settings-quiz" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center text-xl hover:bg-[#333] transition">⚙️</button>
-      </div>
-    </div>
-
-    <div class="quiz-body-container">
-      <div class="bg-[#1c1c1e] flex-1 rounded-[24px] p-5 flex flex-col shadow-lg border border-[#2c2c2e] overflow-y-auto relative">
-        <div class="flex justify-between items-center mb-6 shrink-0">
-          <span id="current-deck-name" class="bg-[#3b2b35] text-[#d685af] px-3 py-1.5 rounded-lg text-sm font-semibold">◯ Đang tải...</span>
-          <div class="flex gap-4 text-gray-400 text-xl">
-            <button class="hover:text-white transition" onclick="playQuestionAudio()">🔊</button>
-          </div>
+        <div class="flex justify-between items-center mb-6 sticky top-0 bg-[#1c1c1e] z-10 pb-2">
+          <h2 class="text-xl font-bold">Cài đặt Cấu hình</h2>
+          <button id="btn-close-settings" class="w-8 h-8 bg-[#333] rounded-full font-bold">✕</button>
         </div>
 
-
-
-
-        <div class="mb-6 shrink-0">
-          <h1 id="q-hira" class="font-bold mb-3 transition-all" style="display: flex; justify-content: center !important; align-items: center !important;">...</h1>
-          <h2 id="q-kanji" class="text-gray-300 transition-all" style="display: flex; justify-content: center !important; align-items: center !important;">...</h2>
-        </div>
-
-          <div class="nut_to" >
-            <button class="hover:text-white transition" onclick="playQuestionAudio()" style="scale:2 ; margin:auto; transform: translateX(90px) " >🔊</button>
+        <div class="flex flex-col gap-4">
+          <div class="flex justify-between items-center bg-[#1c2c36] p-3 rounded-xl border border-[#3ca3f0]">
+            <span class="font-bold text-[#3ca3f0]">Số thẻ học mỗi vòng</span>
+            <input type="number" id="set-question-limit" value="20" min="4" class="w-16 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-center">
           </div>
 
-        <div id="options-container" class="flex flex-col gap-3 mt-auto shrink-0"></div>
+          <div class="flex justify-between items-center bg-[#28102a] p-3 rounded-xl border border-[#9c27b0]">
+            <span class="font-bold text-[#d685af]">Giọng đọc & Tự động</span>
+            <select id="set-voice" class="w-36 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-sm truncate">
+              <option value="auto">🤖 Tự động nhận diện</option>
+            </select>
+          </div>
 
-        <div id="next-btn-container" class="mt-4 hidden shrink-0">
-          <button id="btn-manual-next" class="w-full bg-[#0070ef] hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-colors">Tiếp theo ➔</button>
+          <div class="flex justify-between items-center bg-[#2c1c36] p-3 rounded-xl border border-[#442c4f]">
+            <span class="font-bold text-[#d685af]">Tự động qua câu</span>
+            <input type="checkbox" id="set-auto-next" class="w-5 h-5 accent-pink-500 cursor-pointer">
+          </div>
+
+          <div class="flex justify-between items-center bg-[#101a2a] p-3 rounded-xl border border-gray-700">
+            <span class="font-bold text-white">Đọc câu hỏi</span>
+            <input type="checkbox" id="set-auto-q" checked class="w-5 h-5 accent-blue-500 cursor-pointer">
+          </div>
+          <div class="flex flex-col bg-[#131836] p-3 rounded-xl border border-gray-700 gap-2">
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-white">Delay đọc (giây)</span>
+              <span id="delay-val" class="text-orange-500 font-bold">1.5s</span>
+            </div>
+            <input type="range" id="set-delay" min="0" max="8" step="0.5" value="1.5" class="w-full accent-orange-500">
+          </div>
+          <div class="flex justify-between items-center bg-[#2a1010] p-3 rounded-xl border border-gray-700">
+            <span class="font-bold text-white">Đọc đáp án đúng</span>
+            <input type="checkbox" id="set-auto-ans" class="w-5 h-5 accent-green-500 cursor-pointer">
+          </div>
+
+          <h3 class="font-bold text-lg text-white mt-4 border-b border-gray-700 pb-2">Chữ (Font & Size 12-45px)</h3>
+          
+          <div class="bg-[#1c1c1e] p-3 rounded-xl border border-gray-600">
+            <div class="text-sm font-bold text-blue-400 mb-2 flex justify-between">
+              <span>Chữ Hiragana/Katakana</span>
+              <span id="fs-hira-val">25px</span>
+            </div>
+            <select id="ff-hira" class="w-full bg-[#2c2c2e] text-white text-xs p-2 rounded mb-3 outline-none border border-gray-500">
+              <option value="sans-serif">Cơ bản (Sans-serif)</option>
+              <option value="serif">Có chân (Serif)</option>
+              <option value="'Klee One', cursive">Nét bút lông/Viết tay</option>
+            </select>
+            <input type="range" id="fs-hira" min="12" max="45" value="25" class="w-full accent-blue-500">
+          </div>
+
+          <div class="bg-[#1c1c1e] p-3 rounded-xl border border-gray-600">
+            <div class="text-sm font-bold text-green-400 mb-2 flex justify-between">
+              <span>Chữ Kanji</span>
+              <span id="fs-kanji-val">33px</span>
+            </div>
+            <select id="ff-kanji" class="w-full bg-[#2c2c2e] text-white text-xs p-2 rounded mb-3 outline-none border border-gray-500">
+              <option value="sans-serif">Cơ bản (Sans-serif)</option>
+              <option value="serif">Có chân (Serif)</option>
+              <option value="'Klee One', cursive">Nét bút lông/Viết tay</option>
+            </select>
+            <input type="range" id="fs-kanji" min="12" max="45" value="26" class="w-full accent-green-500">
+          </div>
+
+          <div class="bg-[#1c1c1e] p-3 rounded-xl border border-gray-600">
+            <div class="text-sm font-bold text-orange-400 mb-2 flex justify-between">
+              <span>Chữ Nghĩa (Đáp án)</span>
+              <span id="fs-mean-val">19px</span>
+            </div>
+            <select id="ff-mean" class="w-full bg-[#2c2c2e] text-white text-xs p-2 rounded mb-3 outline-none border border-gray-500">
+              <option value="sans-serif">Cơ bản (Sans-serif)</option>
+              <option value="serif">Có chân (Serif)</option>
+            </select>
+            <input type="range" id="fs-mean" min="12" max="45" value="19" class="w-full accent-orange-500">
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ================= BẢNG SETTINGS ================= -->
-  <div id="settings-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex-col justify-end">
-    <div class="bg-[#1c1c1e] rounded-t-[24px] p-6 border-t border-[#2c2c2e] transform transition-transform translate-y-full max-h-[85vh] overflow-y-auto" id="settings-content">
-      
-      <div class="flex justify-between items-center mb-6 sticky top-0 bg-[#1c1c1e] z-10 pb-2">
-        <h2 class="text-xl font-bold">Cài đặt Cấu hình</h2>
-        <button id="btn-close-settings" class="w-8 h-8 bg-[#333] rounded-full font-bold">✕</button>
+    <!-- ================= GIAO DIỆN NHẬP DỮ LIỆU (absolute) ================= -->
+    <div id="import-modal" class="absolute inset-0 bg-[#161722] z-[100] hidden flex-col w-full h-full overflow-hidden">
+      <div class="flex justify-between items-center p-5 bg-[#1b1d29] border-b border-[#2a2c41] shrink-0">
+        <h2 class="text-lg font-bold text-white">Nhập dữ liệu. <span class="text-sm font-normal text-gray-400 block mt-1">Chép và dán từ Knowt, Quizlet...</span></h2>
+        <button id="btn-close-import" class="w-8 h-8 rounded-full bg-[#2a2c41] flex items-center justify-center hover:bg-[#3f4260] transition">✕</button>
       </div>
 
-      <div class="flex flex-col gap-4">
-
-        <!-- ===== THÊM BLOCK MỚI: CHỌN GIỚI HẠN & GIỌNG NÓI ===== -->
-        <div class="flex justify-between items-center bg-[#1c2c36] p-3 rounded-xl border border-[#3ca3f0]">
-          <span class="font-bold text-[#3ca3f0]">Số thẻ học mỗi vòng</span>
-          <input type="number" id="set-question-limit" value="20" min="4" class="w-16 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-center">
-        </div>
-
-<div class="flex justify-between items-center bg-[#28102a] p-3 rounded-xl border border-[#9c27b0]">
-          <span class="font-bold text-[#d685af]">Giọng đọc & Tự động</span>
-          <select id="set-voice" class="w-36 bg-[#111111] text-white border border-gray-600 rounded px-2 py-1 outline-none text-sm truncate">
-            <option value="auto">🤖 Tự động nhận diện</option>
-            <!-- JS sẽ tự động bơm các giọng đọc vào đây -->
-          </select>
-        </div>
-        <!-- ===== KẾT THÚC THÊM ===== -->
-
-        <div class="flex justify-between items-center bg-[#2c1c36] p-3 rounded-xl border border-[#442c4f]">
-          <span class="font-bold text-[#d685af]">Tự động qua câu</span>
-          <input type="checkbox" id="set-auto-next" class="w-5 h-5 accent-pink-500 cursor-pointer">
-        </div>
-
-        <div class="flex justify-between items-center bg-[#101a2a] p-3 rounded-xl border border-gray-700">
-          <span class="font-bold text-white">Đọc câu hỏi</span>
-          <input type="checkbox" id="set-auto-q" checked class="w-5 h-5 accent-blue-500 cursor-pointer">
-        </div>
-        <div class="flex flex-col bg-[#131836] p-3 rounded-xl border border-gray-700 gap-2">
-          <div class="flex justify-between items-center">
-            <span class="font-bold text-white">Delay đọc (giây)</span>
-            <span id="delay-val" class="text-orange-500 font-bold">1.5s</span>
-          </div>
-          <input type="range" id="set-delay" min="0" max="8" step="0.5" value="1.5" class="w-full accent-orange-500">
-        </div>
-        <div class="flex justify-between items-center bg-[#2a1010] p-3 rounded-xl border border-gray-700">
-          <span class="font-bold text-white">Đọc đáp án đúng</span>
-          <input type="checkbox" id="set-auto-ans" class="w-5 h-5 accent-green-500 cursor-pointer">
-        </div>
-
-        <h3 class="font-bold text-lg text-white mt-4 border-b border-gray-700 pb-2">Chữ (Font & Size 12-45px)</h3>
+      <div class="flex-1 overflow-y-auto p-4 flex flex-col gap-6 w-full mx-auto">
+        <textarea id="import-textarea" class="import-textarea-custom" placeholder="Từ 1 Định nghĩa 1&#10;Từ 2 Định nghĩa 2&#10;Từ 3 Định nghĩa 3"></textarea>
         
-        <div class="bg-[#1c1c1e] p-3 rounded-xl border border-gray-600">
-          <div class="text-sm font-bold text-blue-400 mb-2 flex justify-between">
-            <span>Chữ Hiragana/Katakana</span>
-            <span id="fs-hira-val">25px</span>
+        <div id="su_lua_chon" class="grid grid-cols-2 gap-4 text-sm pl-2">
+          <div class="flex flex-col gap-3">
+            <label class="font-bold text-white mb-1">Giữa từ và định nghĩa</label>
+            <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="tab" checked> Tab</label>
+            <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="comma"> Phẩy</label>
+            <label class="radio-custom flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="term_def" value="custom"> 
+              <input type="text" id="custom-term-def" class="bg-[#2a2c41] border border-transparent rounded px-2 py-1 outline-none focus:border-[#5865f2] w-20 text-white placeholder-gray-500" placeholder="Khác">
+            </label>
           </div>
-          <select id="ff-hira" class="w-full bg-[#2c2c2e] text-white text-xs p-2 rounded mb-3 outline-none border border-gray-500">
-            <option value="sans-serif">Cơ bản (Sans-serif)</option>
-            <option value="serif">Có chân (Serif)</option>
-            <option value="'Klee One', cursive">Nét bút lông/Viết tay</option>
-          </select>
-          <input type="range" id="fs-hira" min="12" max="45" value="25" class="w-full accent-blue-500">
-        </div>
 
-        <div class="bg-[#1c1c1e] p-3 rounded-xl border border-gray-600">
-          <div class="text-sm font-bold text-green-400 mb-2 flex justify-between">
-            <span>Chữ Kanji</span>
-            <span id="fs-kanji-val">33px</span>
+          <div class="flex flex-col gap-3">
+            <label class="font-bold text-white mb-1">Giữa các thẻ</label>
+            <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="card_sep" value="newline" checked> Dòng mới</label>
+            <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="card_sep" value="semicolon"> Chấm phẩy</label>
+            <label class="radio-custom flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="card_sep" value="custom"> 
+              <input type="text" id="custom-card-sep" class="bg-[#2a2c41] border border-transparent rounded px-2 py-1 outline-none focus:border-[#5865f2] w-20 text-white placeholder-gray-500" placeholder="Khác">
+            </label>
           </div>
-          <select id="ff-kanji" class="w-full bg-[#2c2c2e] text-white text-xs p-2 rounded mb-3 outline-none border border-gray-500">
-            <option value="sans-serif">Cơ bản (Sans-serif)</option>
-            <option value="serif">Có chân (Serif)</option>
-            <option value="'Klee One', cursive">Nét bút lông/Viết tay</option>
-          </select>
-          <input type="range" id="fs-kanji" min="12" max="45" value="26" class="w-full accent-green-500">
         </div>
 
-        <div class="bg-[#1c1c1e] p-3 rounded-xl border border-gray-600">
-          <div class="text-sm font-bold text-orange-400 mb-2 flex justify-between">
-            <span>Chữ Nghĩa (Đáp án)</span>
-            <span id="fs-mean-val">19px</span>
+        <div class="preview_zone">
+          <h3 class="font-bold text-lg text-white" style="padding-bottom: 10px;">Xem trước <span id="preview-count" class="text-sm font-normal text-gray-400">0 thẻ</span></h3>
+          <div id="import-preview-box" class="import-preview-container h-[400px]">
+           <p class="text-gray-500 text-sm">Không có nội dung để xem trước</p>
           </div>
-          <select id="ff-mean" class="w-full bg-[#2c2c2e] text-white text-xs p-2 rounded mb-3 outline-none border border-gray-500">
-            <option value="sans-serif">Cơ bản (Sans-serif)</option>
-            <option value="serif">Có chân (Serif)</option>
-          </select>
-          <input type="range" id="fs-mean" min="12" max="45" value="19" class="w-full accent-orange-500">
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= GIAO DIỆN NHẬP DỮ LIỆU (IMPORT MODAL) ================= -->
-  <div id="import-modal" class="fixed inset-0 bg-[#161722] z-[100] hidden flex-col w-full h-full overflow-hidden">
-    
-    <!-- Header -->
-    <div class="flex justify-between items-center p-5 bg-[#1b1d29] border-b border-[#2a2c41] shrink-0">
-      <h2 class="text-lg font-bold text-white">Nhập dữ liệu. <span class="text-sm font-normal text-gray-400">Chép và dán dữ liệu ở đây (từ Knowt, Quizlet, Riki Export, v.v.)</span></h2>
-      <button id="btn-close-import" class="w-8 h-8 rounded-full bg-[#2a2c41] flex items-center justify-center hover:bg-[#3f4260] transition">✕</button>
-    </div>
-
-    <!-- Main Content -->
-    <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 w-full max-w-5xl mx-auto">
-      
-      <!-- Textarea -->
-      <textarea id="import-textarea" class="import-textarea-custom" placeholder="Từ 1 Định nghĩa 1&#10;Từ 2 Định nghĩa 2&#10;Từ 3 Định nghĩa 3"></textarea>
-      <!-- Delimiter Settings -->
-      <div id="su_lua_chon" class="grid grid-cols-2 gap-8 text-sm">
-        <div class="flex flex-col gap-3">
-          <label class="font-bold text-white mb-1">Giữa thuật ngữ và định nghĩa</label>
-          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="tab" checked> Tab</label>
-          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="term_def" value="comma"> Phẩy</label>
-          <label class="radio-custom flex items-center gap-2 cursor-pointer">
-            <input type="radio" name="term_def" value="custom"> 
-            <input type="text" id="custom-term-def" class="bg-[#2a2c41] border border-transparent rounded px-2 py-1 outline-none focus:border-[#5865f2] w-24 text-white placeholder-gray-500" placeholder="Tùy chỉnh">
-          </label>
-        </div>
-
-        <div class="flex flex-col gap-3">
-          <label class="font-bold text-white mb-1">Giữa các thẻ</label>
-          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="card_sep" value="newline" checked> Dòng mới</label>
-          <label class="radio-custom flex items-center gap-2 cursor-pointer"><input type="radio" name="card_sep" value="semicolon"> Chấm phẩy</label>
-          <label class="radio-custom flex items-center gap-2 cursor-pointer">
-            <input type="radio" name="card_sep" value="custom"> 
-            <input type="text" id="custom-card-sep" class="bg-[#2a2c41] border border-transparent rounded px-2 py-1 outline-none focus:border-[#5865f2] w-24 text-white placeholder-gray-500" placeholder="Tùy chỉnh">
-          </label>
         </div>
       </div>
 
-      <!-- Preview Section -->
-      <div class="preview_zone">
-        <h3 class="font-bold text-lg text-white" style="padding-bottom:  10px ;">Xem trước <span id="preview-count" class="text-sm font-normal text-gray-400">0 thẻ</span></h3>
-        <div id="import-preview-box" class="import-preview-container">
-         <p class="text-gray-500 text-sm">Không có nội dung để xem trước</p>
+      <div class="p-4 bg-[#1b1d29] border-t border-[#2a2c41] flex flex-col sm:flex-row gap-3 justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <input type="text" id="import-filename" class="bg-[#2a2c41] border border-transparent rounded px-3 py-2 outline-none focus:border-[#5865f2] text-white text-sm flex-1 sm:w-40" placeholder="Tên file (vd: bai3)" value="bai_moi">
+          <span class="text-sm text-gray-400">.json</span>
+        </div>
+        <div class="flex gap-2 w-full sm:w-auto">
+          <button id="btn-cancel-import" class="flex-1 sm:flex-none px-4 py-2 bg-[#2a2c41] text-white rounded font-semibold hover:bg-[#3f4260] transition">Hủy</button>
+          <button id="btn-save-import" class="flex-1 sm:flex-none px-4 py-2 bg-[#5865f2] text-white rounded font-semibold hover:bg-[#4752c4] transition">Lưu file</button>
         </div>
       </div>
     </div>
 
-    <!-- Footer Actions -->
-    <div class="p-5 bg-[#1b1d29] border-t border-[#2a2c41] flex justify-between items-center shrink-0">
-      <div class="flex items-center gap-2">
-        <span class="text-sm text-gray-400">Tên file:</span>
-        <input type="text" id="import-filename" class="bg-[#2a2c41] border border-transparent rounded px-3 py-2 outline-none focus:border-[#5865f2] text-white text-sm w-48" placeholder="vd: bai3" value="bai_moi">
-        <span class="text-sm text-gray-400">.json</span>
-      </div>
-      <div class="flex gap-3">
-        <button id="btn-cancel-import" class="px-6 py-2 bg-[#2a2c41] text-white rounded font-semibold hover:bg-[#3f4260] transition">Hủy nhập</button>
-        <button id="btn-save-import" class="px-6 py-2 bg-[#5865f2] text-white rounded font-semibold hover:bg-[#4752c4] transition">Lưu thành file JSON</button>
-      </div>
-    </div>
-
-  </div>
+  </div> <!-- KẾT THÚC MOBILE FRAME -->
 
   <script src="https://kit.fontawesome.com/5fe94cd70e.js" crossorigin="anonymous"></script> 
   <script src="script.js"></script>

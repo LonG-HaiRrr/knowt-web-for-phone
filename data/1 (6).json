@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "(シャツを）きます(シャツを）着ます",
+    "kanji": "",
+    "meaning": "Mặc (áo sơ mi,…)"
+  },
+  {
+    "id": 2,
+    "hira_kata": "(くつ、ズボン,…を）はきます",
+    "kanji": "",
+    "meaning": "Đi (giầy, vớ,…), mặc (quần, váy,…)"
+  },
+  {
+    "id": 3,
+    "hira_kata": "(ぼうしを）かぶります",
+    "kanji": "",
+    "meaning": "Đội (nón)"
+  },
+  {
+    "id": 4,
+    "hira_kata": "(メガネを）かけます",
+    "kanji": "",
+    "meaning": "Đeo (kính)"
+  },
+  {
+    "id": 5,
+    "hira_kata": "(ネクタイを）します",
+    "kanji": "",
+    "meaning": "Đeo (cà vạt)"
+  },
+  {
+    "id": 6,
+    "hira_kata": "こどもがうまれます",
+    "kanji": "子供が生まれます",
+    "meaning": "(Đứa trẻ) được sinh ra"
+  },
+  {
+    "id": 7,
+    "hira_kata": "コート",
+    "kanji": "",
+    "meaning": "Áo khoác"
+  },
+  {
+    "id": 8,
+    "hira_kata": "セーター",
+    "kanji": "",
+    "meaning": "Áo len"
+  },
+  {
+    "id": 9,
+    "hira_kata": "スーツ",
+    "kanji": "",
+    "meaning": "Com-le, vét"
+  },
+  {
+    "id": 10,
+    "hira_kata": "ぼうし",
+    "kanji": "帽子",
+    "meaning": "Mũ"
+  },
+  {
+    "id": 11,
+    "hira_kata": "めがね",
+    "kanji": "眼鏡",
+    "meaning": "Kính"
+  },
+  {
+    "id": 12,
+    "hira_kata": "ケーキ",
+    "kanji": "",
+    "meaning": "Bánh ngọt"
+  },
+  {
+    "id": 13,
+    "hira_kata": "「お」べんとう",
+    "kanji": "「お」弁当",
+    "meaning": "Cơm hộp"
+  },
+  {
+    "id": 14,
+    "hira_kata": "ロボット",
+    "kanji": "",
+    "meaning": "Rô bốt"
+  },
+  {
+    "id": 15,
+    "hira_kata": "ユーモア",
+    "kanji": "",
+    "meaning": "Sự hài hước"
+  },
+  {
+    "id": 16,
+    "hira_kata": "ユーモアが　あります",
+    "kanji": "",
+    "meaning": "Có khiếu hài hước"
+  },
+  {
+    "id": 17,
+    "hira_kata": "つごう",
+    "kanji": "都合",
+    "meaning": "Thời gian thích hợp"
+  },
+  {
+    "id": 18,
+    "hira_kata": "つごうがいい",
+    "kanji": "都合がいい",
+    "meaning": "Thuận tiện, phù hợp"
+  },
+  {
+    "id": 19,
+    "hira_kata": "つごうがわるい→",
+    "kanji": "都合が悪い",
+    "meaning": "Không thuận tiện"
+  },
+  {
+    "id": 20,
+    "hira_kata": "よく",
+    "kanji": "",
+    "meaning": "Thường, hay"
+  }
+]

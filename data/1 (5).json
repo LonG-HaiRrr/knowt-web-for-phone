@@ -1,0 +1,224 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "おもいます",
+    "kanji": "思います",
+    "meaning": "Nghĩ"
+  },
+  {
+    "id": 2,
+    "hira_kata": "いいます",
+    "kanji": "言います",
+    "meaning": "Nói"
+  },
+  {
+    "id": 3,
+    "hira_kata": "まけます",
+    "kanji": "負けます",
+    "meaning": "Thua"
+  },
+  {
+    "id": 4,
+    "hira_kata": "かちます",
+    "kanji": "勝ちます",
+    "meaning": "Thắng"
+  },
+  {
+    "id": 5,
+    "hira_kata": "「おまつりが」あります「お祭りが」あります",
+    "kanji": "",
+    "meaning": "[Lễ hội] được tổ chức, diễn ra"
+  },
+  {
+    "id": 6,
+    "hira_kata": "「かいしゃに」やくにたちます「会社に」役に立ちます",
+    "kanji": "",
+    "meaning": "Có ích cho [công ty]"
+  },
+  {
+    "id": 7,
+    "hira_kata": "うごきます",
+    "kanji": "動きます",
+    "meaning": "Chuyển động, chạy"
+  },
+  {
+    "id": 8,
+    "hira_kata": "「かいしゃを」やめます「会社を」やめます",
+    "kanji": "",
+    "meaning": "Bỏ, thôi việc (ở công ty)"
+  },
+  {
+    "id": 9,
+    "hira_kata": "「くるまに」きをつけます「車に」気をつけます",
+    "kanji": "",
+    "meaning": "Chú ý, cẩn thận (xe)"
+  },
+  {
+    "id": 10,
+    "hira_kata": "りゅうがくします",
+    "kanji": "留学します",
+    "meaning": "Du học"
+  },
+  {
+    "id": 11,
+    "hira_kata": "むだ",
+    "kanji": "な",
+    "meaning": "Lãng phí, vô ích"
+  },
+  {
+    "id": 12,
+    "hira_kata": "ふべん",
+    "kanji": "な）(不便)（な",
+    "meaning": "Bất tiện"
+  },
+  {
+    "id": 13,
+    "hira_kata": "ほんとう",
+    "kanji": "本当",
+    "meaning": "Sự thật"
+  },
+  {
+    "id": 14,
+    "hira_kata": "うそ",
+    "kanji": "",
+    "meaning": "Sự giá dối, giả dối"
+  },
+  {
+    "id": 15,
+    "hira_kata": "じどうしゃ",
+    "kanji": "自動車",
+    "meaning": "Ô tô, xe hơi"
+  },
+  {
+    "id": 16,
+    "hira_kata": "こうつう",
+    "kanji": "交通",
+    "meaning": "Giao thông"
+  },
+  {
+    "id": 17,
+    "hira_kata": "ぶっか",
+    "kanji": "物価",
+    "meaning": "Vật giá"
+  },
+  {
+    "id": 18,
+    "hira_kata": "ほうそう",
+    "kanji": "放送",
+    "meaning": "Phát thanh"
+  },
+  {
+    "id": 19,
+    "hira_kata": "ニュース",
+    "kanji": "",
+    "meaning": "Tin tức"
+  },
+  {
+    "id": 20,
+    "hira_kata": "アニメ",
+    "kanji": "",
+    "meaning": "Phim hoạt hình"
+  },
+  {
+    "id": 21,
+    "hira_kata": "まんが",
+    "kanji": "漫画",
+    "meaning": "Truyện tranh"
+  },
+  {
+    "id": 22,
+    "hira_kata": "デザイン",
+    "kanji": "",
+    "meaning": "Thiết kế"
+  },
+  {
+    "id": 23,
+    "hira_kata": "ゆめ",
+    "kanji": "夢",
+    "meaning": "Giấc mơ, ước mơ"
+  },
+  {
+    "id": 24,
+    "hira_kata": "てんさい",
+    "kanji": "天才",
+    "meaning": "Thiên tài"
+  },
+  {
+    "id": 25,
+    "hira_kata": "しあいをします",
+    "kanji": "試合をします",
+    "meaning": "Trận đấu"
+  },
+  {
+    "id": 26,
+    "hira_kata": "いけん",
+    "kanji": "意見",
+    "meaning": "Ý kiến"
+  },
+  {
+    "id": 27,
+    "hira_kata": "はなしをします",
+    "kanji": "話をします",
+    "meaning": "Câu chuyện"
+  },
+  {
+    "id": 28,
+    "hira_kata": "ちきゅう",
+    "kanji": "地球",
+    "meaning": "Trái đất"
+  },
+  {
+    "id": 29,
+    "hira_kata": "つき",
+    "kanji": "月",
+    "meaning": "Mặt trăng"
+  },
+  {
+    "id": 30,
+    "hira_kata": "さいきん",
+    "kanji": "最近",
+    "meaning": "Dạo gần đây"
+  },
+  {
+    "id": 31,
+    "hira_kata": "たぶん",
+    "kanji": "多分",
+    "meaning": "Chắc, có thể"
+  },
+  {
+    "id": 32,
+    "hira_kata": "きっと",
+    "kanji": "",
+    "meaning": "Chắc chắn, nhất định"
+  },
+  {
+    "id": 33,
+    "hira_kata": "ほんとうに(本当)に",
+    "kanji": "",
+    "meaning": "Thật sự"
+  },
+  {
+    "id": 34,
+    "hira_kata": "そんなに",
+    "kanji": "",
+    "meaning": "(Không) ~ lắm"
+  },
+  {
+    "id": 35,
+    "hira_kata": "ひさしぶりです",
+    "kanji": "久しぶりです",
+    "meaning": "Đã lâu không gặp anh/chị"
+  },
+  {
+    "id": 36,
+    "hira_kata": "もちろん",
+    "kanji": "",
+    "meaning": "Tất nhiên, dĩ nhiên"
+  },
+  {
+    "id": 37,
+    "hira_kata": "もうかえらないと...",
+    "kanji": "もう帰らないと...",
+    "meaning": "Tôi phải về rồi..."
+  }
+]

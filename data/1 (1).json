@@ -1,0 +1,188 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "おぼえます",
+    "kanji": "覚えます",
+    "meaning": "Nhớ"
+  },
+  {
+    "id": 2,
+    "hira_kata": "わすれます",
+    "kanji": "忘れます",
+    "meaning": "Quên"
+  },
+  {
+    "id": 3,
+    "hira_kata": "なくします",
+    "kanji": "",
+    "meaning": "Làm mất, đánh mất"
+  },
+  {
+    "id": 4,
+    "hira_kata": "はらいます",
+    "kanji": "払います",
+    "meaning": "Trả tiền"
+  },
+  {
+    "id": 5,
+    "hira_kata": "かえします",
+    "kanji": "返します",
+    "meaning": "Trả lại"
+  },
+  {
+    "id": 6,
+    "hira_kata": "でかけます",
+    "kanji": "出かけます",
+    "meaning": "Ra ngoài"
+  },
+  {
+    "id": 7,
+    "hira_kata": "ぬぎます",
+    "kanji": "脱ぎます",
+    "meaning": "Cởi (quần áo, giầy…)"
+  },
+  {
+    "id": 8,
+    "hira_kata": "もっていきます",
+    "kanji": "持っていきます",
+    "meaning": "Mang đi, mang theo"
+  },
+  {
+    "id": 9,
+    "hira_kata": "もってきます",
+    "kanji": "持ってきます",
+    "meaning": "Mang đến"
+  },
+  {
+    "id": 10,
+    "hira_kata": "しんぱいします",
+    "kanji": "心配します",
+    "meaning": "Lo lắng"
+  },
+  {
+    "id": 11,
+    "hira_kata": "ざんぎょうします",
+    "kanji": "残業します",
+    "meaning": "Làm thêm giờ, tăng ca"
+  },
+  {
+    "id": 12,
+    "hira_kata": "しゅっちょうします",
+    "kanji": "出張します",
+    "meaning": "Đi công tác"
+  },
+  {
+    "id": 13,
+    "hira_kata": "「おふろに」はいります",
+    "kanji": "「おふろに」入ります",
+    "meaning": "Tắm bồn"
+  },
+  {
+    "id": 14,
+    "hira_kata": "たいせつ［な］（大切）「な」",
+    "kanji": "",
+    "meaning": "Quan trọng, quý giá"
+  },
+  {
+    "id": 15,
+    "hira_kata": "だいじょうぶ［な］（大丈夫）「な」",
+    "kanji": "",
+    "meaning": "Không sao, không vấn đề gì"
+  },
+  {
+    "id": 16,
+    "hira_kata": "あぶない",
+    "kanji": "危ない",
+    "meaning": "Nguy hiểm"
+  },
+  {
+    "id": 17,
+    "hira_kata": "あたまがいたい",
+    "kanji": "頭が痛い",
+    "meaning": "Đau đầu"
+  },
+  {
+    "id": 18,
+    "hira_kata": "きんえん",
+    "kanji": "禁煙",
+    "meaning": "Cấm hút thuốc"
+  },
+  {
+    "id": 19,
+    "hira_kata": "けんこう",
+    "kanji": "健康",
+    "meaning": "Sức khỏe"
+  },
+  {
+    "id": 20,
+    "hira_kata": "［けんこう］ほけんしょう［健康］保険証",
+    "kanji": "",
+    "meaning": "Bảo hiểm ( y tế)"
+  },
+  {
+    "id": 21,
+    "hira_kata": "ねつ",
+    "kanji": "熱",
+    "meaning": "Sốt"
+  },
+  {
+    "id": 22,
+    "hira_kata": "びょうき",
+    "kanji": "病気",
+    "meaning": "Bệnh"
+  },
+  {
+    "id": 23,
+    "hira_kata": "かぜ",
+    "kanji": "",
+    "meaning": "Bị cảm"
+  },
+  {
+    "id": 24,
+    "hira_kata": "くすり",
+    "kanji": "薬",
+    "meaning": "Thuốc"
+  },
+  {
+    "id": 25,
+    "hira_kata": "うわぎ",
+    "kanji": "上着",
+    "meaning": "Áo khoác"
+  },
+  {
+    "id": 26,
+    "hira_kata": "したぎ",
+    "kanji": "下着",
+    "meaning": "Quần áo lót"
+  },
+  {
+    "id": 27,
+    "hira_kata": "２、3〜",
+    "kanji": "２、３にち）２、3〜（２、３日",
+    "meaning": "2,3 ~ (2, 3 ngày)"
+  },
+  {
+    "id": 28,
+    "hira_kata": "〜までに",
+    "kanji": "",
+    "meaning": "Trước ~, cho đến trước ~ (chỉ giới hạn thời gian)"
+  },
+  {
+    "id": 29,
+    "hira_kata": "ですから",
+    "kanji": "",
+    "meaning": "Vì thế, vì vậy, do đó"
+  },
+  {
+    "id": 30,
+    "hira_kata": "どうしましたか。",
+    "kanji": "",
+    "meaning": "Anh/ chị bị làm sao?/Có vấn đề gì không"
+  },
+  {
+    "id": 31,
+    "hira_kata": "おだいじに（お大事に）。",
+    "kanji": "",
+    "meaning": "Giữ gìn sức khỏe nha/Mau khỏi bệnh nha."
+  }
+]

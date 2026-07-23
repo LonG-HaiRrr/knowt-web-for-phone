@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "(やまに)のぼります　(山に)登ります",
+    "kanji": "",
+    "meaning": "Leo ( núi), lên"
+  },
+  {
+    "id": 2,
+    "hira_kata": "「ホテルに」とまります「ホテルに」泊まります",
+    "kanji": "",
+    "meaning": "Trọ ( ở khách sạn)"
+  },
+  {
+    "id": 3,
+    "hira_kata": "そうじします",
+    "kanji": "掃除します",
+    "meaning": "Dọn dẹp"
+  },
+  {
+    "id": 4,
+    "hira_kata": "せんたくします",
+    "kanji": "洗濯します",
+    "meaning": "Giặt đồ"
+  },
+  {
+    "id": 5,
+    "hira_kata": "なります",
+    "kanji": "",
+    "meaning": "Trở thành, trở nên"
+  },
+  {
+    "id": 6,
+    "hira_kata": "れんしゅうします",
+    "kanji": "練習します",
+    "meaning": "Luyện tâp"
+  },
+  {
+    "id": 7,
+    "hira_kata": "ねむい",
+    "kanji": "眠い",
+    "meaning": "Buồn ngủ"
+  },
+  {
+    "id": 8,
+    "hira_kata": "つよい",
+    "kanji": "強い",
+    "meaning": "Mạnh"
+  },
+  {
+    "id": 9,
+    "hira_kata": "よわい",
+    "kanji": "弱い",
+    "meaning": "Yếu"
+  },
+  {
+    "id": 10,
+    "hira_kata": "むり",
+    "kanji": "な",
+    "meaning": "Quá sức, không thể"
+  },
+  {
+    "id": 11,
+    "hira_kata": "からだにいい",
+    "kanji": "体にいい",
+    "meaning": "Tốt cho sức khỏe"
+  },
+  {
+    "id": 12,
+    "hira_kata": "ゴルフ",
+    "kanji": "",
+    "meaning": "Gôn"
+  },
+  {
+    "id": 13,
+    "hira_kata": "ホームステイ",
+    "kanji": "",
+    "meaning": "Homestay"
+  },
+  {
+    "id": 14,
+    "hira_kata": "すもう",
+    "kanji": "相撲",
+    "meaning": "Sumo"
+  },
+  {
+    "id": 15,
+    "hira_kata": "おちゃ",
+    "kanji": "お茶",
+    "meaning": "Trà, trà đạo"
+  },
+  {
+    "id": 16,
+    "hira_kata": "ちょうし",
+    "kanji": "調子",
+    "meaning": "Tình trạng, trạng thái"
+  },
+  {
+    "id": 17,
+    "hira_kata": "ちょうしがいい",
+    "kanji": "調子がいい",
+    "meaning": "Tình trạng tốt, khỏe"
+  },
+  {
+    "id": 18,
+    "hira_kata": "ちょうしがわるい",
+    "kanji": "調子が悪い",
+    "meaning": "Tình trạng xấu, không khỏe"
+  },
+  {
+    "id": 19,
+    "hira_kata": "ダイエット",
+    "kanji": "",
+    "meaning": "Ăn kiêng, ăn chế độ giảm cân"
+  },
+  {
+    "id": 20,
+    "hira_kata": "いちども〜ません",
+    "kanji": "一度も～ません",
+    "meaning": "Chưa lần nào, chưa bao giờ - ( dùng với thể phủ định)"
+  },
+  {
+    "id": 21,
+    "hira_kata": "いちど",
+    "kanji": "一度",
+    "meaning": "Một lần"
+  },
+  {
+    "id": 22,
+    "hira_kata": "だんだん",
+    "kanji": "",
+    "meaning": "Dần dần"
+  },
+  {
+    "id": 23,
+    "hira_kata": "もうすぐ",
+    "kanji": "",
+    "meaning": "Sắp, sắp sửa"
+  },
+  {
+    "id": 24,
+    "hira_kata": "でも",
+    "kanji": "",
+    "meaning": "Nhưng mà"
+  },
+  {
+    "id": 25,
+    "hira_kata": "おかげさまで",
+    "kanji": "",
+    "meaning": "Nhờ ơn/ ơn trời (thiên về cảm ơn những người đứng sau động viên, hỗ trợ mình hoàn thành việc gì đó.)"
+  },
+  {
+    "id": 26,
+    "hira_kata": "かんぱい",
+    "kanji": "乾杯",
+    "meaning": "Cạn ly/ nâng chén"
+  }
+]
