@@ -100,7 +100,7 @@ body { -webkit-tap-highlight-color: transparent; }
    GIAO DIỆN PC / LAPTOP (Màn hình > 1024px)
    Giữ nguyên 100% mobile, chỉ bóp lại trên PC
 ========================================= */
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   /* 1. Mở rộng khung giới hạn chính ra như một cửa sổ lớn */
   #mobile-frame {
     max-width: 1200px !important;
