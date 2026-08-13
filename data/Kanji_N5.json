@@ -1,0 +1,4052 @@
+[
+  {
+    "id": 1,
+    "hira_kata": "一番",
+    "kanji": "",
+    "meaning": "số một, tốt nhất"
+  },
+  {
+    "id": 3,
+    "hira_kata": "一緒",
+    "kanji": "",
+    "meaning": "cùng nhau"
+  },
+  {
+    "id": 5,
+    "hira_kata": "一部",
+    "kanji": "",
+    "meaning": "một phần"
+  },
+  {
+    "id": 7,
+    "hira_kata": "一生",
+    "kanji": "",
+    "meaning": "cả đời"
+  },
+  {
+    "id": 9,
+    "hira_kata": "統一",
+    "kanji": "",
+    "meaning": "thống nhất"
+  },
+  {
+    "id": 11,
+    "hira_kata": "二倍",
+    "kanji": "",
+    "meaning": "gấp đôi"
+  },
+  {
+    "id": 13,
+    "hira_kata": "第二",
+    "kanji": "",
+    "meaning": "thứ hai"
+  },
+  {
+    "id": 15,
+    "hira_kata": "二男",
+    "kanji": "",
+    "meaning": "con trai thứ hai"
+  },
+  {
+    "id": 17,
+    "hira_kata": "二女",
+    "kanji": "",
+    "meaning": "con gái thứ hai"
+  },
+  {
+    "id": 19,
+    "hira_kata": "二十歳",
+    "kanji": "",
+    "meaning": "hai mươi tuổi"
+  },
+  {
+    "id": 21,
+    "hira_kata": "三角",
+    "kanji": "",
+    "meaning": "hình tam giác"
+  },
+  {
+    "id": 23,
+    "hira_kata": "三日月",
+    "kanji": "",
+    "meaning": "trăng khuyết"
+  },
+  {
+    "id": 25,
+    "hira_kata": "第三",
+    "kanji": "",
+    "meaning": "thứ ba"
+  },
+  {
+    "id": 27,
+    "hira_kata": "三倍",
+    "kanji": "",
+    "meaning": "gấp ba"
+  },
+  {
+    "id": 29,
+    "hira_kata": "三男",
+    "kanji": "",
+    "meaning": "con trai thứ ba"
+  },
+  {
+    "id": 31,
+    "hira_kata": "四季",
+    "kanji": "",
+    "meaning": "bốn mùa"
+  },
+  {
+    "id": 33,
+    "hira_kata": "四角",
+    "kanji": "",
+    "meaning": "hình tứ giác"
+  },
+  {
+    "id": 35,
+    "hira_kata": "第四",
+    "kanji": "",
+    "meaning": "thứ tư"
+  },
+  {
+    "id": 37,
+    "hira_kata": "四方",
+    "kanji": "",
+    "meaning": "bốn phương"
+  },
+  {
+    "id": 39,
+    "hira_kata": "四辺",
+    "kanji": "",
+    "meaning": "bốn cạnh"
+  },
+  {
+    "id": 41,
+    "hira_kata": "五十音",
+    "kanji": "",
+    "meaning": "bảng 50 chữ cái"
+  },
+  {
+    "id": 43,
+    "hira_kata": "五感",
+    "kanji": "",
+    "meaning": "năm giác quan"
+  },
+  {
+    "id": 45,
+    "hira_kata": "五輪",
+    "kanji": "",
+    "meaning": "thế vận hội Olympic"
+  },
+  {
+    "id": 47,
+    "hira_kata": "第五",
+    "kanji": "",
+    "meaning": "thứ năm"
+  },
+  {
+    "id": 49,
+    "hira_kata": "五体",
+    "kanji": "",
+    "meaning": "toàn thân"
+  },
+  {
+    "id": 51,
+    "hira_kata": "六角形",
+    "kanji": "",
+    "meaning": "hình lục giác"
+  },
+  {
+    "id": 53,
+    "hira_kata": "第六",
+    "kanji": "",
+    "meaning": "thứ sáu"
+  },
+  {
+    "id": 55,
+    "hira_kata": "六十",
+    "kanji": "",
+    "meaning": "sáu mươi"
+  },
+  {
+    "id": 57,
+    "hira_kata": "六法",
+    "kanji": "",
+    "meaning": "sáu bộ luật"
+  },
+  {
+    "id": 59,
+    "hira_kata": "六感",
+    "kanji": "",
+    "meaning": "giác quan thứ 6"
+  },
+  {
+    "id": 61,
+    "hira_kata": "七夕",
+    "kanji": "",
+    "meaning": "lễ Thất Tịch"
+  },
+  {
+    "id": 63,
+    "hira_kata": "七五三",
+    "kanji": "",
+    "meaning": "lễ hội 7-5-3"
+  },
+  {
+    "id": 65,
+    "hira_kata": "第七",
+    "kanji": "",
+    "meaning": "thứ bảy"
+  },
+  {
+    "id": 67,
+    "hira_kata": "七不思議",
+    "kanji": "",
+    "meaning": "7 điều kỳ bí"
+  },
+  {
+    "id": 69,
+    "hira_kata": "七草",
+    "kanji": "",
+    "meaning": "bảy loại cỏ thảo mộc"
+  },
+  {
+    "id": 71,
+    "hira_kata": "八百屋",
+    "kanji": "",
+    "meaning": "cửa hàng rau"
+  },
+  {
+    "id": 73,
+    "hira_kata": "第八",
+    "kanji": "",
+    "meaning": "thứ tám"
+  },
+  {
+    "id": 75,
+    "hira_kata": "八方",
+    "kanji": "",
+    "meaning": "tám hướng"
+  },
+  {
+    "id": 77,
+    "hira_kata": "八幡",
+    "kanji": "",
+    "meaning": "thần Hachiman"
+  },
+  {
+    "id": 79,
+    "hira_kata": "八重歯",
+    "kanji": "",
+    "meaning": "răng khểnh"
+  },
+  {
+    "id": 81,
+    "hira_kata": "九州",
+    "kanji": "",
+    "meaning": "vùng Kyushu"
+  },
+  {
+    "id": 83,
+    "hira_kata": "第九",
+    "kanji": "",
+    "meaning": "thứ chín"
+  },
+  {
+    "id": 85,
+    "hira_kata": "九官鳥",
+    "kanji": "",
+    "meaning": "chim nhại giọng"
+  },
+  {
+    "id": 87,
+    "hira_kata": "九大",
+    "kanji": "",
+    "meaning": "đại học Kyushu"
+  },
+  {
+    "id": 89,
+    "hira_kata": "九九",
+    "kanji": "",
+    "meaning": "bảng cửu chương"
+  },
+  {
+    "id": 91,
+    "hira_kata": "十字路",
+    "kanji": "",
+    "meaning": "ngã tư"
+  },
+  {
+    "id": 93,
+    "hira_kata": "十中八九",
+    "kanji": "",
+    "meaning": "tám chín phần mười"
+  },
+  {
+    "id": 95,
+    "hira_kata": "数十分",
+    "kanji": "",
+    "meaning": "vài chục phút"
+  },
+  {
+    "id": 97,
+    "hira_kata": "十代",
+    "kanji": "",
+    "meaning": "tuổi teen (10-19)"
+  },
+  {
+    "id": 99,
+    "hira_kata": "十分",
+    "kanji": "",
+    "meaning": "đầy đủ"
+  },
+  {
+    "id": 101,
+    "hira_kata": "百貨店",
+    "kanji": "",
+    "meaning": "cửa hàng bách hóa"
+  },
+  {
+    "id": 103,
+    "hira_kata": "百科事典",
+    "kanji": "",
+    "meaning": "từ điển bách khoa"
+  },
+  {
+    "id": 105,
+    "hira_kata": "数百",
+    "kanji": "",
+    "meaning": "vài trăm"
+  },
+  {
+    "id": 107,
+    "hira_kata": "何百",
+    "kanji": "",
+    "meaning": "hàng trăm"
+  },
+  {
+    "id": 109,
+    "hira_kata": "百姓",
+    "kanji": "",
+    "meaning": "nông dân"
+  },
+  {
+    "id": 111,
+    "hira_kata": "千葉",
+    "kanji": "",
+    "meaning": "tỉnh Chiba"
+  },
+  {
+    "id": 113,
+    "hira_kata": "数千",
+    "kanji": "",
+    "meaning": "vài nghìn"
+  },
+  {
+    "id": 115,
+    "hira_kata": "三千",
+    "kanji": "",
+    "meaning": "ba nghìn"
+  },
+  {
+    "id": 117,
+    "hira_kata": "千代紙",
+    "kanji": "",
+    "meaning": "giấy gấp origami"
+  },
+  {
+    "id": 119,
+    "hira_kata": "千鳥",
+    "kanji": "",
+    "meaning": "chim chidori"
+  },
+  {
+    "id": 121,
+    "hira_kata": "万一",
+    "kanji": "",
+    "meaning": "vạn nhất, lỡ như"
+  },
+  {
+    "id": 123,
+    "hira_kata": "万年筆",
+    "kanji": "",
+    "meaning": "bút máy"
+  },
+  {
+    "id": 125,
+    "hira_kata": "万能",
+    "kanji": "",
+    "meaning": "vạn năng"
+  },
+  {
+    "id": 127,
+    "hira_kata": "万引き",
+    "kanji": "",
+    "meaning": "ăn cắp vặt"
+  },
+  {
+    "id": 129,
+    "hira_kata": "万歳",
+    "kanji": "",
+    "meaning": "muôn năm"
+  },
+  {
+    "id": 131,
+    "hira_kata": "円高",
+    "kanji": "",
+    "meaning": "đồng yên tăng giá"
+  },
+  {
+    "id": 133,
+    "hira_kata": "円安",
+    "kanji": "",
+    "meaning": "đồng yên giảm giá"
+  },
+  {
+    "id": 135,
+    "hira_kata": "円満",
+    "kanji": "",
+    "meaning": "viên mãn, trọn vẹn"
+  },
+  {
+    "id": 137,
+    "hira_kata": "楕円",
+    "kanji": "",
+    "meaning": "hình bầu dục"
+  },
+  {
+    "id": 139,
+    "hira_kata": "円周",
+    "kanji": "",
+    "meaning": "chu vi hình tròn"
+  },
+  {
+    "id": 141,
+    "hira_kata": "何故",
+    "kanji": "",
+    "meaning": "tại sao"
+  },
+  {
+    "id": 143,
+    "hira_kata": "何度",
+    "kanji": "",
+    "meaning": "mấy lần, bao nhiêu độ"
+  },
+  {
+    "id": 145,
+    "hira_kata": "何人",
+    "kanji": "",
+    "meaning": "mấy người"
+  },
+  {
+    "id": 147,
+    "hira_kata": "幾何学",
+    "kanji": "",
+    "meaning": "hình học"
+  },
+  {
+    "id": 149,
+    "hira_kata": "何処",
+    "kanji": "",
+    "meaning": "ở đâu"
+  },
+  {
+    "id": 151,
+    "hira_kata": "日常",
+    "kanji": "",
+    "meaning": "thường ngày"
+  },
+  {
+    "id": 153,
+    "hira_kata": "日程",
+    "kanji": "",
+    "meaning": "lịch trình"
+  },
+  {
+    "id": 155,
+    "hira_kata": "記念日",
+    "kanji": "",
+    "meaning": "ngày kỷ niệm"
+  },
+  {
+    "id": 157,
+    "hira_kata": "平日",
+    "kanji": "",
+    "meaning": "ngày thường"
+  },
+  {
+    "id": 159,
+    "hira_kata": "祝日",
+    "kanji": "",
+    "meaning": "ngày lễ"
+  },
+  {
+    "id": 161,
+    "hira_kata": "月末",
+    "kanji": "",
+    "meaning": "cuối tháng"
+  },
+  {
+    "id": 163,
+    "hira_kata": "月給",
+    "kanji": "",
+    "meaning": "lương tháng"
+  },
+  {
+    "id": 165,
+    "hira_kata": "満月",
+    "kanji": "",
+    "meaning": "trăng rằm"
+  },
+  {
+    "id": 167,
+    "hira_kata": "年月",
+    "kanji": "",
+    "meaning": "năm tháng"
+  },
+  {
+    "id": 169,
+    "hira_kata": "半月",
+    "kanji": "",
+    "meaning": "nửa tháng"
+  },
+  {
+    "id": 171,
+    "hira_kata": "火山",
+    "kanji": "",
+    "meaning": "núi lửa"
+  },
+  {
+    "id": 173,
+    "hira_kata": "消火",
+    "kanji": "",
+    "meaning": "cứu hỏa"
+  },
+  {
+    "id": 175,
+    "hira_kata": "点火",
+    "kanji": "",
+    "meaning": "đốt lửa"
+  },
+  {
+    "id": 177,
+    "hira_kata": "火花",
+    "kanji": "",
+    "meaning": "tia lửa"
+  },
+  {
+    "id": 179,
+    "hira_kata": "火星",
+    "kanji": "",
+    "meaning": "sao Hỏa"
+  },
+  {
+    "id": 181,
+    "hira_kata": "水泳",
+    "kanji": "",
+    "meaning": "bơi lội"
+  },
+  {
+    "id": 183,
+    "hira_kata": "水着",
+    "kanji": "",
+    "meaning": "đồ bơi"
+  },
+  {
+    "id": 185,
+    "hira_kata": "水族館",
+    "kanji": "",
+    "meaning": "thủy cung"
+  },
+  {
+    "id": 187,
+    "hira_kata": "洪水",
+    "kanji": "",
+    "meaning": "lũ lụt"
+  },
+  {
+    "id": 189,
+    "hira_kata": "海水",
+    "kanji": "",
+    "meaning": "nước biển"
+  },
+  {
+    "id": 191,
+    "hira_kata": "木綿",
+    "kanji": "",
+    "meaning": "bông, cốt-tông"
+  },
+  {
+    "id": 193,
+    "hira_kata": "大木",
+    "kanji": "",
+    "meaning": "cây lớn"
+  },
+  {
+    "id": 195,
+    "hira_kata": "樹木",
+    "kanji": "",
+    "meaning": "cây cối"
+  },
+  {
+    "id": 197,
+    "hira_kata": "木造",
+    "kanji": "",
+    "meaning": "làm bằng gỗ"
+  },
+  {
+    "id": 199,
+    "hira_kata": "材木",
+    "kanji": "",
+    "meaning": "gỗ xẻ"
+  },
+  {
+    "id": 201,
+    "hira_kata": "貯金",
+    "kanji": "",
+    "meaning": "tiết kiệm tiền"
+  },
+  {
+    "id": 203,
+    "hira_kata": "料金",
+    "kanji": "",
+    "meaning": "tiền cước, lệ phí"
+  },
+  {
+    "id": 205,
+    "hira_kata": "現金",
+    "kanji": "",
+    "meaning": "tiền mặt"
+  },
+  {
+    "id": 207,
+    "hira_kata": "奨学金",
+    "kanji": "",
+    "meaning": "học bổng"
+  },
+  {
+    "id": 209,
+    "hira_kata": "金庫",
+    "kanji": "",
+    "meaning": "két sắt"
+  },
+  {
+    "id": 211,
+    "hira_kata": "土地",
+    "kanji": "",
+    "meaning": "đất đai"
+  },
+  {
+    "id": 213,
+    "hira_kata": "粘土",
+    "kanji": "",
+    "meaning": "đất sét"
+  },
+  {
+    "id": 215,
+    "hira_kata": "土砂",
+    "kanji": "",
+    "meaning": "đất cát"
+  },
+  {
+    "id": 217,
+    "hira_kata": "土木",
+    "kanji": "",
+    "meaning": "công trình công cộng"
+  },
+  {
+    "id": 219,
+    "hira_kata": "お土産",
+    "kanji": "",
+    "meaning": "đặc sản, quà lưu niệm"
+  },
+  {
+    "id": 221,
+    "hira_kata": "今回",
+    "kanji": "",
+    "meaning": "lần này"
+  },
+  {
+    "id": 223,
+    "hira_kata": "今後",
+    "kanji": "",
+    "meaning": "từ nay về sau"
+  },
+  {
+    "id": 225,
+    "hira_kata": "今日",
+    "kanji": "",
+    "meaning": "ngày nay"
+  },
+  {
+    "id": 227,
+    "hira_kata": "今度",
+    "kanji": "",
+    "meaning": "lần tới"
+  },
+  {
+    "id": 229,
+    "hira_kata": "今頃",
+    "kanji": "",
+    "meaning": "tầm này"
+  },
+  {
+    "id": 231,
+    "hira_kata": "年齢",
+    "kanji": "",
+    "meaning": "tuổi tác"
+  },
+  {
+    "id": 233,
+    "hira_kata": "年末",
+    "kanji": "",
+    "meaning": "cuối năm"
+  },
+  {
+    "id": 235,
+    "hira_kata": "青年",
+    "kanji": "",
+    "meaning": "thanh niên"
+  },
+  {
+    "id": 237,
+    "hira_kata": "お年寄り",
+    "kanji": "",
+    "meaning": "người già"
+  },
+  {
+    "id": 239,
+    "hira_kata": "年金",
+    "kanji": "",
+    "meaning": "lương hưu"
+  },
+  {
+    "id": 241,
+    "hira_kata": "夕食",
+    "kanji": "",
+    "meaning": "bữa tối"
+  },
+  {
+    "id": 243,
+    "hira_kata": "夕立",
+    "kanji": "",
+    "meaning": "mưa rào buổi chiều"
+  },
+  {
+    "id": 245,
+    "hira_kata": "夕日",
+    "kanji": "",
+    "meaning": "hoàng hôn"
+  },
+  {
+    "id": 247,
+    "hira_kata": "夕刊",
+    "kanji": "",
+    "meaning": "báo chiều"
+  },
+  {
+    "id": 249,
+    "hira_kata": "一朝一夕",
+    "kanji": "",
+    "meaning": "một sớm một chiều"
+  },
+  {
+    "id": 251,
+    "hira_kata": "時代",
+    "kanji": "",
+    "meaning": "thời đại"
+  },
+  {
+    "id": 253,
+    "hira_kata": "時刻",
+    "kanji": "",
+    "meaning": "thời khắc"
+  },
+  {
+    "id": 255,
+    "hira_kata": "時計",
+    "kanji": "",
+    "meaning": "đồng hồ"
+  },
+  {
+    "id": 257,
+    "hira_kata": "同時",
+    "kanji": "",
+    "meaning": "đồng thời"
+  },
+  {
+    "id": 259,
+    "hira_kata": "臨時",
+    "kanji": "",
+    "meaning": "tạm thời"
+  },
+  {
+    "id": 261,
+    "hira_kata": "自分",
+    "kanji": "",
+    "meaning": "bản thân"
+  },
+  {
+    "id": 263,
+    "hira_kata": "気分",
+    "kanji": "",
+    "meaning": "tâm trạng"
+  },
+  {
+    "id": 265,
+    "hira_kata": "分析",
+    "kanji": "",
+    "meaning": "phân tích"
+  },
+  {
+    "id": 267,
+    "hira_kata": "分解",
+    "kanji": "",
+    "meaning": "phân giải"
+  },
+  {
+    "id": 269,
+    "hira_kata": "十分",
+    "kanji": "",
+    "meaning": "đầy đủ"
+  },
+  {
+    "id": 271,
+    "hira_kata": "半ば",
+    "kanji": "",
+    "meaning": "một nửa, giữa chừng"
+  },
+  {
+    "id": 273,
+    "hira_kata": "半島",
+    "kanji": "",
+    "meaning": "bán đảo"
+  },
+  {
+    "id": 275,
+    "hira_kata": "前半",
+    "kanji": "",
+    "meaning": "hiệp một, nửa đầu"
+  },
+  {
+    "id": 277,
+    "hira_kata": "後半",
+    "kanji": "",
+    "meaning": "hiệp hai, nửa sau"
+  },
+  {
+    "id": 279,
+    "hira_kata": "半額",
+    "kanji": "",
+    "meaning": "nửa giá"
+  },
+  {
+    "id": 281,
+    "hira_kata": "仲間",
+    "kanji": "",
+    "meaning": "bạn bè, đồng bọn"
+  },
+  {
+    "id": 283,
+    "hira_kata": "人間",
+    "kanji": "",
+    "meaning": "con người"
+  },
+  {
+    "id": 285,
+    "hira_kata": "期間",
+    "kanji": "",
+    "meaning": "thời kỳ"
+  },
+  {
+    "id": 287,
+    "hira_kata": "空間",
+    "kanji": "",
+    "meaning": "không gian"
+  },
+  {
+    "id": 289,
+    "hira_kata": "瞬間",
+    "kanji": "",
+    "meaning": "khoảnh khắc"
+  },
+  {
+    "id": 291,
+    "hira_kata": "週末",
+    "kanji": "",
+    "meaning": "cuối tuần"
+  },
+  {
+    "id": 293,
+    "hira_kata": "週間",
+    "kanji": "",
+    "meaning": "khoảng thời gian 1 tuần"
+  },
+  {
+    "id": 295,
+    "hira_kata": "先週",
+    "kanji": "",
+    "meaning": "tuần trước"
+  },
+  {
+    "id": 297,
+    "hira_kata": "来週",
+    "kanji": "",
+    "meaning": "tuần sau"
+  },
+  {
+    "id": 299,
+    "hira_kata": "翌週",
+    "kanji": "",
+    "meaning": "tuần tiếp theo"
+  },
+  {
+    "id": 301,
+    "hira_kata": "科学",
+    "kanji": "",
+    "meaning": "khoa học"
+  },
+  {
+    "id": 303,
+    "hira_kata": "数学",
+    "kanji": "",
+    "meaning": "toán học"
+  },
+  {
+    "id": 305,
+    "hira_kata": "留学",
+    "kanji": "",
+    "meaning": "du học"
+  },
+  {
+    "id": 307,
+    "hira_kata": "学歴",
+    "kanji": "",
+    "meaning": "bằng cấp"
+  },
+  {
+    "id": 309,
+    "hira_kata": "奨学金",
+    "kanji": "",
+    "meaning": "học bổng"
+  },
+  {
+    "id": 311,
+    "hira_kata": "生活",
+    "kanji": "",
+    "meaning": "sinh hoạt"
+  },
+  {
+    "id": 313,
+    "hira_kata": "生産",
+    "kanji": "",
+    "meaning": "sản xuất"
+  },
+  {
+    "id": 315,
+    "hira_kata": "人生",
+    "kanji": "",
+    "meaning": "nhân sinh, cuộc đời"
+  },
+  {
+    "id": 317,
+    "hira_kata": "生物",
+    "kanji": "",
+    "meaning": "sinh vật"
+  },
+  {
+    "id": 319,
+    "hira_kata": "一生",
+    "kanji": "",
+    "meaning": "suốt đời"
+  },
+  {
+    "id": 321,
+    "hira_kata": "先日",
+    "kanji": "",
+    "meaning": "hôm trước"
+  },
+  {
+    "id": 323,
+    "hira_kata": "先輩",
+    "kanji": "",
+    "meaning": "tiền bối"
+  },
+  {
+    "id": 325,
+    "hira_kata": "優先",
+    "kanji": "",
+    "meaning": "ưu tiên"
+  },
+  {
+    "id": 327,
+    "hira_kata": "祖先",
+    "kanji": "",
+    "meaning": "tổ tiên"
+  },
+  {
+    "id": 329,
+    "hira_kata": "先頭",
+    "kanji": "",
+    "meaning": "dẫn đầu"
+  },
+  {
+    "id": 331,
+    "hira_kata": "親友",
+    "kanji": "",
+    "meaning": "bạn thân"
+  },
+  {
+    "id": 333,
+    "hira_kata": "友情",
+    "kanji": "",
+    "meaning": "tình bạn"
+  },
+  {
+    "id": 335,
+    "hira_kata": "友好",
+    "kanji": "",
+    "meaning": "hữu nghị"
+  },
+  {
+    "id": 337,
+    "hira_kata": "友人",
+    "kanji": "",
+    "meaning": "bạn bè"
+  },
+  {
+    "id": 339,
+    "hira_kata": "悪友",
+    "kanji": "",
+    "meaning": "bạn xấu"
+  },
+  {
+    "id": 341,
+    "hira_kata": "有名",
+    "kanji": "",
+    "meaning": "nổi tiếng"
+  },
+  {
+    "id": 343,
+    "hira_kata": "名字",
+    "kanji": "",
+    "meaning": "họ (trong tên)"
+  },
+  {
+    "id": 345,
+    "hira_kata": "名物",
+    "kanji": "",
+    "meaning": "đặc sản"
+  },
+  {
+    "id": 347,
+    "hira_kata": "署名",
+    "kanji": "",
+    "meaning": "chữ ký"
+  },
+  {
+    "id": 349,
+    "hira_kata": "名人",
+    "kanji": "",
+    "meaning": "danh nhân, chuyên gia"
+  },
+  {
+    "id": 351,
+    "hira_kata": "大切",
+    "kanji": "",
+    "meaning": "quan trọng"
+  },
+  {
+    "id": 353,
+    "hira_kata": "大人",
+    "kanji": "",
+    "meaning": "người lớn"
+  },
+  {
+    "id": 355,
+    "hira_kata": "大使館",
+    "kanji": "",
+    "meaning": "đại sứ quán"
+  },
+  {
+    "id": 357,
+    "hira_kata": "大統領",
+    "kanji": "",
+    "meaning": "tổng thống"
+  },
+  {
+    "id": 359,
+    "hira_kata": "拡大",
+    "kanji": "",
+    "meaning": "mở rộng"
+  },
+  {
+    "id": 361,
+    "hira_kata": "小説",
+    "kanji": "",
+    "meaning": "tiểu thuyết"
+  },
+  {
+    "id": 363,
+    "hira_kata": "小包",
+    "kanji": "",
+    "meaning": "bưu kiện nhỏ"
+  },
+  {
+    "id": 365,
+    "hira_kata": "小鳥",
+    "kanji": "",
+    "meaning": "chim non"
+  },
+  {
+    "id": 367,
+    "hira_kata": "小麦",
+    "kanji": "",
+    "meaning": "lúa mì"
+  },
+  {
+    "id": 369,
+    "hira_kata": "縮小",
+    "kanji": "",
+    "meaning": "thu nhỏ"
+  },
+  {
+    "id": 371,
+    "hira_kata": "数字",
+    "kanji": "",
+    "meaning": "chữ số"
+  },
+  {
+    "id": 373,
+    "hira_kata": "文字",
+    "kanji": "",
+    "meaning": "văn tự, chữ viết"
+  },
+  {
+    "id": 375,
+    "hira_kata": "赤字",
+    "kanji": "",
+    "meaning": "lỗ (tài chính)"
+  },
+  {
+    "id": 377,
+    "hira_kata": "黒字",
+    "kanji": "",
+    "meaning": "lãi (tài chính)"
+  },
+  {
+    "id": 379,
+    "hira_kata": "活字",
+    "kanji": "",
+    "meaning": "chữ in"
+  },
+  {
+    "id": 381,
+    "hira_kata": "本当",
+    "kanji": "",
+    "meaning": "sự thật"
+  },
+  {
+    "id": 383,
+    "hira_kata": "資本",
+    "kanji": "",
+    "meaning": "tư bản, tiền vốn"
+  },
+  {
+    "id": 385,
+    "hira_kata": "基本",
+    "kanji": "",
+    "meaning": "cơ bản"
+  },
+  {
+    "id": 387,
+    "hira_kata": "絵本",
+    "kanji": "",
+    "meaning": "sách tranh"
+  },
+  {
+    "id": 389,
+    "hira_kata": "本日",
+    "kanji": "",
+    "meaning": "hôm nay (lịch sự)"
+  },
+  {
+    "id": 391,
+    "hira_kata": "校長",
+    "kanji": "",
+    "meaning": "hiệu trưởng"
+  },
+  {
+    "id": 393,
+    "hira_kata": "中学校",
+    "kanji": "",
+    "meaning": "trường cấp 2"
+  },
+  {
+    "id": 395,
+    "hira_kata": "高校",
+    "kanji": "",
+    "meaning": "trường cấp 3"
+  },
+  {
+    "id": 397,
+    "hira_kata": "転校",
+    "kanji": "",
+    "meaning": "chuyển trường"
+  },
+  {
+    "id": 399,
+    "hira_kata": "母校",
+    "kanji": "",
+    "meaning": "trường cũ"
+  },
+  {
+    "id": 401,
+    "hira_kata": "飛行機",
+    "kanji": "",
+    "meaning": "máy bay"
+  },
+  {
+    "id": 403,
+    "hira_kata": "急行",
+    "kanji": "",
+    "meaning": "tàu tốc hành"
+  },
+  {
+    "id": 405,
+    "hira_kata": "行動",
+    "kanji": "",
+    "meaning": "hành động"
+  },
+  {
+    "id": 407,
+    "hira_kata": "実行",
+    "kanji": "",
+    "meaning": "thực hành"
+  },
+  {
+    "id": 409,
+    "hira_kata": "流行",
+    "kanji": "",
+    "meaning": "thịnh hành, mốt"
+  },
+  {
+    "id": 411,
+    "hira_kata": "将来",
+    "kanji": "",
+    "meaning": "tương lai"
+  },
+  {
+    "id": 413,
+    "hira_kata": "出来る",
+    "kanji": "",
+    "meaning": "có thể làm"
+  },
+  {
+    "id": 415,
+    "hira_kata": "以来",
+    "kanji": "",
+    "meaning": "kể từ đó"
+  },
+  {
+    "id": 417,
+    "hira_kata": "本来",
+    "kanji": "",
+    "meaning": "vốn dĩ"
+  },
+  {
+    "id": 419,
+    "hira_kata": "来客",
+    "kanji": "",
+    "meaning": "khách viếng thăm"
+  },
+  {
+    "id": 421,
+    "hira_kata": "日帰り",
+    "kanji": "",
+    "meaning": "đi về trong ngày"
+  },
+  {
+    "id": 423,
+    "hira_kata": "帰り道",
+    "kanji": "",
+    "meaning": "đường về"
+  },
+  {
+    "id": 425,
+    "hira_kata": "帰宅",
+    "kanji": "",
+    "meaning": "về nhà"
+  },
+  {
+    "id": 427,
+    "hira_kata": "お帰り",
+    "kanji": "",
+    "meaning": "mừng bạn đã về"
+  },
+  {
+    "id": 429,
+    "hira_kata": "復帰",
+    "kanji": "",
+    "meaning": "sự quay lại, khôi phục"
+  },
+  {
+    "id": 431,
+    "hira_kata": "外国人",
+    "kanji": "",
+    "meaning": "người nước ngoài"
+  },
+  {
+    "id": 433,
+    "hira_kata": "国籍",
+    "kanji": "",
+    "meaning": "quốc tịch"
+  },
+  {
+    "id": 435,
+    "hira_kata": "国家",
+    "kanji": "",
+    "meaning": "quốc gia"
+  },
+  {
+    "id": 437,
+    "hira_kata": "帰国",
+    "kanji": "",
+    "meaning": "về nước"
+  },
+  {
+    "id": 439,
+    "hira_kata": "国立",
+    "kanji": "",
+    "meaning": "quốc lập, của nhà nước"
+  },
+  {
+    "id": 441,
+    "hira_kata": "人口",
+    "kanji": "",
+    "meaning": "dân số"
+  },
+  {
+    "id": 443,
+    "hira_kata": "他人",
+    "kanji": "",
+    "meaning": "người khác"
+  },
+  {
+    "id": 445,
+    "hira_kata": "恋人",
+    "kanji": "",
+    "meaning": "người yêu"
+  },
+  {
+    "id": 447,
+    "hira_kata": "犯人",
+    "kanji": "",
+    "meaning": "tội phạm"
+  },
+  {
+    "id": 449,
+    "hira_kata": "人間",
+    "kanji": "",
+    "meaning": "loài người"
+  },
+  {
+    "id": 451,
+    "hira_kata": "父親",
+    "kanji": "",
+    "meaning": "người cha"
+  },
+  {
+    "id": 453,
+    "hira_kata": "祖父",
+    "kanji": "",
+    "meaning": "ông nội/ngoại"
+  },
+  {
+    "id": 455,
+    "hira_kata": "叔父",
+    "kanji": "",
+    "meaning": "chú/bác trai"
+  },
+  {
+    "id": 457,
+    "hira_kata": "父母",
+    "kanji": "",
+    "meaning": "cha mẹ"
+  },
+  {
+    "id": 459,
+    "hira_kata": "義父",
+    "kanji": "",
+    "meaning": "cha vợ/chồng"
+  },
+  {
+    "id": 461,
+    "hira_kata": "母親",
+    "kanji": "",
+    "meaning": "người mẹ"
+  },
+  {
+    "id": 463,
+    "hira_kata": "祖母",
+    "kanji": "",
+    "meaning": "bà nội/ngoại"
+  },
+  {
+    "id": 465,
+    "hira_kata": "叔母",
+    "kanji": "",
+    "meaning": "cô/dì"
+  },
+  {
+    "id": 467,
+    "hira_kata": "母乳",
+    "kanji": "",
+    "meaning": "sữa mẹ"
+  },
+  {
+    "id": 469,
+    "hira_kata": "義母",
+    "kanji": "",
+    "meaning": "mẹ vợ/chồng"
+  },
+  {
+    "id": 471,
+    "hira_kata": "迷子",
+    "kanji": "",
+    "meaning": "trẻ lạc"
+  },
+  {
+    "id": 473,
+    "hira_kata": "電子",
+    "kanji": "",
+    "meaning": "điện tử"
+  },
+  {
+    "id": 475,
+    "hira_kata": "帽子",
+    "kanji": "",
+    "meaning": "mũ"
+  },
+  {
+    "id": 477,
+    "hira_kata": "様子",
+    "kanji": "",
+    "meaning": "dáng vẻ, tình trạng"
+  },
+  {
+    "id": 479,
+    "hira_kata": "双子",
+    "kanji": "",
+    "meaning": "anh/chị em sinh đôi"
+  },
+  {
+    "id": 481,
+    "hira_kata": "男性",
+    "kanji": "",
+    "meaning": "nam giới"
+  },
+  {
+    "id": 483,
+    "hira_kata": "長男",
+    "kanji": "",
+    "meaning": "con trai trưởng"
+  },
+  {
+    "id": 485,
+    "hira_kata": "男子",
+    "kanji": "",
+    "meaning": "con trai"
+  },
+  {
+    "id": 487,
+    "hira_kata": "男女",
+    "kanji": "",
+    "meaning": "nam nữ"
+  },
+  {
+    "id": 489,
+    "hira_kata": "男前",
+    "kanji": "",
+    "meaning": "đẹp trai"
+  },
+  {
+    "id": 491,
+    "hira_kata": "女性",
+    "kanji": "",
+    "meaning": "nữ giới"
+  },
+  {
+    "id": 493,
+    "hira_kata": "長女",
+    "kanji": "",
+    "meaning": "con gái trưởng"
+  },
+  {
+    "id": 495,
+    "hira_kata": "彼女",
+    "kanji": "",
+    "meaning": "cô ấy, bạn gái"
+  },
+  {
+    "id": 497,
+    "hira_kata": "女子",
+    "kanji": "",
+    "meaning": "con gái"
+  },
+  {
+    "id": 499,
+    "hira_kata": "魔女",
+    "kanji": "",
+    "meaning": "phù thủy"
+  },
+  {
+    "id": 501,
+    "hira_kata": "頂上",
+    "kanji": "",
+    "meaning": "đỉnh núi"
+  },
+  {
+    "id": 503,
+    "hira_kata": "以上",
+    "kanji": "",
+    "meaning": "trở lên"
+  },
+  {
+    "id": 505,
+    "hira_kata": "上着",
+    "kanji": "",
+    "meaning": "áo khoác"
+  },
+  {
+    "id": 507,
+    "hira_kata": "向上",
+    "kanji": "",
+    "meaning": "nâng cao, cải thiện"
+  },
+  {
+    "id": 509,
+    "hira_kata": "見上げる",
+    "kanji": "",
+    "meaning": "nhìn lên"
+  },
+  {
+    "id": 511,
+    "hira_kata": "地下鉄",
+    "kanji": "",
+    "meaning": "tàu điện ngầm"
+  },
+  {
+    "id": 513,
+    "hira_kata": "廊下",
+    "kanji": "",
+    "meaning": "hành lang"
+  },
+  {
+    "id": 515,
+    "hira_kata": "以下",
+    "kanji": "",
+    "meaning": "trở xuống"
+  },
+  {
+    "id": 517,
+    "hira_kata": "下書き",
+    "kanji": "",
+    "meaning": "bản nháp"
+  },
+  {
+    "id": 519,
+    "hira_kata": "見下ろす",
+    "kanji": "",
+    "meaning": "nhìn xuống"
+  },
+  {
+    "id": 521,
+    "hira_kata": "左右",
+    "kanji": "",
+    "meaning": "trái phải"
+  },
+  {
+    "id": 523,
+    "hira_kata": "利き右",
+    "kanji": "",
+    "meaning": "thuận tay phải"
+  },
+  {
+    "id": 525,
+    "hira_kata": "右折",
+    "kanji": "",
+    "meaning": "rẽ phải"
+  },
+  {
+    "id": 527,
+    "hira_kata": "右側",
+    "kanji": "",
+    "meaning": "phía bên phải"
+  },
+  {
+    "id": 529,
+    "hira_kata": "座右の銘",
+    "kanji": "",
+    "meaning": "châm ngôn sống"
+  },
+  {
+    "id": 531,
+    "hira_kata": "左折",
+    "kanji": "",
+    "meaning": "rẽ trái"
+  },
+  {
+    "id": 533,
+    "hira_kata": "左利き",
+    "kanji": "",
+    "meaning": "thuận tay trái"
+  },
+  {
+    "id": 535,
+    "hira_kata": "左側",
+    "kanji": "",
+    "meaning": "phía bên trái"
+  },
+  {
+    "id": 537,
+    "hira_kata": "左腕",
+    "kanji": "",
+    "meaning": "cánh tay trái"
+  },
+  {
+    "id": 539,
+    "hira_kata": "左遷",
+    "kanji": "",
+    "meaning": "giáng chức"
+  },
+  {
+    "id": 541,
+    "hira_kata": "途中",
+    "kanji": "",
+    "meaning": "giữa chừng"
+  },
+  {
+    "id": 543,
+    "hira_kata": "中心",
+    "kanji": "",
+    "meaning": "trung tâm"
+  },
+  {
+    "id": 545,
+    "hira_kata": "集中",
+    "kanji": "",
+    "meaning": "tập trung"
+  },
+  {
+    "id": 547,
+    "hira_kata": "夢中",
+    "kanji": "",
+    "meaning": "say sưa, đam mê"
+  },
+  {
+    "id": 549,
+    "hira_kata": "夜中",
+    "kanji": "",
+    "meaning": "nửa đêm"
+  },
+  {
+    "id": 551,
+    "hira_kata": "後輩",
+    "kanji": "",
+    "meaning": "hậu bối"
+  },
+  {
+    "id": 553,
+    "hira_kata": "食後",
+    "kanji": "",
+    "meaning": "sau bữa ăn"
+  },
+  {
+    "id": 555,
+    "hira_kata": "最後",
+    "kanji": "",
+    "meaning": "cuối cùng"
+  },
+  {
+    "id": 557,
+    "hira_kata": "以後",
+    "kanji": "",
+    "meaning": "sau đó, từ sau khi"
+  },
+  {
+    "id": 559,
+    "hira_kata": "後悔",
+    "kanji": "",
+    "meaning": "hối hận"
+  },
+  {
+    "id": 561,
+    "hira_kata": "午前",
+    "kanji": "",
+    "meaning": "buổi sáng"
+  },
+  {
+    "id": 563,
+    "hira_kata": "駅前",
+    "kanji": "",
+    "meaning": "trước nhà ga"
+  },
+  {
+    "id": 565,
+    "hira_kata": "以前",
+    "kanji": "",
+    "meaning": "trước đây"
+  },
+  {
+    "id": 567,
+    "hira_kata": "手前",
+    "kanji": "",
+    "meaning": "phía trước mặt"
+  },
+  {
+    "id": 569,
+    "hira_kata": "当たり前",
+    "kanji": "",
+    "meaning": "đương nhiên"
+  },
+  {
+    "id": 571,
+    "hira_kata": "海外",
+    "kanji": "",
+    "meaning": "nước ngoài"
+  },
+  {
+    "id": 573,
+    "hira_kata": "郊外",
+    "kanji": "",
+    "meaning": "ngoại ô"
+  },
+  {
+    "id": 575,
+    "hira_kata": "意外",
+    "kanji": "",
+    "meaning": "ngoài dự tính, bất ngờ"
+  },
+  {
+    "id": 577,
+    "hira_kata": "外科",
+    "kanji": "",
+    "meaning": "khoa ngoại"
+  },
+  {
+    "id": 579,
+    "hira_kata": "例外",
+    "kanji": "",
+    "meaning": "ngoại lệ"
+  },
+  {
+    "id": 581,
+    "hira_kata": "輸入",
+    "kanji": "",
+    "meaning": "nhập khẩu"
+  },
+  {
+    "id": 583,
+    "hira_kata": "収入",
+    "kanji": "",
+    "meaning": "thu nhập"
+  },
+  {
+    "id": 585,
+    "hira_kata": "気に入る",
+    "kanji": "",
+    "meaning": "yêu thích"
+  },
+  {
+    "id": 587,
+    "hira_kata": "入力",
+    "kanji": "",
+    "meaning": "nhập liệu"
+  },
+  {
+    "id": 589,
+    "hira_kata": "入場",
+    "kanji": "",
+    "meaning": "sự vào cửa"
+  },
+  {
+    "id": 591,
+    "hira_kata": "出発",
+    "kanji": "",
+    "meaning": "xuất phát"
+  },
+  {
+    "id": 593,
+    "hira_kata": "輸出",
+    "kanji": "",
+    "meaning": "xuất khẩu"
+  },
+  {
+    "id": 595,
+    "hira_kata": "出席",
+    "kanji": "",
+    "meaning": "có mặt"
+  },
+  {
+    "id": 597,
+    "hira_kata": "思い出す",
+    "kanji": "",
+    "meaning": "nhớ lại"
+  },
+  {
+    "id": 599,
+    "hira_kata": "提出",
+    "kanji": "",
+    "meaning": "nộp (tài liệu)"
+  },
+  {
+    "id": 601,
+    "hira_kata": "南北",
+    "kanji": "",
+    "meaning": "nam bắc"
+  },
+  {
+    "id": 603,
+    "hira_kata": "南極",
+    "kanji": "",
+    "meaning": "nam cực"
+  },
+  {
+    "id": 605,
+    "hira_kata": "南米",
+    "kanji": "",
+    "meaning": "nam mỹ"
+  },
+  {
+    "id": 607,
+    "hira_kata": "東南アジア",
+    "kanji": "",
+    "meaning": "đông nam á"
+  },
+  {
+    "id": 609,
+    "hira_kata": "南部",
+    "kanji": "",
+    "meaning": "khu vực phía nam"
+  },
+  {
+    "id": 611,
+    "hira_kata": "関西",
+    "kanji": "",
+    "meaning": "vùng Kansai"
+  },
+  {
+    "id": 613,
+    "hira_kata": "西洋",
+    "kanji": "",
+    "meaning": "phương Tây"
+  },
+  {
+    "id": 615,
+    "hira_kata": "東西",
+    "kanji": "",
+    "meaning": "đông tây"
+  },
+  {
+    "id": 617,
+    "hira_kata": "大西洋",
+    "kanji": "",
+    "meaning": "大 tây dương"
+  },
+  {
+    "id": 619,
+    "hira_kata": "西部",
+    "kanji": "",
+    "meaning": "khu vực phía tây"
+  },
+  {
+    "id": 621,
+    "hira_kata": "関東",
+    "kanji": "",
+    "meaning": "vùng Kanto"
+  },
+  {
+    "id": 623,
+    "hira_kata": "中東",
+    "kanji": "",
+    "meaning": "trung đông"
+  },
+  {
+    "id": 625,
+    "hira_kata": "東部",
+    "kanji": "",
+    "meaning": "khu vực phía đông"
+  },
+  {
+    "id": 627,
+    "hira_kata": "東京",
+    "kanji": "",
+    "meaning": "Tokyo"
+  },
+  {
+    "id": 629,
+    "hira_kata": "東北",
+    "kanji": "",
+    "meaning": "vùng Tohoku"
+  },
+  {
+    "id": 631,
+    "hira_kata": "北海道",
+    "kanji": "",
+    "meaning": "Hokkaido"
+  },
+  {
+    "id": 633,
+    "hira_kata": "敗北",
+    "kanji": "",
+    "meaning": "thất bại"
+  },
+  {
+    "id": 635,
+    "hira_kata": "北極",
+    "kanji": "",
+    "meaning": "bắc cực"
+  },
+  {
+    "id": 637,
+    "hira_kata": "北部",
+    "kanji": "",
+    "meaning": "khu vực phía bắc"
+  },
+  {
+    "id": 639,
+    "hira_kata": "北西",
+    "kanji": "",
+    "meaning": "tây bắc"
+  },
+  {
+    "id": 641,
+    "hira_kata": "地方",
+    "kanji": "",
+    "meaning": "địa phương"
+  },
+  {
+    "id": 643,
+    "hira_kata": "両方",
+    "kanji": "",
+    "meaning": "cả hai"
+  },
+  {
+    "id": 645,
+    "hira_kata": "方法",
+    "kanji": "",
+    "meaning": "phương pháp"
+  },
+  {
+    "id": 647,
+    "hira_kata": "仕方",
+    "kanji": "",
+    "meaning": "cách làm"
+  },
+  {
+    "id": 649,
+    "hira_kata": "方向",
+    "kanji": "",
+    "meaning": "phương hướng"
+  },
+  {
+    "id": 651,
+    "hira_kata": "窓口",
+    "kanji": "",
+    "meaning": "cửa bán vé, quầy tiếp tân"
+  },
+  {
+    "id": 653,
+    "hira_kata": "悪口",
+    "kanji": "",
+    "meaning": "nói xấu"
+  },
+  {
+    "id": 655,
+    "hira_kata": "口実",
+    "kanji": "",
+    "meaning": "viện cớ"
+  },
+  {
+    "id": 657,
+    "hira_kata": "口紅",
+    "kanji": "",
+    "meaning": "son môi"
+  },
+  {
+    "id": 659,
+    "hira_kata": "口調",
+    "kanji": "",
+    "meaning": "giọng điệu"
+  },
+  {
+    "id": 661,
+    "hira_kata": "目的",
+    "kanji": "",
+    "meaning": "mục đích"
+  },
+  {
+    "id": 663,
+    "hira_kata": "目次",
+    "kanji": "",
+    "meaning": "mục lục"
+  },
+  {
+    "id": 665,
+    "hira_kata": "真面目",
+    "kanji": "",
+    "meaning": "chăm chỉ, nghiêm túc"
+  },
+  {
+    "id": 667,
+    "hira_kata": "注目",
+    "kanji": "",
+    "meaning": "chú ý"
+  },
+  {
+    "id": 669,
+    "hira_kata": "盲目",
+    "kanji": "",
+    "meaning": "mù quáng"
+  },
+  {
+    "id": 671,
+    "hira_kata": "耳鼻科",
+    "kanji": "",
+    "meaning": "khoa tai mũi họng"
+  },
+  {
+    "id": 673,
+    "hira_kata": "初耳",
+    "kanji": "",
+    "meaning": "nghe lần đầu"
+  },
+  {
+    "id": 675,
+    "hira_kata": "中耳炎",
+    "kanji": "",
+    "meaning": "viêm tai giữa"
+  },
+  {
+    "id": 677,
+    "hira_kata": "耳鳴り",
+    "kanji": "",
+    "meaning": "ù tai"
+  },
+  {
+    "id": 679,
+    "hira_kata": "耳たぶ",
+    "kanji": "",
+    "meaning": "dái tai"
+  },
+  {
+    "id": 681,
+    "hira_kata": "切手",
+    "kanji": "",
+    "meaning": "tem thư"
+  },
+  {
+    "id": 683,
+    "hira_kata": "握手",
+    "kanji": "",
+    "meaning": "bắt tay"
+  },
+  {
+    "id": 685,
+    "hira_kata": "拍手",
+    "kanji": "",
+    "meaning": "vỗ tay"
+  },
+  {
+    "id": 687,
+    "hira_kata": "手術",
+    "kanji": "",
+    "meaning": "phẫu thuật"
+  },
+  {
+    "id": 689,
+    "hira_kata": "選手",
+    "kanji": "",
+    "meaning": "tuyển thủ"
+  },
+  {
+    "id": 691,
+    "hira_kata": "不足",
+    "kanji": "",
+    "meaning": "thiếu thốn"
+  },
+  {
+    "id": 693,
+    "hira_kata": "満足",
+    "kanji": "",
+    "meaning": "thỏa mãn"
+  },
+  {
+    "id": 695,
+    "hira_kata": "遠足",
+    "kanji": "",
+    "meaning": "dã ngoại"
+  },
+  {
+    "id": 697,
+    "hira_kata": "足首",
+    "kanji": "",
+    "meaning": "cổ chân"
+  },
+  {
+    "id": 699,
+    "hira_kata": "裸足",
+    "kanji": "",
+    "meaning": "chân trần"
+  },
+  {
+    "id": 701,
+    "hira_kata": "牛肉",
+    "kanji": "",
+    "meaning": "thịt bò"
+  },
+  {
+    "id": 703,
+    "hira_kata": "水牛",
+    "kanji": "",
+    "meaning": "con trâu"
+  },
+  {
+    "id": 705,
+    "hira_kata": "和牛",
+    "kanji": "",
+    "meaning": "bò Nhật"
+  },
+  {
+    "id": 707,
+    "hira_kata": "闘牛",
+    "kanji": "",
+    "meaning": "đấu bò"
+  },
+  {
+    "id": 709,
+    "hira_kata": "牛舎",
+    "kanji": "",
+    "meaning": "chuồng bò"
+  },
+  {
+    "id": 711,
+    "hira_kata": "金魚",
+    "kanji": "",
+    "meaning": "cá vàng"
+  },
+  {
+    "id": 713,
+    "hira_kata": "人魚",
+    "kanji": "",
+    "meaning": "người cá"
+  },
+  {
+    "id": 715,
+    "hira_kata": "焼き魚",
+    "kanji": "",
+    "meaning": "cá nướng"
+  },
+  {
+    "id": 717,
+    "hira_kata": "鮮魚",
+    "kanji": "",
+    "meaning": "cá tươi"
+  },
+  {
+    "id": 719,
+    "hira_kata": "魚屋",
+    "kanji": "",
+    "meaning": "cửa hàng bán cá"
+  },
+  {
+    "id": 721,
+    "hira_kata": "子犬",
+    "kanji": "",
+    "meaning": "chó con"
+  },
+  {
+    "id": 723,
+    "hira_kata": "番犬",
+    "kanji": "",
+    "meaning": "chó giữ nhà"
+  },
+  {
+    "id": 725,
+    "hira_kata": "盲導犬",
+    "kanji": "",
+    "meaning": "chó dẫn đường"
+  },
+  {
+    "id": 727,
+    "hira_kata": "野良犬",
+    "kanji": "",
+    "meaning": "chó hoang"
+  },
+  {
+    "id": 729,
+    "hira_kata": "愛犬",
+    "kanji": "",
+    "meaning": "chó cưng"
+  },
+  {
+    "id": 731,
+    "hira_kata": "焼き鳥",
+    "kanji": "",
+    "meaning": "thịt chim/gà nướng"
+  },
+  {
+    "id": 733,
+    "hira_kata": "小鳥",
+    "kanji": "",
+    "meaning": "chim nhỏ"
+  },
+  {
+    "id": 735,
+    "hira_kata": "白鳥",
+    "kanji": "",
+    "meaning": "thiên nga"
+  },
+  {
+    "id": 737,
+    "hira_kata": "野鳥",
+    "kanji": "",
+    "meaning": "chim hoang dã"
+  },
+  {
+    "id": 739,
+    "hira_kata": "渡り鳥",
+    "kanji": "",
+    "meaning": "chim di cư"
+  },
+  {
+    "id": 741,
+    "hira_kata": "乗馬",
+    "kanji": "",
+    "meaning": "cưỡi ngựa"
+  },
+  {
+    "id": 743,
+    "hira_kata": "競馬",
+    "kanji": "",
+    "meaning": "đua ngựa"
+  },
+  {
+    "id": 745,
+    "hira_kata": "馬鹿",
+    "kanji": "",
+    "meaning": "ngu ngốc"
+  },
+  {
+    "id": 747,
+    "hira_kata": "馬車",
+    "kanji": "",
+    "meaning": "xe ngựa"
+  },
+  {
+    "id": 749,
+    "hira_kata": "絵馬",
+    "kanji": "",
+    "meaning": "thẻ gỗ cầu nguyện"
+  },
+  {
+    "id": 751,
+    "hira_kata": "登山",
+    "kanji": "",
+    "meaning": "leo núi"
+  },
+  {
+    "id": 753,
+    "hira_kata": "火山",
+    "kanji": "",
+    "meaning": "núi lửa"
+  },
+  {
+    "id": 755,
+    "hira_kata": "山林",
+    "kanji": "",
+    "meaning": "núi rừng"
+  },
+  {
+    "id": 757,
+    "hira_kata": "富士山",
+    "kanji": "",
+    "meaning": "núi Phú Sĩ"
+  },
+  {
+    "id": 759,
+    "hira_kata": "山脈",
+    "kanji": "",
+    "meaning": "dãy núi"
+  },
+  {
+    "id": 761,
+    "hira_kata": "河川",
+    "kanji": "",
+    "meaning": "sông ngòi"
+  },
+  {
+    "id": 763,
+    "hira_kata": "ライン川",
+    "kanji": "",
+    "meaning": "sông Rhine"
+  },
+  {
+    "id": 765,
+    "hira_kata": "川辺",
+    "kanji": "",
+    "meaning": "bờ sông"
+  },
+  {
+    "id": 767,
+    "hira_kata": "小川",
+    "kanji": "",
+    "meaning": "suối nhỏ"
+  },
+  {
+    "id": 769,
+    "hira_kata": "天の川",
+    "kanji": "",
+    "meaning": "dải Ngân Hà"
+  },
+  {
+    "id": 771,
+    "hira_kata": "水田",
+    "kanji": "",
+    "meaning": "ruộng lúa nước"
+  },
+  {
+    "id": 773,
+    "hira_kata": "田舎",
+    "kanji": "",
+    "meaning": "nông thôn"
+  },
+  {
+    "id": 775,
+    "hira_kata": "油田",
+    "kanji": "",
+    "meaning": "mỏ dầu"
+  },
+  {
+    "id": 777,
+    "hira_kata": "田植え",
+    "kanji": "",
+    "meaning": "việc cấy lúa"
+  },
+  {
+    "id": 779,
+    "hira_kata": "炭田",
+    "kanji": "",
+    "meaning": "mỏ than"
+  },
+  {
+    "id": 781,
+    "hira_kata": "海水浴",
+    "kanji": "",
+    "meaning": "tắm biển"
+  },
+  {
+    "id": 783,
+    "hira_kata": "海岸",
+    "kanji": "",
+    "meaning": "bờ biển"
+  },
+  {
+    "id": 785,
+    "hira_kata": "日本海",
+    "kanji": "",
+    "meaning": "biển Nhật Bản"
+  },
+  {
+    "id": 787,
+    "hira_kata": "海軍",
+    "kanji": "",
+    "meaning": "hải quân"
+  },
+  {
+    "id": 789,
+    "hira_kata": "海産物",
+    "kanji": "",
+    "meaning": "hải sản"
+  },
+  {
+    "id": 791,
+    "hira_kata": "空気",
+    "kanji": "",
+    "meaning": "không khí"
+  },
+  {
+    "id": 793,
+    "hira_kata": "空港",
+    "kanji": "",
+    "meaning": "sân bay"
+  },
+  {
+    "id": 795,
+    "hira_kata": "青空",
+    "kanji": "",
+    "meaning": "bầu trời xanh"
+  },
+  {
+    "id": 797,
+    "hira_kata": "空手",
+    "kanji": "",
+    "meaning": "võ karate"
+  },
+  {
+    "id": 799,
+    "hira_kata": "航空便",
+    "kanji": "",
+    "meaning": "thư gửi đường hàng không"
+  },
+  {
+    "id": 801,
+    "hira_kata": "花見",
+    "kanji": "",
+    "meaning": "ngắm hoa"
+  },
+  {
+    "id": 803,
+    "hira_kata": "花瓶",
+    "kanji": "",
+    "meaning": "bình hoa"
+  },
+  {
+    "id": 805,
+    "hira_kata": "生け花",
+    "kanji": "",
+    "meaning": "nghệ thuật cắm hoa"
+  },
+  {
+    "id": 807,
+    "hira_kata": "花束",
+    "kanji": "",
+    "meaning": "bó hoa"
+  },
+  {
+    "id": 809,
+    "hira_kata": "花粉",
+    "kanji": "",
+    "meaning": "phấn hoa"
+  },
+  {
+    "id": 811,
+    "hira_kata": "梅雨",
+    "kanji": "",
+    "meaning": "mùa mưa"
+  },
+  {
+    "id": 813,
+    "hira_kata": "大雨",
+    "kanji": "",
+    "meaning": "mưa lớn"
+  },
+  {
+    "id": 815,
+    "hira_kata": "豪雨",
+    "kanji": "",
+    "meaning": "mưa lớn kinh khủng"
+  },
+  {
+    "id": 817,
+    "hira_kata": "雨戸",
+    "kanji": "",
+    "meaning": "cửa chớp che mưa"
+  },
+  {
+    "id": 819,
+    "hira_kata": "雨天",
+    "kanji": "",
+    "meaning": "trời mưa"
+  },
+  {
+    "id": 821,
+    "hira_kata": "天気",
+    "kanji": "",
+    "meaning": "thời tiết"
+  },
+  {
+    "id": 823,
+    "hira_kata": "天才",
+    "kanji": "",
+    "meaning": "thiên tài"
+  },
+  {
+    "id": 825,
+    "hira_kata": "天国",
+    "kanji": "",
+    "meaning": "thiên đường"
+  },
+  {
+    "id": 827,
+    "hira_kata": "天井",
+    "kanji": "",
+    "meaning": "trần nhà"
+  },
+  {
+    "id": 829,
+    "hira_kata": "晴天",
+    "kanji": "",
+    "meaning": "trời quang đãng"
+  },
+  {
+    "id": 831,
+    "hira_kata": "駅員",
+    "kanji": "",
+    "meaning": "nhân viên nhà ga"
+  },
+  {
+    "id": 833,
+    "hira_kata": "店員",
+    "kanji": "",
+    "meaning": "nhân viên cửa hàng"
+  },
+  {
+    "id": 835,
+    "hira_kata": "全員",
+    "kanji": "",
+    "meaning": "tất cả thành viên"
+  },
+  {
+    "id": 837,
+    "hira_kata": "公務員",
+    "kanji": "",
+    "meaning": "nhân viên công chức"
+  },
+  {
+    "id": 839,
+    "hira_kata": "満員",
+    "kanji": "",
+    "meaning": "đầy người"
+  },
+  {
+    "id": 841,
+    "hira_kata": "医者",
+    "kanji": "",
+    "meaning": "bác sĩ"
+  },
+  {
+    "id": 843,
+    "hira_kata": "学者",
+    "kanji": "",
+    "meaning": "học giả"
+  },
+  {
+    "id": 845,
+    "hira_kata": "読者",
+    "kanji": "",
+    "meaning": "độc giả"
+  },
+  {
+    "id": 847,
+    "hira_kata": "作者",
+    "kanji": "",
+    "meaning": "tác giả"
+  },
+  {
+    "id": 849,
+    "hira_kata": "記者",
+    "kanji": "",
+    "meaning": "ký giả, nhà báo"
+  },
+  {
+    "id": 851,
+    "hira_kata": "意見",
+    "kanji": "",
+    "meaning": "ý kiến"
+  },
+  {
+    "id": 853,
+    "hira_kata": "発見",
+    "kanji": "",
+    "meaning": "phát hiện"
+  },
+  {
+    "id": 855,
+    "hira_kata": "見物",
+    "kanji": "",
+    "meaning": "tham quan"
+  },
+  {
+    "id": 857,
+    "hira_kata": "お見舞い",
+    "kanji": "",
+    "meaning": "thăm người ốm"
+  },
+  {
+    "id": 859,
+    "hira_kata": "拝見",
+    "kanji": "",
+    "meaning": "xem (khiêm nhường)"
+  },
+  {
+    "id": 861,
+    "hira_kata": "伝聞",
+    "kanji": "",
+    "meaning": "truyền miệng"
+  },
+  {
+    "id": 863,
+    "hira_kata": "見聞",
+    "kanji": "",
+    "meaning": "kiến thức có được do nghe nhìn"
+  },
+  {
+    "id": 865,
+    "hira_kata": "新聞紙",
+    "kanji": "",
+    "meaning": "tờ giấy báo"
+  },
+  {
+    "id": 867,
+    "hira_kata": "聞き手",
+    "kanji": "",
+    "meaning": "người nghe"
+  },
+  {
+    "id": 869,
+    "hira_kata": "未聞",
+    "kanji": "",
+    "meaning": "chưa từng nghe thấy"
+  },
+  {
+    "id": 871,
+    "hira_kata": "辞書",
+    "kanji": "",
+    "meaning": "từ điển"
+  },
+  {
+    "id": 873,
+    "hira_kata": "読書",
+    "kanji": "",
+    "meaning": "đọc sách"
+  },
+  {
+    "id": 875,
+    "hira_kata": "葉書",
+    "kanji": "",
+    "meaning": "bưu thiếp"
+  },
+  {
+    "id": 877,
+    "hira_kata": "秘書",
+    "kanji": "",
+    "meaning": "thư ký"
+  },
+  {
+    "id": 879,
+    "hira_kata": "書類",
+    "kanji": "",
+    "meaning": "tài liệu"
+  },
+  {
+    "id": 881,
+    "hira_kata": "食事",
+    "kanji": "",
+    "meaning": "bữa ăn"
+  },
+  {
+    "id": 883,
+    "hira_kata": "食堂",
+    "kanji": "",
+    "meaning": "nhà ăn"
+  },
+  {
+    "id": 885,
+    "hira_kata": "昼食",
+    "kanji": "",
+    "meaning": "bữa trưa"
+  },
+  {
+    "id": 887,
+    "hira_kata": "外食",
+    "kanji": "",
+    "meaning": "ăn ngoài"
+  },
+  {
+    "id": 889,
+    "hira_kata": "定食",
+    "kanji": "",
+    "meaning": "suất ăn"
+  },
+  {
+    "id": 891,
+    "hira_kata": "飲み物",
+    "kanji": "",
+    "meaning": "đồ uống"
+  },
+  {
+    "id": 893,
+    "hira_kata": "飲食店",
+    "kanji": "",
+    "meaning": "cửa hàng ăn uống"
+  },
+  {
+    "id": 895,
+    "hira_kata": "飲料水",
+    "kanji": "",
+    "meaning": "nước uống"
+  },
+  {
+    "id": 897,
+    "hira_kata": "飲食",
+    "kanji": "",
+    "meaning": "việc ăn uống"
+  },
+  {
+    "id": 899,
+    "hira_kata": "飲み屋",
+    "kanji": "",
+    "meaning": "quán nhậu"
+  },
+  {
+    "id": 901,
+    "hira_kata": "買い物",
+    "kanji": "",
+    "meaning": "mua sắm"
+  },
+  {
+    "id": 903,
+    "hira_kata": "売買",
+    "kanji": "",
+    "meaning": "mua bán"
+  },
+  {
+    "id": 905,
+    "hira_kata": "買い手",
+    "kanji": "",
+    "meaning": "người mua"
+  },
+  {
+    "id": 907,
+    "hira_kata": "買い得",
+    "kanji": "",
+    "meaning": "mua được giá hời"
+  },
+  {
+    "id": 909,
+    "hira_kata": "買収",
+    "kanji": "",
+    "meaning": "thu mua"
+  },
+  {
+    "id": 911,
+    "hira_kata": "言葉",
+    "kanji": "",
+    "meaning": "từ vựng"
+  },
+  {
+    "id": 913,
+    "hira_kata": "伝言",
+    "kanji": "",
+    "meaning": "lời nhắn"
+  },
+  {
+    "id": 915,
+    "hira_kata": "方言",
+    "kanji": "",
+    "meaning": "tiếng địa phương"
+  },
+  {
+    "id": 917,
+    "hira_kata": "無言",
+    "kanji": "",
+    "meaning": "im lặng"
+  },
+  {
+    "id": 919,
+    "hira_kata": "宣言",
+    "kanji": "",
+    "meaning": "tuyên ngôn, tuyên bố"
+  },
+  {
+    "id": 921,
+    "hira_kata": "読解",
+    "kanji": "",
+    "meaning": "đọc hiểu"
+  },
+  {
+    "id": 923,
+    "hira_kata": "音読",
+    "kanji": "",
+    "meaning": "đọc thành tiếng"
+  },
+  {
+    "id": 925,
+    "hira_kata": "愛読",
+    "kanji": "",
+    "meaning": "say mê đọc"
+  },
+  {
+    "id": 927,
+    "hira_kata": "句読点",
+    "kanji": "",
+    "meaning": "dấu chấm câu"
+  },
+  {
+    "id": 929,
+    "hira_kata": "朗読",
+    "kanji": "",
+    "meaning": "ngâm thơ, đọc diễn cảm"
+  },
+  {
+    "id": 931,
+    "hira_kata": "話題",
+    "kanji": "",
+    "meaning": "chủ đề cuộc nói chuyện"
+  },
+  {
+    "id": 933,
+    "hira_kata": "世話",
+    "kanji": "",
+    "meaning": "chăm sóc"
+  },
+  {
+    "id": 935,
+    "hira_kata": "昔話",
+    "kanji": "",
+    "meaning": "chuyện cổ tích"
+  },
+  {
+    "id": 937,
+    "hira_kata": "電話",
+    "kanji": "",
+    "meaning": "điện thoại"
+  },
+  {
+    "id": 939,
+    "hira_kata": "会話",
+    "kanji": "",
+    "meaning": "hội thoại"
+  },
+  {
+    "id": 941,
+    "hira_kata": "休憩",
+    "kanji": "",
+    "meaning": "nghỉ ngơi"
+  },
+  {
+    "id": 943,
+    "hira_kata": "休日",
+    "kanji": "",
+    "meaning": "ngày nghỉ"
+  },
+  {
+    "id": 945,
+    "hira_kata": "連休",
+    "kanji": "",
+    "meaning": "kỳ nghỉ dài"
+  },
+  {
+    "id": 947,
+    "hira_kata": "夏休み",
+    "kanji": "",
+    "meaning": "kỳ nghỉ hè"
+  },
+  {
+    "id": 949,
+    "hira_kata": "運休",
+    "kanji": "",
+    "meaning": "ngừng hoạt động (tàu, xe)"
+  },
+  {
+    "id": 951,
+    "hira_kata": "高校",
+    "kanji": "",
+    "meaning": "trường cấp 3"
+  },
+  {
+    "id": 953,
+    "hira_kata": "最高",
+    "kanji": "",
+    "meaning": "tuyệt vời nhất, cao nhất"
+  },
+  {
+    "id": 955,
+    "hira_kata": "高級",
+    "kanji": "",
+    "meaning": "cao cấp"
+  },
+  {
+    "id": 957,
+    "hira_kata": "高速",
+    "kanji": "",
+    "meaning": "cao tốc"
+  },
+  {
+    "id": 959,
+    "hira_kata": "高等",
+    "kanji": "",
+    "meaning": "bậc cao"
+  },
+  {
+    "id": 961,
+    "hira_kata": "安心",
+    "kanji": "",
+    "meaning": "an tâm"
+  },
+  {
+    "id": 963,
+    "hira_kata": "安全",
+    "kanji": "",
+    "meaning": "an toàn"
+  },
+  {
+    "id": 965,
+    "hira_kata": "不安",
+    "kanji": "",
+    "meaning": "bất an"
+  },
+  {
+    "id": 967,
+    "hira_kata": "安定",
+    "kanji": "",
+    "meaning": "ổn định"
+  },
+  {
+    "id": 969,
+    "hira_kata": "慰安",
+    "kanji": "",
+    "meaning": "giải trí, an ủi"
+  },
+  {
+    "id": 971,
+    "hira_kata": "延長",
+    "kanji": "",
+    "meaning": "kéo dài"
+  },
+  {
+    "id": 973,
+    "hira_kata": "長所",
+    "kanji": "",
+    "meaning": "sở trường"
+  },
+  {
+    "id": 975,
+    "hira_kata": "成長",
+    "kanji": "",
+    "meaning": "trưởng thành"
+  },
+  {
+    "id": 977,
+    "hira_kata": "身長",
+    "kanji": "",
+    "meaning": "chiều cao"
+  },
+  {
+    "id": 979,
+    "hira_kata": "議長",
+    "kanji": "",
+    "meaning": "chủ tọa"
+  },
+  {
+    "id": 981,
+    "hira_kata": "気分",
+    "kanji": "",
+    "meaning": "tâm trạng"
+  },
+  {
+    "id": 983,
+    "hira_kata": "気持ち",
+    "kanji": "",
+    "meaning": "cảm xúc"
+  },
+  {
+    "id": 985,
+    "hira_kata": "空気",
+    "kanji": "",
+    "meaning": "không khí"
+  },
+  {
+    "id": 987,
+    "hira_kata": "人気",
+    "kanji": "",
+    "meaning": "sự yêu thích"
+  },
+  {
+    "id": 989,
+    "hira_kata": "勇気",
+    "kanji": "",
+    "meaning": "dũng khí"
+  },
+  {
+    "id": 991,
+    "hira_kata": "地元",
+    "kanji": "",
+    "meaning": "địa phương"
+  },
+  {
+    "id": 993,
+    "hira_kata": "元日",
+    "kanji": "",
+    "meaning": "sáng mùng 1 tết"
+  },
+  {
+    "id": 995,
+    "hira_kata": "復元",
+    "kanji": "",
+    "meaning": "khôi phục, phục nguyên"
+  },
+  {
+    "id": 997,
+    "hira_kata": "紀元",
+    "kanji": "",
+    "meaning": "kỷ nguyên"
+  },
+  {
+    "id": 999,
+    "hira_kata": "根元",
+    "kanji": "",
+    "meaning": "rễ cây, nguồn gốc"
+  },
+  {
+    "id": 1001,
+    "hira_kata": "新幹線",
+    "kanji": "",
+    "meaning": "tàu cao tốc shinkansen"
+  },
+  {
+    "id": 1003,
+    "hira_kata": "新鮮",
+    "kanji": "",
+    "meaning": "tươi mới"
+  },
+  {
+    "id": 1005,
+    "hira_kata": "最新",
+    "kanji": "",
+    "meaning": "mới nhất"
+  },
+  {
+    "id": 1007,
+    "hira_kata": "新年",
+    "kanji": "",
+    "meaning": "năm mới"
+  },
+  {
+    "id": 1009,
+    "hira_kata": "新人",
+    "kanji": "",
+    "meaning": "người mới"
+  },
+  {
+    "id": 1011,
+    "hira_kata": "考古学",
+    "kanji": "",
+    "meaning": "khảo cổ học"
+  },
+  {
+    "id": 1013,
+    "hira_kata": "古本",
+    "kanji": "",
+    "meaning": "sách cũ"
+  },
+  {
+    "id": 1015,
+    "hira_kata": "古代",
+    "kanji": "",
+    "meaning": "cổ đại"
+  },
+  {
+    "id": 1017,
+    "hira_kata": "復古",
+    "kanji": "",
+    "meaning": "phục cổ"
+  },
+  {
+    "id": 1019,
+    "hira_kata": "古風",
+    "kanji": "",
+    "meaning": "phong cách cổ"
+  },
+  {
+    "id": 1021,
+    "hira_kata": "少年",
+    "kanji": "",
+    "meaning": "thiếu niên"
+  },
+  {
+    "id": 1023,
+    "hira_kata": "少女",
+    "kanji": "",
+    "meaning": "thiếu nữ"
+  },
+  {
+    "id": 1025,
+    "hira_kata": "多少",
+    "kanji": "",
+    "meaning": "một ít, nhiều hay ít"
+  },
+  {
+    "id": 1027,
+    "hira_kata": "少数",
+    "kanji": "",
+    "meaning": "thiểu số"
+  },
+  {
+    "id": 1029,
+    "hira_kata": "減少",
+    "kanji": "",
+    "meaning": "giảm sút"
+  },
+  {
+    "id": 1031,
+    "hira_kata": "多数",
+    "kanji": "",
+    "meaning": "đa số"
+  },
+  {
+    "id": 1033,
+    "hira_kata": "多目的",
+    "kanji": "",
+    "meaning": "đa năng, nhiều mục đích"
+  },
+  {
+    "id": 1035,
+    "hira_kata": "滅多に",
+    "kanji": "",
+    "meaning": "hiếm khi"
+  },
+  {
+    "id": 1037,
+    "hira_kata": "多数決",
+    "kanji": "",
+    "meaning": "biểu quyết theo đa số"
+  },
+  {
+    "id": 1039,
+    "hira_kata": "多様",
+    "kanji": "",
+    "meaning": "đa dạng"
+  },
+  {
+    "id": 1041,
+    "hira_kata": "発明",
+    "kanji": "",
+    "meaning": "phát minh"
+  },
+  {
+    "id": 1043,
+    "hira_kata": "証明",
+    "kanji": "",
+    "meaning": "chứng minh"
+  },
+  {
+    "id": 1045,
+    "hira_kata": "明確",
+    "kanji": "",
+    "meaning": "rõ ràng"
+  },
+  {
+    "id": 1047,
+    "hira_kata": "透明",
+    "kanji": "",
+    "meaning": "trong suốt"
+  },
+  {
+    "id": 1049,
+    "hira_kata": "明白",
+    "kanji": "",
+    "meaning": "minh bạch, rõ ràng"
+  },
+  {
+    "id": 1051,
+    "hira_kata": "米国",
+    "kanji": "",
+    "meaning": "nước Mỹ"
+  },
+  {
+    "id": 1053,
+    "hira_kata": "玄米",
+    "kanji": "",
+    "meaning": "gạo lứt"
+  },
+  {
+    "id": 1055,
+    "hira_kata": "新米",
+    "kanji": "",
+    "meaning": "gạo mới, lính mới"
+  },
+  {
+    "id": 1057,
+    "hira_kata": "北米",
+    "kanji": "",
+    "meaning": "bắc mỹ"
+  },
+  {
+    "id": 1059,
+    "hira_kata": "南米",
+    "kanji": "",
+    "meaning": "nam mỹ"
+  },
+  {
+    "id": 1061,
+    "hira_kata": "豚肉",
+    "kanji": "",
+    "meaning": "thịt lợn"
+  },
+  {
+    "id": 1063,
+    "hira_kata": "焼肉",
+    "kanji": "",
+    "meaning": "thịt nướng"
+  },
+  {
+    "id": 1065,
+    "hira_kata": "筋肉",
+    "kanji": "",
+    "meaning": "cơ bắp"
+  },
+  {
+    "id": 1067,
+    "hira_kata": "皮肉",
+    "kanji": "",
+    "meaning": "giễu cợt, mỉa mai"
+  },
+  {
+    "id": 1069,
+    "hira_kata": "肉体",
+    "kanji": "",
+    "meaning": "cơ thể, thể xác"
+  },
+  {
+    "id": 1071,
+    "hira_kata": "抹茶",
+    "kanji": "",
+    "meaning": "trà xanh matcha"
+  },
+  {
+    "id": 1073,
+    "hira_kata": "紅茶",
+    "kanji": "",
+    "meaning": "hồng trà"
+  },
+  {
+    "id": 1075,
+    "hira_kata": "茶色",
+    "kanji": "",
+    "meaning": "màu nâu"
+  },
+  {
+    "id": 1077,
+    "hira_kata": "無茶",
+    "kanji": "",
+    "meaning": "vô lý, quá mức"
+  },
+  {
+    "id": 1079,
+    "hira_kata": "茶道",
+    "kanji": "",
+    "meaning": "trà đạo"
+  },
+  {
+    "id": 1081,
+    "hira_kata": "荷物",
+    "kanji": "",
+    "meaning": "hành lý"
+  },
+  {
+    "id": 1083,
+    "hira_kata": "果物",
+    "kanji": "",
+    "meaning": "trái cây"
+  },
+  {
+    "id": 1085,
+    "hira_kata": "禁物",
+    "kanji": "",
+    "meaning": "điều cấm kỵ"
+  },
+  {
+    "id": 1087,
+    "hira_kata": "本物",
+    "kanji": "",
+    "meaning": "đồ thật"
+  },
+  {
+    "id": 1089,
+    "hira_kata": "見物",
+    "kanji": "",
+    "meaning": "đi ngắm cảnh"
+  },
+  {
+    "id": 1091,
+    "hira_kata": "好意",
+    "kanji": "",
+    "meaning": "hảo ý"
+  },
+  {
+    "id": 1093,
+    "hira_kata": "絶好",
+    "kanji": "",
+    "meaning": "tuyệt hảo"
+  },
+  {
+    "id": 1095,
+    "hira_kata": "好奇心",
+    "kanji": "",
+    "meaning": "sự tò mò"
+  },
+  {
+    "id": 1097,
+    "hira_kata": "友好",
+    "kanji": "",
+    "meaning": "hữu nghị"
+  },
+  {
+    "id": 1099,
+    "hira_kata": "好調",
+    "kanji": "",
+    "meaning": "thuận lợi, tình trạng tốt"
+  },
+  {
+    "id": 1101,
+    "hira_kata": "電話",
+    "kanji": "",
+    "meaning": "điện thoại"
+  },
+  {
+    "id": 1103,
+    "hira_kata": "電池",
+    "kanji": "",
+    "meaning": "cục pin"
+  },
+  {
+    "id": 1105,
+    "hira_kata": "電気",
+    "kanji": "",
+    "meaning": "đèn điện"
+  },
+  {
+    "id": 1107,
+    "hira_kata": "電子",
+    "kanji": "",
+    "meaning": "điện tử"
+  },
+  {
+    "id": 1109,
+    "hira_kata": "電報",
+    "kanji": "",
+    "meaning": "bức điện tín"
+  },
+  {
+    "id": 1111,
+    "hira_kata": "駐車場",
+    "kanji": "",
+    "meaning": "bãi đỗ xe"
+  },
+  {
+    "id": 1113,
+    "hira_kata": "歯車",
+    "kanji": "",
+    "meaning": "bánh răng"
+  },
+  {
+    "id": 1115,
+    "hira_kata": "車椅子",
+    "kanji": "",
+    "meaning": "xe lăn"
+  },
+  {
+    "id": 1117,
+    "hira_kata": "車輪",
+    "kanji": "",
+    "meaning": "bánh xe"
+  },
+  {
+    "id": 1119,
+    "hira_kata": "乗車",
+    "kanji": "",
+    "meaning": "việc lên xe"
+  },
+  {
+    "id": 1121,
+    "hira_kata": "自信",
+    "kanji": "",
+    "meaning": "tự tin"
+  },
+  {
+    "id": 1123,
+    "hira_kata": "自由",
+    "kanji": "",
+    "meaning": "tự do"
+  },
+  {
+    "id": 1125,
+    "hira_kata": "自然",
+    "kanji": "",
+    "meaning": "tự nhiên"
+  },
+  {
+    "id": 1127,
+    "hira_kata": "自動車",
+    "kanji": "",
+    "meaning": "ô tô"
+  },
+  {
+    "id": 1129,
+    "hira_kata": "自立",
+    "kanji": "",
+    "meaning": "tự lập"
+  },
+  {
+    "id": 1131,
+    "hira_kata": "寺院",
+    "kanji": "",
+    "meaning": "đền chùa"
+  },
+  {
+    "id": 1133,
+    "hira_kata": "金閣寺",
+    "kanji": "",
+    "meaning": "chùa Gác Vàng"
+  },
+  {
+    "id": 1135,
+    "hira_kata": "禅寺",
+    "kanji": "",
+    "meaning": "chùa thiền"
+  },
+  {
+    "id": 1137,
+    "hira_kata": "山寺",
+    "kanji": "",
+    "meaning": "chùa trên núi"
+  },
+  {
+    "id": 1139,
+    "hira_kata": "寺社",
+    "kanji": "",
+    "meaning": "đền và chùa"
+  },
+  {
+    "id": 1141,
+    "hira_kata": "下町",
+    "kanji": "",
+    "meaning": "khu phố buôn bán"
+  },
+  {
+    "id": 1143,
+    "hira_kata": "町長",
+    "kanji": "",
+    "meaning": "thị trưởng"
+  },
+  {
+    "id": 1145,
+    "hira_kata": "港町",
+    "kanji": "",
+    "meaning": "thành phố cảng"
+  },
+  {
+    "id": 1147,
+    "hira_kata": "町役場",
+    "kanji": "",
+    "meaning": "tòa thị chính"
+  },
+  {
+    "id": 1149,
+    "hira_kata": "町内",
+    "kanji": "",
+    "meaning": "trong khu phố"
+  },
+  {
+    "id": 1151,
+    "hira_kata": "会議",
+    "kanji": "",
+    "meaning": "hội nghị, cuộc họp"
+  },
+  {
+    "id": 1153,
+    "hira_kata": "大会",
+    "kanji": "",
+    "meaning": "đại hội"
+  },
+  {
+    "id": 1155,
+    "hira_kata": "会場",
+    "kanji": "",
+    "meaning": "hội trường"
+  },
+  {
+    "id": 1157,
+    "hira_kata": "忘年会",
+    "kanji": "",
+    "meaning": "tiệc tất niên"
+  },
+  {
+    "id": 1159,
+    "hira_kata": "機会",
+    "kanji": "",
+    "meaning": "cơ hội"
+  },
+  {
+    "id": 1161,
+    "hira_kata": "社会",
+    "kanji": "",
+    "meaning": "xã hội"
+  },
+  {
+    "id": 1163,
+    "hira_kata": "神社",
+    "kanji": "",
+    "meaning": "đền thần"
+  },
+  {
+    "id": 1165,
+    "hira_kata": "本社",
+    "kanji": "",
+    "meaning": "trụ sở chính"
+  },
+  {
+    "id": 1167,
+    "hira_kata": "社交",
+    "kanji": "",
+    "meaning": "xã giao"
+  },
+  {
+    "id": 1169,
+    "hira_kata": "出社",
+    "kanji": "",
+    "meaning": "đến công ty"
+  },
+  {
+    "id": 1171,
+    "hira_kata": "病院",
+    "kanji": "",
+    "meaning": "bệnh viện"
+  },
+  {
+    "id": 1173,
+    "hira_kata": "病気",
+    "kanji": "",
+    "meaning": "bệnh tật"
+  },
+  {
+    "id": 1175,
+    "hira_kata": "急病",
+    "kanji": "",
+    "meaning": "bệnh cấp tính"
+  },
+  {
+    "id": 1177,
+    "hira_kata": "伝染病",
+    "kanji": "",
+    "meaning": "bệnh truyền nhiễm"
+  },
+  {
+    "id": 1179,
+    "hira_kata": "闘病",
+    "kanji": "",
+    "meaning": "chống chọi với bệnh"
+  },
+  {
+    "id": 1181,
+    "hira_kata": "入院",
+    "kanji": "",
+    "meaning": "nhập viện"
+  },
+  {
+    "id": 1183,
+    "hira_kata": "退院",
+    "kanji": "",
+    "meaning": "xuất viện"
+  },
+  {
+    "id": 1185,
+    "hira_kata": "大学院",
+    "kanji": "",
+    "meaning": "cao học"
+  },
+  {
+    "id": 1187,
+    "hira_kata": "医院",
+    "kanji": "",
+    "meaning": "phòng khám"
+  },
+  {
+    "id": 1189,
+    "hira_kata": "美容院",
+    "kanji": "",
+    "meaning": "thẩm mỹ viện"
+  },
+  {
+    "id": 1191,
+    "hira_kata": "売店",
+    "kanji": "",
+    "meaning": "quầy bán hàng"
+  },
+  {
+    "id": 1193,
+    "hira_kata": "書店",
+    "kanji": "",
+    "meaning": "cửa hàng sách"
+  },
+  {
+    "id": 1195,
+    "hira_kata": "支店",
+    "kanji": "",
+    "meaning": "chi nhánh"
+  },
+  {
+    "id": 1197,
+    "hira_kata": "本店",
+    "kanji": "",
+    "meaning": "trụ sở chính (của cửa hàng)"
+  },
+  {
+    "id": 1199,
+    "hira_kata": "代理店",
+    "kanji": "",
+    "meaning": "đại lý"
+  },
+  {
+    "id": 1201,
+    "hira_kata": "毎朝",
+    "kanji": "",
+    "meaning": "mỗi sáng"
+  },
+  {
+    "id": 1203,
+    "hira_kata": "毎年",
+    "kanji": "",
+    "meaning": "mỗi năm"
+  },
+  {
+    "id": 1205,
+    "hira_kata": "毎週",
+    "kanji": "",
+    "meaning": "mỗi tuần"
+  },
+  {
+    "id": 1207,
+    "hira_kata": "毎月",
+    "kanji": "",
+    "meaning": "mỗi tháng"
+  },
+  {
+    "id": 1209,
+    "hira_kata": "毎度",
+    "kanji": "",
+    "meaning": "mỗi lần (cảm ơn)"
+  },
+  {
+    "id": 1211,
+    "hira_kata": "毎回",
+    "kanji": "",
+    "meaning": "mỗi lần"
+  },
+  {
+    "id": 1213,
+    "hira_kata": "回転",
+    "kanji": "",
+    "meaning": "xoay chuyển"
+  },
+  {
+    "id": 1215,
+    "hira_kata": "回復",
+    "kanji": "",
+    "meaning": "hồi phục"
+  },
+  {
+    "id": 1217,
+    "hira_kata": "回答",
+    "kanji": "",
+    "meaning": "trả lời"
+  },
+  {
+    "id": 1219,
+    "hira_kata": "回避",
+    "kanji": "",
+    "meaning": "né tránh"
+  },
+  {
+    "id": 1221,
+    "hira_kata": "正午",
+    "kanji": "",
+    "meaning": "đúng 12 giờ trưa"
+  },
+  {
+    "id": 1223,
+    "hira_kata": "午睡",
+    "kanji": "",
+    "meaning": "ngủ trưa"
+  },
+  {
+    "id": 1225,
+    "hira_kata": "子午線",
+    "kanji": "",
+    "meaning": "đường kinh tuyến"
+  },
+  {
+    "id": 1227,
+    "hira_kata": "午前中",
+    "kanji": "",
+    "meaning": "trong buổi sáng"
+  },
+  {
+    "id": 1229,
+    "hira_kata": "午後",
+    "kanji": "",
+    "meaning": "buổi chiều"
+  },
+  {
+    "id": 1231,
+    "hira_kata": "同時",
+    "kanji": "",
+    "meaning": "đồng thời"
+  },
+  {
+    "id": 1233,
+    "hira_kata": "同級生",
+    "kanji": "",
+    "meaning": "bạn cùng khóa"
+  },
+  {
+    "id": 1235,
+    "hira_kata": "共同",
+    "kanji": "",
+    "meaning": "cộng đồng, chung"
+  },
+  {
+    "id": 1237,
+    "hira_kata": "賛同",
+    "kanji": "",
+    "meaning": "tán thành"
+  },
+  {
+    "id": 1239,
+    "hira_kata": "同僚",
+    "kanji": "",
+    "meaning": "đồng nghiệp"
+  },
+  {
+    "id": 1241,
+    "hira_kata": "独立",
+    "kanji": "",
+    "meaning": "độc lập"
+  },
+  {
+    "id": 1243,
+    "hira_kata": "立派",
+    "kanji": "",
+    "meaning": "tuyệt vời, lộng lẫy"
+  },
+  {
+    "id": 1245,
+    "hira_kata": "目立つ",
+    "kanji": "",
+    "meaning": "nổi bật"
+  },
+  {
+    "id": 1247,
+    "hira_kata": "献立",
+    "kanji": "",
+    "meaning": "thực đơn"
+  },
+  {
+    "id": 1249,
+    "hira_kata": "立場",
+    "kanji": "",
+    "meaning": "lập trường"
+  },
+  {
+    "id": 1251,
+    "hira_kata": "専門",
+    "kanji": "",
+    "meaning": "chuyên môn"
+  },
+  {
+    "id": 1253,
+    "hira_kata": "校門",
+    "kanji": "",
+    "meaning": "cổng trường"
+  },
+  {
+    "id": 1255,
+    "hira_kata": "部門",
+    "kanji": "",
+    "meaning": "bộ phận, phòng ban"
+  },
+  {
+    "id": 1257,
+    "hira_kata": "入門",
+    "kanji": "",
+    "meaning": "nhập môn"
+  },
+  {
+    "id": 1259,
+    "hira_kata": "名門",
+    "kanji": "",
+    "meaning": "danh gia vọng tộc"
+  },
+  {
+    "id": 1261,
+    "hira_kata": "森林",
+    "kanji": "",
+    "meaning": "rừng rậm"
+  },
+  {
+    "id": 1263,
+    "hira_kata": "青森",
+    "kanji": "",
+    "meaning": "tỉnh Aomori"
+  },
+  {
+    "id": 1265,
+    "hira_kata": "森閑",
+    "kanji": "",
+    "meaning": "yên ắng, tĩnh mịch"
+  },
+  {
+    "id": 1267,
+    "hira_kata": "森羅万象",
+    "kanji": "",
+    "meaning": "vạn vật trong vũ trụ"
+  },
+  {
+    "id": 1269,
+    "hira_kata": "森の中",
+    "kanji": "",
+    "meaning": "trong rừng"
+  },
+  {
+    "id": 1271,
+    "hira_kata": "林業",
+    "kanji": "",
+    "meaning": "lâm nghiệp"
+  },
+  {
+    "id": 1273,
+    "hira_kata": "山林",
+    "kanji": "",
+    "meaning": "núi rừng"
+  },
+  {
+    "id": 1275,
+    "hira_kata": "小林",
+    "kanji": "",
+    "meaning": "họ Kobayashi"
+  },
+  {
+    "id": 1277,
+    "hira_kata": "密林",
+    "kanji": "",
+    "meaning": "rừng rậm nhiệt đới"
+  },
+  {
+    "id": 1279,
+    "hira_kata": "防風林",
+    "kanji": "",
+    "meaning": "rừng phòng hộ"
+  },
+  {
+    "id": 1281,
+    "hira_kata": "宝石",
+    "kanji": "",
+    "meaning": "đá quý"
+  },
+  {
+    "id": 1283,
+    "hira_kata": "磁石",
+    "kanji": "",
+    "meaning": "nam châm"
+  },
+  {
+    "id": 1285,
+    "hira_kata": "化石",
+    "kanji": "",
+    "meaning": "hóa thạch"
+  },
+  {
+    "id": 1287,
+    "hira_kata": "石鹸",
+    "kanji": "",
+    "meaning": "xà phòng"
+  },
+  {
+    "id": 1289,
+    "hira_kata": "軽石",
+    "kanji": "",
+    "meaning": "đá bọt"
+  },
+  {
+    "id": 1291,
+    "hira_kata": "爆竹",
+    "kanji": "",
+    "meaning": "pháo nổ"
+  },
+  {
+    "id": 1293,
+    "hira_kata": "竹林",
+    "kanji": "",
+    "meaning": "rừng trúc"
+  },
+  {
+    "id": 1295,
+    "hira_kata": "破竹",
+    "kanji": "",
+    "meaning": "chẻ tre (thế như chẻ tre)"
+  },
+  {
+    "id": 1297,
+    "hira_kata": "竹馬",
+    "kanji": "",
+    "meaning": "cà kheo"
+  },
+  {
+    "id": 1299,
+    "hira_kata": "竹の子",
+    "kanji": "",
+    "meaning": "măng"
+  },
+  {
+    "id": 1301,
+    "hira_kata": "案内",
+    "kanji": "",
+    "meaning": "hướng dẫn"
+  },
+  {
+    "id": 1303,
+    "hira_kata": "室内",
+    "kanji": "",
+    "meaning": "trong phòng"
+  },
+  {
+    "id": 1305,
+    "hira_kata": "内科",
+    "kanji": "",
+    "meaning": "khoa nội"
+  },
+  {
+    "id": 1307,
+    "hira_kata": "内緒",
+    "kanji": "",
+    "meaning": "bí mật"
+  },
+  {
+    "id": 1309,
+    "hira_kata": "内容",
+    "kanji": "",
+    "meaning": "nội dung"
+  },
+  {
+    "id": 1311,
+    "hira_kata": "真っ暗",
+    "kanji": "",
+    "meaning": "tối thui"
+  },
+  {
+    "id": 1313,
+    "hira_kata": "暗記",
+    "kanji": "",
+    "meaning": "học thuộc lòng"
+  },
+  {
+    "id": 1315,
+    "hira_kata": "明暗",
+    "kanji": "",
+    "meaning": "sáng tối"
+  },
+  {
+    "id": 1317,
+    "hira_kata": "暗黙",
+    "kanji": "",
+    "meaning": "trầm mặc, ngầm hiểu"
+  },
+  {
+    "id": 1319,
+    "hira_kata": "暗殺",
+    "kanji": "",
+    "meaning": "ám sát"
+  },
+  {
+    "id": 1321,
+    "hira_kata": "仕方",
+    "kanji": "",
+    "meaning": "cách làm"
+  },
+  {
+    "id": 1323,
+    "hira_kata": "仕上げ",
+    "kanji": "",
+    "meaning": "sự hoàn thành"
+  },
+  {
+    "id": 1325,
+    "hira_kata": "奉仕",
+    "kanji": "",
+    "meaning": "phục vụ, cống hiến"
+  },
+  {
+    "id": 1327,
+    "hira_kata": "仕組み",
+    "kanji": "",
+    "meaning": "cơ cấu, kết cấu"
+  },
+  {
+    "id": 1329,
+    "hira_kata": "仕様",
+    "kanji": "",
+    "meaning": "thông số kỹ thuật, cách thức"
+  },
+  {
+    "id": 1331,
+    "hira_kata": "事故",
+    "kanji": "",
+    "meaning": "tai nạn"
+  },
+  {
+    "id": 1333,
+    "hira_kata": "大事",
+    "kanji": "",
+    "meaning": "việc quan trọng"
+  },
+  {
+    "id": 1335,
+    "hira_kata": "返事",
+    "kanji": "",
+    "meaning": "trả lời"
+  },
+  {
+    "id": 1337,
+    "hira_kata": "無事",
+    "kanji": "",
+    "meaning": "bình an vô sự"
+  },
+  {
+    "id": 1339,
+    "hira_kata": "見事",
+    "kanji": "",
+    "meaning": "tuyệt vời, đẹp đẽ"
+  },
+  {
+    "id": 1341,
+    "hira_kata": "努力",
+    "kanji": "",
+    "meaning": "nỗ lực"
+  },
+  {
+    "id": 1343,
+    "hira_kata": "協力",
+    "kanji": "",
+    "meaning": "hiệp lực, hợp tác"
+  },
+  {
+    "id": 1345,
+    "hira_kata": "実力",
+    "kanji": "",
+    "meaning": "thực lực"
+  },
+  {
+    "id": 1347,
+    "hira_kata": "魅力",
+    "kanji": "",
+    "meaning": "sức hấp dẫn"
+  },
+  {
+    "id": 1349,
+    "hira_kata": "権力",
+    "kanji": "",
+    "meaning": "quyền lực"
+  }
+]
