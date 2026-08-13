@@ -1,10 +1,14 @@
 // ================= STATE & ĐIỀU HƯỚNG MÀN HÌNH =================
 let flashcards = [];
 let fullDeck = []; 
-let globalDecks = []; // Biến chứa tất cả các deck để dùng cho tính năng Filter/Sort
+let globalDecks = []; 
 let currentIndex = 0;
 let isAnswered = false;
 let timeoutId = null;
+
+// Thêm 2 biến này để xử lý logic sai thì lặp lại thẻ
+let correctAnswersCount = 0; 
+let totalInitialCards = 0;
 
 // Khởi tạo Audio dùng chung cho "Giọng Google Mạng"
 const cloudAudio = new Audio();
@@ -47,7 +51,6 @@ function showQuiz(fileUrl, deckName) {
 document.getElementById('btn-exit').addEventListener('click', showLobby);
 
 // ================= LẤY DANH SÁCH BÀI HỌC VÀ LỌC (TÌM KIẾM, SẮP XẾP) =================
-// ================= LẤY DANH SÁCH BÀI HỌC VÀ LỌC (TÌM KIẾM, SẮP XẾP) =================
 async function fetchDeckList() {
   try {
     const response = await fetch('data/list.json?t=' + new Date().getTime());
@@ -64,10 +67,9 @@ async function fetchDeckList() {
         globalDecks.forEach(deck => {
           const fileName = deck.file.split('/').pop();
           const lastCommit = commits.find(c => {
-            return c.commit.message.includes(fileName) || true; // Lấy mtime từ commit gần nhất của repo
+            return c.commit.message.includes(fileName) || true; 
           });
           
-          // Lấy mtime từ commit của GitHub
           deck.mtime = lastCommit ? new Date(lastCommit.commit.committer.date).getTime() : 0;
         });
       }
@@ -75,7 +77,7 @@ async function fetchDeckList() {
       console.log("Không thể lấy commit date từ GitHub API, sẽ dùng thứ tự mặc định.");
     }
 
-    handleSearchAndSort(); // Chạy hàm render dựa theo thanh filter
+    handleSearchAndSort(); 
   } catch (error) {
     document.getElementById('deck-list').innerHTML = `<p class="text-gray-400 text-center">Đang nạp dữ liệu...</p>`;
   }
@@ -107,10 +109,8 @@ function handleSearchAndSort() {
   const query = document.getElementById('search-deck').value.toLowerCase().trim();
   const sortType = document.getElementById('sort-deck').value;
 
-  // Lọc theo tìm kiếm (không cần nhập 100% đúng tên)
   let filteredDecks = globalDecks.filter(deck => deck.name.toLowerCase().includes(query));
 
-  // Sắp xếp
   if (sortType === 'az') {
     filteredDecks.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
   } else if (sortType === 'za') {
@@ -159,6 +159,11 @@ function startSession() {
   flashcards.forEach(card => card.seen += 1);
 
   currentIndex = 0;
+  
+  // RESET BIẾN KHI BẮT ĐẦU VÒNG MỚI
+  correctAnswersCount = 0; 
+  totalInitialCards = flashcards.length; 
+
   renderQuestion();
 }
 
@@ -178,8 +183,13 @@ function renderQuestion() {
   const currentCard = flashcards[currentIndex];
   document.getElementById('q-hira').innerText = currentCard.hira_kata;
   document.getElementById('q-kanji').innerText = currentCard.kanji || '';
+  
+  // Vẫn đếm số thứ tự lượt học (kể cả lượt bị phạt)
   document.getElementById('card-counter').innerText = currentIndex + 1;
-  document.getElementById('progress-bar').style.width = `${((currentIndex) / flashcards.length) * 100}%`;
+  
+  // LOGIC MỚI: Thanh tiến trình = (Số câu đúng / Số thẻ gốc ban đầu)
+  const progressPercent = (correctAnswersCount / totalInitialCards) * 100;
+  document.getElementById('progress-bar').style.width = `${progressPercent}%`;
 
   const container = document.getElementById('options-container');
   container.innerHTML = ''; 
@@ -214,15 +224,22 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
 
   if (selectedId === correctId) {
     clickedBtn.classList.add('correct');
+    
+    // NẾU ĐÚNG: Cộng vào biến đếm số câu đúng
+    correctAnswersCount++; 
   } else {
     clickedBtn.classList.add('wrong');
     allBtns.forEach(btn => {
       if (btn.dataset.id == correctId) btn.classList.add('correct');
     });
     
-    // TÍNH NĂNG MỚI: Trả lời sai thì copy thẻ hiện tại đẩy xuống cuối mảng.
+    // NẾU SAI: Bốc thẻ hiện tại ném xuống cuối cùng mảng
     flashcards.push(flashcards[currentIndex]); 
   }
+
+  // Cập nhật lại thanh tiến trình ngay lập tức
+  const progressPercent = (correctAnswersCount / totalInitialCards) * 100;
+  document.getElementById('progress-bar').style.width = `${progressPercent}%`;
 
   if (document.getElementById('set-auto-ans').checked) {
     const currentCard = flashcards[currentIndex];
@@ -250,21 +267,17 @@ document.getElementById('btn-manual-next').addEventListener('click', goToNextQue
 
 // ================= XỬ LÝ PHÍM TẮT BÀN PHÍM =================
 document.addEventListener('keydown', (e) => {
-  // Bỏ qua nếu đang gõ text (tìm kiếm, nhập file, v.v...)
   if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
   
-  // Phát Audio (Phím Numpad 0)
   if (e.code === 'Numpad0' || e.code === 'NumpadDecimal') {
       playQuestionAudio();
   }
 
-  // Chọn đáp án 1, 2, 3, 4 => A, B, C, D (Hỗ trợ cả phím trên và phím Numpad)
   if (['Digit1', 'Numpad1'].includes(e.code)) clickOptionByIndex(0);
   if (['Digit2', 'Numpad2'].includes(e.code)) clickOptionByIndex(1);
   if (['Digit3', 'Numpad3'].includes(e.code)) clickOptionByIndex(2);
   if (['Digit4', 'Numpad4'].includes(e.code)) clickOptionByIndex(3);
 
-  // Phím Enter để qua bài (chỉ hoạt động khi ở chế độ Manual Skip và nút "Next" hiện ra)
   if (['Enter', 'NumpadEnter'].includes(e.code)) {
       const nextBtnContainer = document.getElementById('next-btn-container');
       if (nextBtnContainer && !nextBtnContainer.classList.contains('hidden')) {
@@ -273,7 +286,6 @@ document.addEventListener('keydown', (e) => {
   }
 }, true);
 
-// Hàm click tự động dựa trên số 1,2,3,4
 function clickOptionByIndex(index) {
   const btns = document.querySelectorAll('.option-btn');
   if (btns && btns.length > index && !btns[index].disabled) {
