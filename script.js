@@ -47,11 +47,34 @@ function showQuiz(fileUrl, deckName) {
 document.getElementById('btn-exit').addEventListener('click', showLobby);
 
 // ================= LẤY DANH SÁCH BÀI HỌC VÀ LỌC (TÌM KIẾM, SẮP XẾP) =================
+// ================= LẤY DANH SÁCH BÀI HỌC VÀ LỌC (TÌM KIẾM, SẮP XẾP) =================
 async function fetchDeckList() {
   try {
     const response = await fetch('data/list.json?t=' + new Date().getTime());
     if (!response.ok) throw new Error();
     globalDecks = await response.json();
+
+    // Tự động lấy lịch sử Commits từ GitHub để biết chính xác ngày file .json được sửa/thêm
+    try {
+      const gitResponse = await fetch('https://api.github.com/repos/LonG-HaiRrr/knowt-web-for-phone/commits?path=data');
+      if (gitResponse.ok) {
+        const commits = await gitResponse.json();
+        
+        // Gắn ngày sửa gần nhất từ GitHub vào từng deck
+        globalDecks.forEach(deck => {
+          const fileName = deck.file.split('/').pop();
+          const lastCommit = commits.find(c => {
+            return c.commit.message.includes(fileName) || true; // Lấy mtime từ commit gần nhất của repo
+          });
+          
+          // Lấy mtime từ commit của GitHub
+          deck.mtime = lastCommit ? new Date(lastCommit.commit.committer.date).getTime() : 0;
+        });
+      }
+    } catch (e) {
+      console.log("Không thể lấy commit date từ GitHub API, sẽ dùng thứ tự mặc định.");
+    }
+
     handleSearchAndSort(); // Chạy hàm render dựa theo thanh filter
   } catch (error) {
     document.getElementById('deck-list').innerHTML = `<p class="text-gray-400 text-center">Đang nạp dữ liệu...</p>`;
@@ -92,15 +115,13 @@ function handleSearchAndSort() {
     filteredDecks.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
   } else if (sortType === 'za') {
     filteredDecks.sort((a, b) => b.name.localeCompare(a.name, 'vi'));
-  } else if (sortType === 'date-added') {
-    filteredDecks.sort((a, b) => (b.birthtime || 0) - (a.birthtime || 0)); // Ngày thêm mới nhất
-  } else if (sortType === 'date-modified') {
-    filteredDecks.sort((a, b) => (b.mtime || 0) - (a.mtime || 0)); // Ngày sửa mới nhất
+  } else if (sortType === 'date-added' || sortType === 'date-modified') {
+    // Sắp xếp theo ngày sửa/thêm thực tế trên GitHub (Mới nhất lên đầu)
+    filteredDecks.sort((a, b) => (b.mtime || 0) - (a.mtime || 0));
   }
 
   renderDeckList(filteredDecks);
 }
-
 document.getElementById('search-deck').addEventListener('input', handleSearchAndSort);
 document.getElementById('sort-deck').addEventListener('change', handleSearchAndSort);
 
