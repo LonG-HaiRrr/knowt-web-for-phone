@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
 
 :root {
-  --fs-hira: 25px;
+  /* Set mặc định Hira là 50px và in đậm */
+  --fs-hira: 50px;
   --ff-hira: sans-serif;
+  --fw-hira: bold; 
   
+  /* Kanji mặc định bình thường */
   --fs-kanji: 33px;
   --ff-kanji: sans-serif;
+  --fw-kanji: normal;
   
   --fs-mean: 19px;
   --ff-mean: sans-serif;
@@ -17,8 +21,9 @@ h6{
 body { -webkit-tap-highlight-color: transparent; }
 ::-webkit-scrollbar { display: none; }
 
-#q-hira { font-size: var(--fs-hira) !important; font-family: var(--ff-hira) !important; }
-#q-kanji { font-size: var(--fs-kanji) !important; font-family: var(--ff-kanji) !important; }
+/* Bổ sung thuộc tính font-weight gọi biến vừa tạo */
+#q-hira { font-size: var(--fs-hira) !important; font-family: var(--ff-hira) !important; font-weight: var(--fw-hira) !important; }
+#q-kanji { font-size: var(--fs-kanji) !important; font-family: var(--ff-kanji) !important; font-weight: var(--fw-kanji) !important; }
 .meaning-text { font-size: var(--fs-mean) !important; font-family: var(--ff-mean) !important; }
 
 .option-btn { transition: all 0.2s ease; }

@@ -12,10 +12,16 @@ function scanDirectory() {
         // Lọc ra các file .json (bỏ qua file list.json)
         const decks = files
             .filter(f => f.endsWith('.json') && f !== 'list.json')
-            .map(f => ({
-                file: `data/${f}`,
-                name: f.replace('.json', '') // Lấy tên bài làm hiển thị (VD: bai1)
-            }));
+            .map(f => {
+                // Đọc thông tin thời gian của file để phục vụ sắp xếp
+                const stats = fs.statSync(path.join(dataDir, f));
+                return {
+                    file: `data/${f}`,
+                    name: f.replace('.json', ''), // Lấy tên bài làm hiển thị (VD: bai1)
+                    birthtime: stats.birthtimeMs, // Ngày tạo file
+                    mtime: stats.mtimeMs          // Ngày sửa file gần nhất
+                };
+            });
             
         // Ghi lại vào file list.json
         fs.writeFileSync(listFile, JSON.stringify(decks, null, 2));

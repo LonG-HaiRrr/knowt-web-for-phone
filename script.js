@@ -79,7 +79,7 @@ function renderDeckList(decks) {
   });
 }
 
-// Logic Tìm kiếm theo chữ và Sắp xếp A-Z
+// Logic Tìm kiếm theo chữ và Sắp xếp A-Z / Ngày tháng
 function handleSearchAndSort() {
   const query = document.getElementById('search-deck').value.toLowerCase().trim();
   const sortType = document.getElementById('sort-deck').value;
@@ -92,6 +92,10 @@ function handleSearchAndSort() {
     filteredDecks.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
   } else if (sortType === 'za') {
     filteredDecks.sort((a, b) => b.name.localeCompare(a.name, 'vi'));
+  } else if (sortType === 'date-added') {
+    filteredDecks.sort((a, b) => (b.birthtime || 0) - (a.birthtime || 0)); // Ngày thêm mới nhất
+  } else if (sortType === 'date-modified') {
+    filteredDecks.sort((a, b) => (b.mtime || 0) - (a.mtime || 0)); // Ngày sửa mới nhất
   }
 
   renderDeckList(filteredDecks);
@@ -194,6 +198,9 @@ function handleAnswer(clickedBtn, selectedId, correctId) {
     allBtns.forEach(btn => {
       if (btn.dataset.id == correctId) btn.classList.add('correct');
     });
+    
+    // TÍNH NĂNG MỚI: Trả lời sai thì copy thẻ hiện tại đẩy xuống cuối mảng.
+    flashcards.push(flashcards[currentIndex]); 
   }
 
   if (document.getElementById('set-auto-ans').checked) {
@@ -463,6 +470,10 @@ document.getElementById('fs-mean').addEventListener('input', (e) => updateFont('
 document.getElementById('ff-hira').addEventListener('change', (e) => updateFont('hira', 'ff', e.target.value));
 document.getElementById('ff-kanji').addEventListener('change', (e) => updateFont('kanji', 'ff', e.target.value));
 document.getElementById('ff-mean').addEventListener('change', (e) => updateFont('mean', 'ff', e.target.value));
+
+// Thêm sự kiện bắt Font Weight
+document.getElementById('fw-hira').addEventListener('change', (e) => root.style.setProperty('--fw-hira', e.target.value));
+document.getElementById('fw-kanji').addEventListener('change', (e) => root.style.setProperty('--fw-kanji', e.target.value));
 
 
 // ================= GIAO DIỆN NHẬP DỮ LIỆU (IMPORT LOGIC) =================
