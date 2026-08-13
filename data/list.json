@@ -16,10 +16,6 @@
     "name": "riki 17"
   },
   {
-    "file": "data/3.json",
-    "name": "3"
-  },
-  {
     "file": "data/riki 25.json",
     "name": "riki 25"
   },
@@ -32,28 +28,8 @@
     "name": "riki 18"
   },
   {
-    "file": "data/1 (7).json",
-    "name": "1 (7)"
-  },
-  {
-    "file": "data/1 (5).json",
-    "name": "1 (5)"
-  },
-  {
-    "file": "data/1 (6).json",
-    "name": "1 (6)"
-  },
-  {
-    "file": "data/1 (4).json",
-    "name": "1 (4)"
-  },
-  {
     "file": "data/riki 21.json",
     "name": "riki 21"
-  },
-  {
-    "file": "data/2.json",
-    "name": "2"
   },
   {
     "file": "data/riki 24.json",
@@ -68,8 +44,8 @@
     "name": "riki 20"
   },
   {
-    "file": "data/1 (1).json",
-    "name": "1 (1)"
+    "file": "data/Kanji_N5.json",
+    "name": "Kanji_N5"
   },
   {
     "file": "data/riki 19.json",
